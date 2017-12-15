@@ -1,0 +1,125 @@
+2017-12-15 21:07:36.7145 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2017-12-15 21:07:36.8920 |  Info | Program |   Interface:         0.0.0.0 
+2017-12-15 21:07:36.9090 |  Info | Program |   Port:                 4490 
+2017-12-15 21:07:36.9240 |  Info | Program |   Name:      GC-Core Test Server 
+2017-12-15 21:07:36.9351 |  Info | Program |   FQDN:                      
+2017-12-15 21:07:36.9471 |  Info | Program |   Players:                50 
+2017-12-15 21:07:36.9612 |  Info | Program |   Announce:             True 
+2017-12-15 21:07:36.9752 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2017-12-15 21:07:36.9912 |  Info | Program | Starting... 
+2017-12-15 21:07:44.5112 |  Info | ConstantData | Loaded Language de 
+2017-12-15 21:07:44.7990 | Debug | GameServer | Announcing self to master server... 
+2017-12-15 21:07:44.8341 |  Info | GameServer | Loading resources... 
+2017-12-15 21:07:46.0754 |  Info | GameServer | Starting admin 
+2017-12-15 21:07:46.7713 |  Info | GameServer | Resource admin started. 
+2017-12-15 21:07:46.7863 |  Info | GameServer | Starting TerraTex-RL-RPG 
+2017-12-15 21:07:46.8204 |  Info | GameServer | Starting scoreboard 
+2017-12-15 21:07:47.2214 |  Info | GameServer | Resource scoreboard started. 
+2017-12-15 21:07:47.8561 | Error | GameServer | ERROR STARTING RESOURCE TerraTex-RL-RPG System.IO.FileNotFoundException: Die Datei oder Assembly "file:///C:\Users\Norman_124\Desktop\Neuer Ordner (2)\GT-MP-Server\resources\TerraTex-RL-RPG\bin\Debug\TerraTex-RL-RPG.dll" oder eine Abhängigkeit davon wurde nicht gefunden. Das System kann die angegebene Datei nicht finden.
+Dateiname: "file:///C:\Users\Norman_124\Desktop\Neuer Ordner (2)\GT-MP-Server\resources\TerraTex-RL-RPG\bin\Debug\TerraTex-RL-RPG.dll"
+   bei System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   bei System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   bei System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   bei System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   bei GrandTheftMultiplayer.Server.GameServer.StartResource(String resourceName, String father)
+
+WRN: Protokollierung der Assemblybindung ist AUS.
+Sie können die Protokollierung der Assemblybindungsfehler aktivieren, indem Sie den Registrierungswert [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) auf 1 festlegen.
+Hinweis: Die Protokollierung der Assemblybindungsfehler führt zu einer gewissen Leistungseinbuße.
+Sie können dieses Feature deaktivieren, indem Sie den Registrierungswert [HKLM\Software\Microsoft\Fusion!EnableLog] entfernen.
+
+2017-12-15 21:07:47.9353 |  Info | GameServer | Starting speedometer 
+2017-12-15 21:07:48.2913 |  Info | GameServer | Resource speedometer started. 
+2017-12-15 21:07:48.3093 |  Info | Program | Started! Waiting for connections. 
+2017-12-15 21:09:23.7281 |  Info | Program | Terminating... 
+2017-12-15 21:09:23.7582 |  Info | GameServer | Stopping speedometer 
+2017-12-15 21:09:23.7823 |  Info | GameServer | Stopped speedometer. 
+2017-12-15 21:09:23.7983 |  Info | GameServer | Stopping scoreboard 
+2017-12-15 21:09:23.9406 |  Info | GameServer | Stopped scoreboard. 
+2017-12-15 21:09:23.9567 |  Info | GameServer | Stopping admin 
+2017-12-15 21:09:24.0730 |  Info | GameServer | Stopped admin. 
+2017-12-15 21:52:42.5732 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2017-12-15 21:52:42.7467 |  Info | Program |   Interface:         0.0.0.0 
+2017-12-15 21:52:42.7667 |  Info | Program |   Port:                 4490 
+2017-12-15 21:52:42.7818 |  Info | Program |   Name:      GC-Core Test Server 
+2017-12-15 21:52:42.7998 |  Info | Program |   FQDN:                      
+2017-12-15 21:52:42.8169 |  Info | Program |   Players:                50 
+2017-12-15 21:52:42.8329 |  Info | Program |   Announce:             True 
+2017-12-15 21:52:42.8489 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2017-12-15 21:52:42.8489 |  Info | Program | Starting... 
+2017-12-15 21:52:43.8837 |  Info | ConstantData | Loaded Language de 
+2017-12-15 21:52:44.1344 | Debug | GameServer | Announcing self to master server... 
+2017-12-15 21:52:44.1695 |  Info | GameServer | Loading resources... 
+2017-12-15 21:52:44.3750 |  Info | GameServer | Starting admin 
+2017-12-15 21:52:44.9054 |  Info | GameServer | Resource admin started. 
+2017-12-15 21:52:44.9184 |  Info | GameServer | Starting TerraTex-RL-RPG 
+2017-12-15 21:52:44.9395 |  Info | GameServer | Starting scoreboard 
+2017-12-15 21:52:45.3235 |  Info | GameServer | Resource scoreboard started. 
+2017-12-15 21:52:45.3526 | Error | GameServer | ERROR STARTING RESOURCE TerraTex-RL-RPG System.IO.FileNotFoundException: Die Datei oder Assembly "file:///C:\Users\Norman_124\Desktop\Neuer Ordner (2)\GT-MP-Server\resources\TerraTex-RL-RPG\bin\Debug\TerraTex-RL-RPG.dll" oder eine Abhängigkeit davon wurde nicht gefunden. Das System kann die angegebene Datei nicht finden.
+Dateiname: "file:///C:\Users\Norman_124\Desktop\Neuer Ordner (2)\GT-MP-Server\resources\TerraTex-RL-RPG\bin\Debug\TerraTex-RL-RPG.dll"
+   bei System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   bei System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+   bei System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+   bei System.Reflection.Assembly.LoadFrom(String assemblyFile)
+   bei GrandTheftMultiplayer.Server.GameServer.StartResource(String resourceName, String father)
+
+WRN: Protokollierung der Assemblybindung ist AUS.
+Sie können die Protokollierung der Assemblybindungsfehler aktivieren, indem Sie den Registrierungswert [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) auf 1 festlegen.
+Hinweis: Die Protokollierung der Assemblybindungsfehler führt zu einer gewissen Leistungseinbuße.
+Sie können dieses Feature deaktivieren, indem Sie den Registrierungswert [HKLM\Software\Microsoft\Fusion!EnableLog] entfernen.
+
+2017-12-15 21:52:45.4007 |  Info | GameServer | Starting speedometer 
+2017-12-15 21:52:45.4338 |  Info | GameServer | Resource speedometer started. 
+2017-12-15 21:52:45.4499 |  Info | Program | Started! Waiting for connections. 
+2017-12-15 21:52:51.8977 |  Info | Program | Terminating... 
+2017-12-15 21:52:51.9318 |  Info | GameServer | Stopping speedometer 
+2017-12-15 21:52:51.9578 |  Info | GameServer | Stopped speedometer. 
+2017-12-15 21:52:51.9749 |  Info | GameServer | Stopping scoreboard 
+2017-12-15 21:52:52.1172 |  Info | GameServer | Stopped scoreboard. 
+2017-12-15 21:52:52.1343 |  Info | GameServer | Stopping admin 
+2017-12-15 21:52:52.2506 |  Info | GameServer | Stopped admin. 
+2017-12-15 21:58:22.2587 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2017-12-15 21:58:22.4041 |  Info | Program |   Interface:         0.0.0.0 
+2017-12-15 21:58:22.4221 |  Info | Program |   Port:                 4490 
+2017-12-15 21:58:22.4382 |  Info | Program |   Name:      GC-Core Test Server 
+2017-12-15 21:58:22.4592 |  Info | Program |   FQDN:                      
+2017-12-15 21:58:22.4753 |  Info | Program |   Players:                50 
+2017-12-15 21:58:22.4923 |  Info | Program |   Announce:             True 
+2017-12-15 21:58:22.5074 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2017-12-15 21:58:22.5224 |  Info | Program | Starting... 
+2017-12-15 21:58:23.6324 |  Info | ConstantData | Loaded Language de 
+2017-12-15 21:58:23.8871 | Debug | GameServer | Announcing self to master server... 
+2017-12-15 21:58:23.9231 |  Info | GameServer | Loading resources... 
+2017-12-15 21:58:24.1106 |  Info | GameServer | Starting admin 
+2017-12-15 21:58:24.6360 |  Info | GameServer | Resource admin started. 
+2017-12-15 21:58:24.6501 |  Info | GameServer | Starting TerraTex-RL-RPG 
+2017-12-15 21:58:24.7233 |  Info | GameServer | Starting scoreboard 
+2017-12-15 21:58:25.0682 |  Info | GameServer | Resource scoreboard started. 
+2017-12-15 21:58:25.7329 |  Info | GameServer | Resource TerraTex-RL-RPG started. 
+2017-12-15 21:58:25.7500 |  Info | GameServer | Starting speedometer 
+2017-12-15 21:58:25.7781 |  Info | TTRPG | Loaded Configuration: database 
+2017-12-15 21:58:25.7941 |  Info | TTRPG | Loaded Configuration: server 
+2017-12-15 21:58:25.7781 |  Info | GameServer | Resource speedometer started. 
+2017-12-15 21:58:25.8262 |  Info | Program | Started! Waiting for connections. 
+2017-12-15 21:58:26.4990 |  Info | TTRPG | Database Connection created. 
+2017-12-15 21:58:26.5150 |  Info | TTRPG | Starting TerraTex_RL_RPG Gamemode 
+2017-12-15 21:58:26.5361 |  Info | TTRPG | Started User Data Store Thread 
+2017-12-15 21:58:26.5361 |  Info | TTRPG | Started Update Player PlayTime Thread 
+2017-12-15 22:00:23.8873 | Debug | GameServer | Announcing self to master server... 
+2017-12-15 22:00:54.0427 |  Info | GameServer | Initiating connection: [213.209.74.180:51132] 
+2017-12-15 22:00:54.6453 |  Info | GameServer | Player connection refused: Wrong password. (213.209.74.180) 
+2017-12-15 22:01:06.5043 |  Info | GameServer | Initiating connection: [213.209.74.180:51132] 
+2017-12-15 22:01:06.9835 |  Info | GameServer | Processing connection: norman124 (norman124) [213.209.74.180] 
+2017-12-15 22:01:07.5791 |  Info | GameServer | Connection established: norman124 (norman124) [213.209.74.180] 
+2017-12-15 22:01:21.1412 |  Info | PlayerLogin | Account norman124(2) logged in. 
+2017-12-15 22:01:36.2763 |  Info | PlayerDisconnection | Account norman124(2) left the server: Quit 
+2017-12-15 22:01:36.2974 |  Info | GameServer | Player disconnected: norman124 (norman124) [213.209.74.180], reason: Quit 
+2017-12-15 22:01:47.6004 |  Info | Program | Terminating... 
+2017-12-15 22:01:47.6335 |  Info | GameServer | Stopping speedometer 
+2017-12-15 22:01:47.6556 |  Info | GameServer | Stopped speedometer. 
+2017-12-15 22:01:47.6726 |  Info | GameServer | Stopping TerraTex-RL-RPG 
+2017-12-15 22:01:48.3277 |  Info | GameServer | Stopped TerraTex-RL-RPG. 
+2017-12-15 22:01:48.3437 |  Info | GameServer | Stopping scoreboard 
+2017-12-15 22:01:48.4720 |  Info | GameServer | Stopped scoreboard. 
+2017-12-15 22:01:48.4881 |  Info | GameServer | Stopping admin 
+2017-12-15 22:01:48.6054 |  Info | GameServer | Stopped admin. 
