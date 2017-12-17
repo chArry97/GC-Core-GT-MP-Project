@@ -20,7 +20,7 @@ class Database : Script {
 		command.CommandText = command;
 		connection.Open();
 		
-		return reader = commandExecuteReader();
+		return reader = command.ExecuteReader();
 	}
 	
 	public static void endCommand() {

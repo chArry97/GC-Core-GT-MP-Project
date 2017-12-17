@@ -5,5 +5,5 @@
     <assembly ref="MySql.Data.dll" />
 	
 	<!--Database-->
-	<script src="/Database/Database.cs" type="server" lang="csharp" />
+	<script src="/database/Database.cs" type="server" lang="csharp" />
 </meta>

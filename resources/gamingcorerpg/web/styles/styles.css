@@ -1,0 +1,31 @@
+.header {
+  background-color: darkgrey;
+  height: 100px;
+  margin-bottom: 5px;
+}
+
+.welcome {
+  font-family: calibri;
+  font-color: white;
+}
+
+.register-image-logo {
+  text-align: right;
+  height: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+.left {
+  height: 600px;
+  float: left;
+  width: 49%;
+  border: 2px solid grey
+}
+                          
+.right {
+  height: 600px;
+  float: right;
+  width: 49%;
+  border: 2px solid grey
+}
