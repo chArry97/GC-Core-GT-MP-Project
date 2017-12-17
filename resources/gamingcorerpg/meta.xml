@@ -1,0 +1,9 @@
+<meta>
+    <info name="Gamingcore RPG" author="chArry" type="gamemode" />
+    
+    <assembly ref="System.Data.dll" />
+    <assembly ref="MySql.Data.dll" />
+	
+	<!--Database-->
+	<script src="/Database/Database.cs" type="server" lang="csharp" />
+</meta>
