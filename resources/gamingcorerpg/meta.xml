@@ -6,4 +6,10 @@
 	
 	<!--Database-->
 	<script src="/database/Database.cs" type="server" lang="csharp" />
+	
+	<!--Web-->
+	<file src="/web/start.html" />
+	<file src="/web/styles/styles.css" />
+	<file src="/web/images/logo.png" />
+	
 </meta>
