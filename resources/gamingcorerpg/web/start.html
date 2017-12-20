@@ -23,14 +23,23 @@
 	<div id="Login" class="tabcontent">
 		<form onsubmit="login();">
 			<h4 class="headline">Login</h4>
-			<input class="inputfield" type="text" name="email" placeholder="E-Mail" required checked><br>
-			<input class="inputfield" type="password" name="pw" placeholder="Passwort"><br>
+			<input class="inputfield" type="text" id="email" placeholder="E-Mail" required checked><br>
+			<input class="inputfield" type="password" id="pw" placeholder="Passwort" required checked><br>
+			<button class="inputbutton" type="submit">Einloggen<br>
 		</form>
 	</div>
 	<div id="Registrieren" class="tabcontent">
-		Registrieren-Tab
+		<form onsubmit="register();">
+			<h4 class="headline">Registrieren</h4>
+			<input class="inputfield" type="text" id="regemail" placeholder="E-Mail" required checked><br>
+			<input class="inputfield" type="password" id="regpw" placeholder="Passwort" required checked><br>
+			<input class="inputfield" type="password" id="regpwrepeated" placeholder="Passwort wiederholen" required checked><br>
+			<button class="inputbutton" type="submit">Registrieren<br>
+		</form>
 	</div>
-	
+	<div class="footer">
+		<p class="footertext">powered by <a href="http://www.gc-core.net">gc-core.net</a></p>
+	</div>
 </body>
 
 <script>
@@ -51,6 +60,11 @@
 
 		document.getElementById(tabName).style.display = "block";
 		evt.currentTarget.className += " active";
+	}
+	
+	function login() {
+		var email = $("#email").val();
+		var pw = $("#pw").val();
 	}
 </script>
 

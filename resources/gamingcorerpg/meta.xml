@@ -6,6 +6,7 @@
 	
 	<!--Database-->
 	<script src="/database/Database.cs" type="server" lang="csharp" />
+	<script src="/login/client_login.js" type="client" lang="javascript" />
 	
 	<!--Web-->
 	<file src="/web/start.html" />
