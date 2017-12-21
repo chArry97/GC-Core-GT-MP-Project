@@ -3,6 +3,10 @@
 	padding: 0px;
 }
 
+body {
+	background-color: White;
+}
+
 .header {
 	background-color: #323232;
 	padding-bottom: 5px;
