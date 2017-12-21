@@ -10,7 +10,6 @@ API.onResourceStart.connect(function() {
 	API.setCefBrowserHeadless(login_browser, true);
 	API.showCursor(true);
 	API.setCanOpenChat(false);
-	API.setHudVisible(false);
 	API.setPlayerInvincible(true);
 });
 
@@ -18,6 +17,5 @@ function close() {
 	API.showCursor(false);
 	API.destroyCefBrowser(login_browser);
 	API.setCanOpenChat(true);
-	API.setHudVisible(true);
 	API.setPlayerInvincible(true);
 }
