@@ -1,0 +1,148 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: White;
+}
+
+.header {
+	background-color: #323232;
+	padding-bottom: 5px;
+}
+
+.welcome {
+	font-family: calibri;
+	font-size: 28px;
+	color: white;
+	margin-top: 0px;
+}
+
+.welcome_desc {
+	color: white;
+	padding: 1px;
+	font-family: calibri;
+}
+
+.register-image-logo {
+	text-align: right;
+	height: 90px;
+	float: left;
+	margin-top: 5px;
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+.tab {
+	overflow: hidden;
+	background-color: LightGreen;
+}
+
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	color: White;
+	font-family: calibri;
+	font-size: 18px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-shadow: 0 0 5px black;
+	width: 33.33%;
+}
+
+.tab button:hover {
+	background-color: PaleGreen;
+}
+
+.tab button.active {
+	background-color: MediumSeaGreen;
+}
+
+.tabcontent {
+	display: none;
+	padding: 6px 12px;
+	border-top: none;
+	animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.headline {
+	font-family: calibri;
+	font-size: 32px;
+	letter-spacing: 8px;
+	font-variant: small-caps;
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.inputfield {
+	height: 32px;
+	margin-top: 8px;
+	font-size: 22px;
+	display: block;
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+
+.inputbutton {
+	background-color: LightGreen;
+	float: center;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	color: White;
+	font-family: calibri;
+	font-size: 18px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-shadow: 0 0 5px black;
+	width: 100%;
+	display: block;
+}
+
+.inputbutton:hover {
+	background-color: PaleGreen;
+}
+
+.inputbutton:active {
+	background-color: MediumSeaGreen;
+}
+
+.footer {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	background-color: LightGreen;
+	text-align: center;
+	padding: 5px;
+}
+
+.footertext {
+	font-family: Calibri;
+	color: White;
+	font-size: 14px;
+	text-shadow: 0 0 5px black;
+}
+
+a {
+	font-family: Calibri;
+	font-variant: small-caps;
+	font-weight: bold;
+	color: White;
+	font-size: 18px;
+	text-shadow: 0 0 5px black;
+}

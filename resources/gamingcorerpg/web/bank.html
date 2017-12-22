@@ -3,11 +3,11 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Willkommen auf dem Gamingcore GT-MP Server!</title>
-	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/bankstyles.css">
 </head>
 <body>
 	<div class="header">                                                
-		<img src="images/logo.png" class="register-image-logo">
+		<img src="images/bank_logo_v3.png" class="register-image-logo">
 		<h3 class="welcome">Willkommen auf dem Gamingcore GT-MP Server!</h3>
 		<p class="welcome_desc">
 			Logge dich mit deinem Account ein, damit du spielen kannst.<br>
@@ -16,21 +16,27 @@
 		</p>
 	</div>
 	<div class="tab">
-		<button class="logintabbutton" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
-		<button class="logintabbutton" onclick="openTab(event, 'Registrieren')">Registrieren</button>
+		<button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+		<button class="tablinks" onclick="openTab(event, 'Einzahlen')">Einzahlen</button>
+		<button class="tablinks" onclick="openTab(event, 'Auszahlen')">Auszahlen</button>
 	</div>
 	
-	<div id="Login" class="tabcontent">
+	<div id="Home" class="tabcontent">
+		<h4 class="headline">Home</h4>
+		<input class="inputfield" type="text" id="email" placeholder="E-Mail" required checked><br>
+		<input class="inputfield" type="password" id="pw" placeholder="Passwort" required checked><br>
+	</div>
+	<div id="Einzahlen" class="tabcontent">
 		<form onsubmit="login();">
-			<h4 class="headline">Login</h4>
+			<h4 class="headline">Einzahlen</h4>
 			<input class="inputfield" type="text" id="email" placeholder="E-Mail" required checked><br>
 			<input class="inputfield" type="password" id="pw" placeholder="Passwort" required checked><br>
 			<button class="inputbutton" type="submit">Einloggen<br>
 		</form>
 	</div>
-	<div id="Registrieren" class="tabcontent">
+	<div id="Auszahlen" class="tabcontent">
 		<form onsubmit="register();">
-			<h4 class="headline">Registrieren</h4>
+			<h4 class="headline">Auszahlen</h4>
 			<input class="inputfield" type="text" id="regemail" placeholder="E-Mail" required checked><br>
 			<input class="inputfield" type="password" id="regpw" placeholder="Passwort" required checked><br>
 			<input class="inputfield" type="password" id="regpwrepeated" placeholder="Passwort wiederholen" required checked><br>
