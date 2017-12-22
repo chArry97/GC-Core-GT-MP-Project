@@ -7,15 +7,16 @@ API.onResourceStart.connect(function() {
 	API.waitUntilCefBrowserInit(login_browser);
 	API.setCefBrowserPosition(login_browser, res.Width/4, res.Height/4);
 	API.loadPageCefBrowser(login_browser, "/web/start.html");
-	API.setCefBrowserHeadless(login_browser, true);
+  API.setHudVisible(false);
 	API.showCursor(true);
 	API.setCanOpenChat(false);
-	API.setPlayerInvincible(true);
+	API.setPlayerInvincible(false);
 });
 
 function close() {
 	API.showCursor(false);
 	API.destroyCefBrowser(login_browser);
-	API.setCanOpenChat(true);
+	API.setCanOpenChat(true);      
+  API.setHudVisible(true);
 	API.setPlayerInvincible(true);
 }

@@ -123,3 +123,39 @@ Sie können dieses Feature deaktivieren, indem Sie den Registrierungswert [HKLM\S
 2017-12-15 22:01:48.4720 |  Info | GameServer | Stopped scoreboard. 
 2017-12-15 22:01:48.4881 |  Info | GameServer | Stopping admin 
 2017-12-15 22:01:48.6054 |  Info | GameServer | Stopped admin. 
+2017-12-21 20:46:59.4066 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2017-12-21 20:46:59.5740 |  Info | Program |   Interface:         0.0.0.0 
+2017-12-21 20:46:59.5961 |  Info | Program |   Port:                 4490 
+2017-12-21 20:46:59.6171 |  Info | Program |   Name:      GC-Core Test Server 
+2017-12-21 20:46:59.6342 |  Info | Program |   FQDN:                      
+2017-12-21 20:46:59.6492 |  Info | Program |   Players:                50 
+2017-12-21 20:46:59.6693 |  Info | Program |   Announce:             True 
+2017-12-21 20:46:59.6863 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2017-12-21 20:46:59.7053 |  Info | Program | Starting... 
+2017-12-21 20:47:00.9958 |  Info | ConstantData | Loaded Language de 
+2017-12-21 20:47:01.2605 | Debug | GameServer | Announcing self to master server... 
+2017-12-21 20:47:01.2966 |  Info | GameServer | Loading resources... 
+2017-12-21 20:47:01.4961 |  Info | GameServer | Starting admin 
+2017-12-21 20:47:02.1087 |  Info | GameServer | Resource admin started. 
+2017-12-21 20:47:02.1288 |  Info | GameServer | Starting TerraTex-RL-RPG 
+2017-12-21 20:47:02.1529 |  Info | GameServer | Starting scoreboard 
+2017-12-21 20:47:02.5379 |  Info | GameServer | Resource scoreboard started. 
+2017-12-21 20:47:02.5970 |  Info | GameServer | Resource TerraTex-RL-RPG started. 
+2017-12-21 20:47:02.6171 |  Info | GameServer | Starting speedometer 
+2017-12-21 20:47:02.6381 |  Info | TTRPG | Loaded Configuration: database 
+2017-12-21 20:47:02.6542 |  Info | TTRPG | Loaded Configuration: server 
+2017-12-21 20:47:02.6381 |  Info | GameServer | Resource speedometer started. 
+2017-12-21 20:47:02.6853 |  Info | Program | Started! Waiting for connections. 
+2017-12-21 20:47:03.3490 |  Info | TTRPG | Database Connection created. 
+2017-12-21 20:47:03.3641 |  Info | TTRPG | Starting TerraTex_RL_RPG Gamemode 
+2017-12-21 20:47:03.3851 |  Info | TTRPG | Started User Data Store Thread 
+2017-12-21 20:47:03.3851 |  Info | TTRPG | Started Update Player PlayTime Thread 
+2017-12-21 20:47:34.5877 |  Info | Program | Terminating... 
+2017-12-21 20:47:34.6248 |  Info | GameServer | Stopping speedometer 
+2017-12-21 20:47:34.6559 |  Info | GameServer | Stopped speedometer. 
+2017-12-21 20:47:34.6790 |  Info | GameServer | Stopping TerraTex-RL-RPG 
+2017-12-21 20:47:35.3347 |  Info | GameServer | Stopped TerraTex-RL-RPG. 
+2017-12-21 20:47:35.3568 |  Info | GameServer | Stopping scoreboard 
+2017-12-21 20:47:35.4901 |  Info | GameServer | Stopped scoreboard. 
+2017-12-21 20:47:35.5082 |  Info | GameServer | Stopping admin 
+2017-12-21 20:47:35.6285 |  Info | GameServer | Stopped admin. 
