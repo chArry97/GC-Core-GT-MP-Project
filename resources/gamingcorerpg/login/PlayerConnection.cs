@@ -1,5 +1,7 @@
 using System;
 using GrandTheftMultiplayer.Server.API;
+using GrandTheftMultiplayer.Server.Elements;
+using GrandTheftMultiplayer.Shared.Math;
 
 public class PlayerConnection : Script {
 	

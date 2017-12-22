@@ -9,8 +9,8 @@ API.onResourceStart.connect(function() {
 	API.loadPageCefBrowser(login_browser, "/web/start.html");
 	API.setHudVisible(false);
 	API.setCanOpenChat(false);
-    API.waitUntilCefBrowserLoaded(browser);
 	API.showCursor(true);
+    API.waitUntilCefBrowserLoaded(browser);
 });
 
 function close() {
