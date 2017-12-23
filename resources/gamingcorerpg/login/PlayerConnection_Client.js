@@ -13,9 +13,19 @@ API.onResourceStart.connect(function() {
     API.waitUntilCefBrowserLoaded(browser);
 });
 
-function close() {
-	API.showCursor(false);
-	API.destroyCefBrowser(login_browser);
-	API.setCanOpenChat(true);      
-	API.setHudVisible(true);
+API.onServerEventTrigger.connect(function(eventname, args) {
+	if (eventname == "spawnPlayer") {
+		API.showCursor(false);
+		API.destroyCefBrowser(login_browser);
+		API.setCanOpenChat(true);      
+		API.setHudVisible(true);
+	}
+});
+
+function loginPlayer(String email, String password) {
+	API.triggerServerEvent("eventClientLogin", email, password);
+}
+
+function registerPlayer(String email, String password) {
+	API.triggerServerEvent("eventClientRegister", email, password);
 }

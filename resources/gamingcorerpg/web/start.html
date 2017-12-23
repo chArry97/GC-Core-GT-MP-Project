@@ -65,6 +65,22 @@
 	function login() {
 		var email = $("#email").val();
 		var pw = $("#pw").val();
+		
+		if (email != null && pw != null) {
+			resourceCall("loginPlayer", email, pw);
+		}
+	}
+	
+	function register() {
+		var email = $("#regemail").val();
+		var pw = $("#regpw").val();
+		var pwrep = $("#regpwrepeated").val();
+		
+		if (email != null && pw != null && pwrep != null) {
+			if (pw == pwrep) {
+				resourceCall("registerPlayer", email, pw);
+			}
+		}
 	}
 </script>
 
