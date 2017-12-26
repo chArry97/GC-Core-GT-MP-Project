@@ -14,7 +14,7 @@ API.onResourceStart.connect(function() {
 });
 
 API.onServerEventTrigger.connect(function(eventname, args) {
-	if (eventname == "spawnPlayer") {
+	if (eventname === "spawnPlayer") {
 		API.showCursor(false);
 		API.destroyCefBrowser(login_browser);
 		API.setCanOpenChat(true);      
@@ -22,10 +22,10 @@ API.onServerEventTrigger.connect(function(eventname, args) {
 	}
 });
 
-function loginPlayer(String email, String password) {
+function loginPlayer(email, password) {
 	API.triggerServerEvent("eventClientLogin", email, password);
 }
 
-function registerPlayer(String email, String password) {
+function registerPlayer(email, password) {
 	API.triggerServerEvent("eventClientRegister", email, password);
 }

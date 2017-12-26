@@ -9,7 +9,7 @@ public class PlayerConnection : Script {
 	
 	public PlayerConnection() {
 		API.onPlayerConnected += OnPlayerConnectedEvent;
-		API.onClientEventTrigger += OnPlayerLoginEvent;
+		API.onClientEventTrigger += OnClientEvent;
 	}
 	
 	public void OnPlayerConnectedEvent(Client player) {
@@ -32,7 +32,7 @@ public class PlayerConnection : Script {
 				
 				Int32 accounts = Int32.Parse(cmd.ExecuteScalar().ToString());
 				
-				if (account > 0) {
+				if (accounts > 0) {
 					cmd = conn.CreateCommand();
 					cmd.CommandText = "SELECT Password FROM user WHERE Email = @email";
 					cmd.Parameters.AddWithValue("@email", arguments[0]);
@@ -52,7 +52,7 @@ public class PlayerConnection : Script {
 					player.sendNotification ("Login Error", "Diese Email ist uns nicht bekannt");
 				}
 				conn.Close();
-			} catch (MySqlException e) {
+			} catch (MySqlException) {
 				player.sendNotification ("Login Error", "Es ist ein Fehler aufgetreten!");
 			}	
 		} else if (eventName.Equals("eventClientRegister")) {
@@ -65,11 +65,11 @@ public class PlayerConnection : Script {
 				
 				Int32 accounts = Int32.Parse(cmd.ExecuteScalar().ToString());
 				
-				if (account == 0) {
+				if (accounts == 0) {
 					cmd = conn.CreateCommand();
 					cmd.CommandText = "INSERT INTO user (Email, Password) Values (@email, @password)";
 					cmd.Parameters.AddWithValue("@email", arguments[0]);
-					cmd.Parameters.AddWithValue("@password", PlayerConnection.Base64Encode(arguments[1]));
+					cmd.Parameters.AddWithValue("@password", PlayerConnection.Base64Encode((string) arguments[1]));
 
 					cmd.ExecuteNonQuery();
 					loginPlayerSuccess(player);
@@ -77,7 +77,7 @@ public class PlayerConnection : Script {
 					player.sendNotification ("Register Error", "Ein Account mit dieser Email ist schon vorhanden!");
 				}
 				conn.Close();
-			} catch (MySqlException e) {
+			} catch (MySqlException) {
 				player.sendNotification ("Register Error", "Es ist ein Fehler aufgetreten!");
 			}
 		}

@@ -2,6 +2,7 @@
     <info name="Gamingcore RPG" author="chArry" type="gamemode" />
     
     <assembly ref="System.Data.dll" />
+    <assembly ref="System.Xml.dll" />
     <assembly ref="MySql.Data.dll" />
 	
 	<!--Database-->

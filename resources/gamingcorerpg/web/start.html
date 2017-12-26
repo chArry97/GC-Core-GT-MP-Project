@@ -1,9 +1,51 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="utf-8"/>
-	<title>Willkommen auf dem Gamingcore GT-MP Server!</title>
-	<link rel="stylesheet" href="styles/styles.css">
+    <meta charset="utf-8" />
+    <title>Willkommen auf dem Gamingcore GT-MP Server!</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function login() {
+            var email = $("#email").val();
+            var pw = $("#pw").val();
+
+            if (email != null && pw != null) {
+                resourceCall("loginPlayer", email, pw);
+            }
+        }
+
+        function register() {
+            var email = $("#regemail").val();
+            var pw = $("#regpw").val();
+            var pwrep = $("#regpwrepeated").val();
+
+            if (email != null && pw != null && pwrep != null) {
+                if (pw == pwrep) {
+                    resourceCall("registerPlayer", email, pw);
+                }
+            }
+        }
+    </script>
 </head>
 <body>
 	<div class="header">                                                
@@ -25,7 +67,7 @@
 			<h4 class="headline">Login</h4>
 			<input class="inputfield" type="text" id="email" placeholder="E-Mail" required checked><br>
 			<input class="inputfield" type="password" id="pw" placeholder="Passwort" required checked><br>
-			<button class="inputbutton" type="submit">Einloggen<br>
+			<button class="inputbutton" type="submit">Einloggen</button>
 		</form>
 	</div>
 	<div id="Registrieren" class="tabcontent">
@@ -34,54 +76,11 @@
 			<input class="inputfield" type="text" id="regemail" placeholder="E-Mail" required checked><br>
 			<input class="inputfield" type="password" id="regpw" placeholder="Passwort" required checked><br>
 			<input class="inputfield" type="password" id="regpwrepeated" placeholder="Passwort wiederholen" required checked><br>
-			<button class="inputbutton" type="submit">Registrieren<br>
+			<button class="inputbutton" type="submit">Registrieren</button>
 		</form>
 	</div>
 	<div class="footer">
 		<p class="footertext">powered by <a href="http://www.gc-core.net">gc-core.net</a></p>
 	</div>
 </body>
-
-<script>
-	document.getElementById("defaultOpen").click();
-
-	function openTab(evt, tabName) {
-		var i, tabcontent, tablinks;
-
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-
-		document.getElementById(tabName).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
-	
-	function login() {
-		var email = $("#email").val();
-		var pw = $("#pw").val();
-		
-		if (email != null && pw != null) {
-			resourceCall("loginPlayer", email, pw);
-		}
-	}
-	
-	function register() {
-		var email = $("#regemail").val();
-		var pw = $("#regpw").val();
-		var pwrep = $("#regpwrepeated").val();
-		
-		if (email != null && pw != null && pwrep != null) {
-			if (pw == pwrep) {
-				resourceCall("registerPlayer", email, pw);
-			}
-		}
-	}
-</script>
-
 </html>

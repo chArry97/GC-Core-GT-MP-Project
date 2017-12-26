@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml;
+using GrandTheftMultiplayer.Shared;
 
 public class ConfigurationLoader {
 	
@@ -9,8 +10,8 @@ public class ConfigurationLoader {
 	
 	private readonly Dictionary<string, XmlDocument> _xmlConfigs = new Dictionary<string, XmlDocument>();
 
-	private ConfigurationLoader() {
-		string[] fileEntries = Directory.GetFiles(TTRPG.Api.getResourceFolder() + "/config");
+    private ConfigurationLoader() {
+        string[] fileEntries = Directory.GetFiles(Directory.GetCurrentDirectory() + "/resources/gamingcorerpg/config");
 		foreach (string fileEntry in fileEntries) {
 			string configName = Path.GetFileNameWithoutExtension(fileEntry);
 			XmlDocument config = new XmlDocument();
