@@ -7,7 +7,7 @@ using GrandTheftMultiplayer.Server.Managers;
 using GrandTheftMultiplayer.Shared;
 using GrandTheftMultiplayer.Shared.Math;
 
-public class Cars
+public class Cars : Script
 {
     [Command("veh", Alias = "Vehicle")]//Command führt aus das /veh oder /vehicle das Auto Gespawnt wird.
     public void veh(Client player, string vehicle, int color1 = 0, int color2 = 0) //int Hash = Deklaration des namens
