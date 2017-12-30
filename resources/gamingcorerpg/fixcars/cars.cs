@@ -21,7 +21,7 @@ public class Cars : Script
             if(color2 > 159) { color2 = 0; }
             API.createVehicle(VehicleHash.Adder, vehPos, new Vector3(0,0,vehRot.Z), color1, color2);
             
-            API.sendChatMassageToPlayer(player, "Dein Auto wurde gespawnt.");
+            API.sendChatMessageToPlayer(player, "Dein Auto wurde gespawnt.");
         }
         else
         {
