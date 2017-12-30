@@ -6,10 +6,18 @@
     <assembly ref="MySql.Data.dll" />
 	
 	<!--Database-->
-	<script src="/database/Database.cs" type="server" lang="csharp" />
+	<script src="/general/Database.cs" type="server" lang="csharp" />
+	
+	<!--Admin-->
+	<script src="/admin/CarCommands.cs" type="server" lang="csharp" />
+	<script src="/admin/PlayerCommands.cs" type="server" lang="csharp" />
+	
+    <!-- Blinker -->
+	<script src="/vehicle/VehIndicatorMain.cs" type="server" lang="csharp" />
+	<script src="/vehicle/VehIndicator.js" type="client" lang="javascript" />
 	
 	<script src="GamingcoreRpg.cs" type="server" lang="csharp" />
-	<script src="/configuration_manager/ConfigurationLoader.cs" type="server" lang="csharp" />
+	<script src="/general/ConfigurationLoader.cs" type="server" lang="csharp" />
 	<script src="/login/PlayerConnection.cs" type="server" lang="csharp" />
 	<script src="/login/PlayerConnection_Client.js" type="client" lang="javascript" />
 	
