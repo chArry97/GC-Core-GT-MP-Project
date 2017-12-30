@@ -4,9 +4,45 @@
     <meta charset="utf-8" />
     <title>Willkommen auf dem Gamingcore GT-MP Server!</title>
     <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+	<div class="header">                                                
+		<img src="images/logo.png" class="register-image-logo" alt="Gamingcore Logo">
+		<h3 class="welcome">Willkommen auf dem Gamingcore GT-MP Server!</h3>
+		<p class="welcome_desc">
+			Logge dich mit deinem Account ein, damit du spielen kannst.<br>
+			Solltest du noch keinen Account haben, so hast du die Möglichkeit,<br>
+			dir einen neuen Account zu erstellen.
+		</p>
+	</div>
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
+		<button class="tablinks" onclick="openTab(event, 'Registrieren')">Registrieren</button>
+	</div>
+	
+	<div id="Login" class="tabcontent">
+		<form id="submitLogin" onsubmit="login(); return false;">
+			<h4 class="headline" id="loginHead">Login</h4>
+			<input class="inputfield" type="text" id="email" placeholder="E-Mail" required><br>
+			<input class="inputfield" type="password" id="pw" placeholder="Passwort" required><br>
+			<button class="inputbutton" type="submit">Einloggen</button>
+		</form>
+	</div>
+	<div id="Registrieren" class="tabcontent">
+		<form id="submitRegister" onsubmit="register(); return false;">
+			<h4 class="headline">Registrieren</h4>
+			<input class="inputfield" type="text" id="regemail" placeholder="E-Mail" required><br>
+			<input class="inputfield" type="password" id="regpw" placeholder="Passwort" required><br>
+			<input class="inputfield" type="password" id="regpwrepeated" placeholder="Passwort wiederholen" required><br>
+			<button class="inputbutton" type="submit">Registrieren</button>
+		</form>
+	</div>
+	<div class="footer">
+		<p class="footertext">powered by <a href="http://www.gc-core.net">gc-core.net</a></p>
+	</div>
 
     <script>
-        document.getElementById("defaultOpen").click();
+        document.getElementById("defaultOpen").click();		
 
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -26,61 +62,21 @@
         }
 
         function login() {
-            var email = $("#email").val();
-            var pw = $("#pw").val();
-
-            if (email != null && pw != null) {
-                resourceCall("loginPlayer", email, pw);
-            }
+            var email = document.getElementById("email").value;
+            var pw = document.getElementById("pw").value;
+			
+            resourceCall("loginPlayer", email, pw);
         }
 
         function register() {
-            var email = $("#regemail").val();
-            var pw = $("#regpw").val();
-            var pwrep = $("#regpwrepeated").val();
+            var email = document.getElementById("regemail").value;
+            var pw = document.getElementById("regpw").value;
+            var pwrep = document.getElementById("regpwrepeated").value;
 
-            if (email != null && pw != null && pwrep != null) {
-                if (pw == pwrep) {
-                    resourceCall("registerPlayer", email, pw);
-                }
+            if (pw == pwrep) {
+                resourceCall("registerPlayer", email, pw);
             }
         }
     </script>
-</head>
-<body>
-	<div class="header">                                                
-		<img src="images/logo.png" class="register-image-logo">
-		<h3 class="welcome">Willkommen auf dem Gamingcore GT-MP Server!</h3>
-		<p class="welcome_desc">
-			Logge dich mit deinem Account ein, damit du spielen kannst.<br>
-			Solltest du noch keinen Account haben, so hast du die Möglichkeit,<br>
-			dir einen neuen Account zu erstellen.
-		</p>
-	</div>
-	<div class="tab">
-		<button class="tablinks" onclick="openTab(event, 'Login')" id="defaultOpen">Login</button>
-		<button class="tablinks" onclick="openTab(event, 'Registrieren')">Registrieren</button>
-	</div>
-	
-	<div id="Login" class="tabcontent">
-		<form onsubmit="login();">
-			<h4 class="headline">Login</h4>
-			<input class="inputfield" type="text" id="email" placeholder="E-Mail" required checked><br>
-			<input class="inputfield" type="password" id="pw" placeholder="Passwort" required checked><br>
-			<button class="inputbutton" type="submit">Einloggen</button>
-		</form>
-	</div>
-	<div id="Registrieren" class="tabcontent">
-		<form onsubmit="register();">
-			<h4 class="headline">Registrieren</h4>
-			<input class="inputfield" type="text" id="regemail" placeholder="E-Mail" required checked><br>
-			<input class="inputfield" type="password" id="regpw" placeholder="Passwort" required checked><br>
-			<input class="inputfield" type="password" id="regpwrepeated" placeholder="Passwort wiederholen" required checked><br>
-			<button class="inputbutton" type="submit">Registrieren</button>
-		</form>
-	</div>
-	<div class="footer">
-		<p class="footertext">powered by <a href="http://www.gc-core.net">gc-core.net</a></p>
-	</div>
 </body>
 </html>

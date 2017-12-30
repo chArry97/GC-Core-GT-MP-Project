@@ -31,7 +31,9 @@
   <connections_slow_mode>false</connections_slow_mode>
   
   <resource src="admin" />
-  <resource src="TerraTex-RL-RPG" />
   <resource src="speedometer" />
+  <resource src="spawner" />
+  <resource src="gamingcorerpg" />
+  
   
 </config>

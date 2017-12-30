@@ -23,6 +23,7 @@ public class PlayerConnection : Script {
 	
 	public void OnClientEvent(Client player, string eventName, params object[] arguments) {
 		if (eventName.Equals("eventClientLogin")) {
+			API.consoleOutput("eventClientLogin");
 			MySqlConnection conn = Database.getDatabase();
 			try {
 				conn.Open();
@@ -44,6 +45,7 @@ public class PlayerConnection : Script {
 					string dbpw = (string) result.Rows[0]["Password"];
 					
 					if (arguments[1].Equals(PlayerConnection.Base64Decode(dbpw))) {
+						player.sendNotification ("Login", "Einloggen erfolgreich");
 						loginPlayerSuccess(player);
 					} else {
 						player.sendNotification ("Login Error", "Email oder Passwort falsch");
@@ -53,9 +55,11 @@ public class PlayerConnection : Script {
 				}
 				conn.Close();
 			} catch (MySqlException) {
+				API.consoleOutput ("ERROR connecting to database failed");
 				player.sendNotification ("Login Error", "Es ist ein Fehler aufgetreten!");
 			}	
 		} else if (eventName.Equals("eventClientRegister")) {
+			API.consoleOutput("eventClientRegister");
 			MySqlConnection conn = Database.getDatabase();
 			try {
 				conn.Open();
@@ -78,6 +82,7 @@ public class PlayerConnection : Script {
 				}
 				conn.Close();
 			} catch (MySqlException) {
+				API.consoleOutput ("ERROR connecting to database failed");
 				player.sendNotification ("Register Error", "Es ist ein Fehler aufgetreten!");
 			}
 		}
