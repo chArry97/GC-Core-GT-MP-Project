@@ -19,7 +19,7 @@ public class Cars : Script
             Vector3 vehRot = player.rotation;
             if(color1 > 159) { color1 = 0; } //Größer als 159 erstellt 0 = Schwarz
             if(color2 > 159) { color2 = 0; }
-            API.createVehicle(myvehicle, vehPos, new Vector3(0,0,vehRot.Z), color1, color2);
+            API.createVehicle(myVehicle, vehPos, new Vector3(0,0,vehRot.Z), color1, color2);
             
             API.sendChatMessageToPlayer(player, "Dein Auto wurde gespawnt.");
         }
