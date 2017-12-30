@@ -6,8 +6,8 @@ using GrandTheftMultiplayer.Server.Constant;
 using GrandTheftMultiplayer.Server.Managers;
 using GrandTheftMultiplayer.Shared;
 using GrandTheftMultiplayer.Shared.Math;
-
-public class Cars : Script
+//Dieses Script darf nacher nur unter Admins laufen.
+public class Cars : Script 
 {
     [Command("veh", Alias = "Vehicle")]//Command führt aus das /veh oder /vehicle das Auto Gespawnt wird.
     public void veh(Client player, string vehicle, int color1 = 0, int color2 = 0) //int Hash = Deklaration des namens
@@ -15,7 +15,7 @@ public class Cars : Script
         VehicleHash myVehicle = API.vehicleNameToModel(vehicle); //Spawnt durch string vehicle jegliches model was ich will.
         if (myVehicle != ((VehicleHash)0))
         {
-            Vector3 vehPos = player.position; //die Definition 
+            Vector3 vehPos = player.position; //die Definition der x Axe für Player!
             Vector3 vehRot = player.rotation;
             if(color1 > 159) { color1 = 0; } //Größer als 159 erstellt 0 = Schwarz
             if(color2 > 159) { color2 = 0; }

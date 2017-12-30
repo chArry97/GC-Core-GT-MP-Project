@@ -9,6 +9,9 @@
 	<script src="/database/Database.cs" type="server" lang="csharp" />
   <!--Auto-->
   <script src="/fixcars/cars.cs" type="server" lang="csharp" />
+  
+  <!--Teleport-->
+  <script src="/Teleport/Teleportieren.cs" type="server" lang="csharp" />
 	
   <script src="GamingcoreRpg.cs" type="server" lang="csharp" />
 	<script src="/configuration_manager/ConfigurationLoader.cs" type="server" lang="csharp" />
