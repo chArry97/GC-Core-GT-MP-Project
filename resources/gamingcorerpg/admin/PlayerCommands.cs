@@ -1,0 +1,28 @@
+﻿using System;
+using System;
+using GrandTheftMultiplayer.Server;
+using GrandTheftMultiplayer.Server.API;
+using GrandTheftMultiplayer.Server.Elements;
+using GrandTheftMultiplayer.Server.Constant;
+using GrandTheftMultiplayer.Server.Managers;
+using GrandTheftMultiplayer.Shared;
+using GrandTheftMultiplayer.Shared.Math;
+
+public class PlayerCommands : Script
+{
+    [Command("tp", Alias = "teleport", "Usage: /tp *Player*", GreedyArg = true)
+    public void cmd_teleport(Client sender, Client target)
+    {
+        API.sendNotificationToPlayer(sender, "~w~Du wurdest zum Spieler teleportiert.:~r~" + target.name);
+        API.sendNotificationToPlayer(target, "~r~" + sender.name + " ~w~hat sich zu dir teleportiert!");
+        sender.position = target.position;
+    }
+	
+    [Command("tphere", Alias = "teleportHere", "Usage: /tptome *Player*", GreedyArg = true)]
+    public void cmd_teleportHere(Client sender, Client target)
+    {
+        API.sendNotificationToPlayer(target, "~w~Du teleportierst den Spieler zu dir:~r~" + sender.name);
+        API.sendNotificationToPlayer(sender, "~r~" + target.name + " ~w~Du wurdest teleportiert!");
+        target.position = sender.position;
+    }
+}
