@@ -195,3 +195,55 @@ Sie können dieses Feature deaktivieren, indem Sie den Registrierungswert [HKLM\S
 2017-12-22 18:47:22.3634 |  Info | GameServer | Stopped scoreboard. 
 2017-12-22 18:47:22.3825 |  Info | GameServer | Stopping admin 
 2017-12-22 18:47:22.5028 |  Info | GameServer | Stopped admin. 
+2017-12-30 01:04:22.4532 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2017-12-30 01:04:22.6397 |  Info | Program |   Interface:         0.0.0.0 
+2017-12-30 01:04:22.6808 |  Info | Program |   Port:                 4490 
+2017-12-30 01:04:22.6968 |  Info | Program |   Name:      GC-Core Test Server 
+2017-12-30 01:04:22.7148 |  Info | Program |   FQDN:                      
+2017-12-30 01:04:22.7148 |  Info | Program |   Players:                50 
+2017-12-30 01:04:22.7429 |  Info | Program |   Announce:             True 
+2017-12-30 01:04:22.7580 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2017-12-30 01:04:22.7690 |  Info | Program | Starting... 
+2017-12-30 01:04:23.9231 |  Info | ConstantData | Loaded Language de 
+2017-12-30 01:04:24.2058 | Fatal | GameServer | Socket Exception when starting server System.Net.Sockets.SocketException (0x80004005): Normalerweise darf jede Socketadresse (Protokoll, Netzwerkadresse oder Anschluss) nur jeweils einmal verwendet werden
+   bei System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   bei System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   bei Lidgren.Network.NetPeer.BindSocket(Boolean reBind)
+   bei Lidgren.Network.NetPeer.InitializeNetwork()
+   bei Lidgren.Network.NetPeer.Start()
+   bei GrandTheftMultiplayer.Server.GameServer.Start(String[] filterscripts)
+2017-12-30 01:04:26.5631 |  Info | Program | Terminating... 
+2017-12-30 01:04:48.5713 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2017-12-30 01:04:48.7498 |  Info | Program |   Interface:         0.0.0.0 
+2017-12-30 01:04:48.7729 |  Info | Program |   Port:                 4490 
+2017-12-30 01:04:48.7929 |  Info | Program |   Name:      GC-Core Test Server 
+2017-12-30 01:04:48.8130 |  Info | Program |   FQDN:                      
+2017-12-30 01:04:48.8310 |  Info | Program |   Players:                50 
+2017-12-30 01:04:48.8471 |  Info | Program |   Announce:             True 
+2017-12-30 01:04:48.8661 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2017-12-30 01:04:48.8832 |  Info | Program | Starting... 
+2017-12-30 01:04:50.2658 |  Info | ConstantData | Loaded Language de 
+2017-12-30 01:04:50.5326 | Debug | GameServer | Announcing self to master server... 
+2017-12-30 01:04:50.5717 |  Info | GameServer | Loading resources... 
+2017-12-30 01:04:50.7862 |  Info | GameServer | Starting admin 
+2017-12-30 01:05:12.7226 |  Info | GameServer | Resource admin started. 
+2017-12-30 01:05:12.7447 |  Info | GameServer | Starting speedometer 
+2017-12-30 01:05:12.7918 |  Info | GameServer | Resource speedometer started. 
+2017-12-30 01:05:12.8058 |  Info | GameServer | Starting spawner 
+2017-12-30 01:05:15.1862 |  Info | GameServer | Resource spawner started. 
+2017-12-30 01:05:15.2012 |  Info | GameServer | Starting gamingcorerpg 
+2017-12-30 01:05:18.3706 |  Info | GameServer | Resource gamingcorerpg started. 
+2017-12-30 01:05:18.3887 |  Info | Program | Started! Waiting for connections. 
+2017-12-30 01:05:18.3887 |  Info | GamingcoreRpg | Server starting... 
+2017-12-30 01:05:19.2720 |  Info | GamingcoreRpg | Connected to Database 
+2017-12-30 01:05:19.2961 |  Info | GamingcoreRpg | Connection to Database closed 
+2017-12-30 01:06:50.5367 | Debug | GameServer | Announcing self to master server... 
+2017-12-30 01:07:27.8429 |  Info | Program | Terminating... 
+2017-12-30 01:07:27.8860 |  Info | GameServer | Stopping gamingcorerpg 
+2017-12-30 01:07:28.1306 |  Info | GameServer | Stopped gamingcorerpg. 
+2017-12-30 01:07:28.1477 |  Info | GameServer | Stopping spawner 
+2017-12-30 01:07:28.2670 |  Info | GameServer | Stopped spawner. 
+2017-12-30 01:07:28.2851 |  Info | GameServer | Stopping speedometer 
+2017-12-30 01:07:28.3041 |  Info | GameServer | Stopped speedometer. 
+2017-12-30 01:07:28.3242 |  Info | GameServer | Stopping admin 
+2017-12-30 01:07:28.4395 |  Info | GameServer | Stopped admin. 
