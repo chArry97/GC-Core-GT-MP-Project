@@ -20,9 +20,6 @@ public class Teleportieren : Script
     [Command("tptome", "Usage: /tptome *Player*", GreedyArg = true)] // Spieler wird zum Admin teleportiert.
     public void teleportPlayerToMe(Client sender, Client target)
     {
-        Player player = sender.getData("player");
-        if (player.Account.AdminLvl < 10)
-            return;
         API.sendNotificationToPlayer(target, "~w~Du Teleportierst den Spieler zu dir:~r~" + sender.name);
         API.sendNotificationToPlayer(sender, "~r~" + target.name + " ~w~Du wurdest Teleportiert!");
         target.position = sender.position;

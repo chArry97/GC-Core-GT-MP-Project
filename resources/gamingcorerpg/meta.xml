@@ -13,6 +13,12 @@
   <!--Teleport-->
   <script src="/Teleport/Teleportieren.cs" type="server" lang="csharp" />
 	
+  <!--ADAC System-->
+  <script src="/Fraktionen/ADAC/carsrepair.cs" type="server" lang="csharp" />
+  
+  <!--Hilfe-->
+  <script src="/Commands/Playercommandlist.cs" type="server" lang="csharp" />
+  
   <script src="GamingcoreRpg.cs" type="server" lang="csharp" />
 	<script src="/configuration_manager/ConfigurationLoader.cs" type="server" lang="csharp" />
 	<script src="/login/PlayerConnection.cs" type="server" lang="csharp" />
