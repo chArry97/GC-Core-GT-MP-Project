@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="grandtheftmultiplayer.api" Version="0.1.640.64" />
+    <PackageReference Include="grandtheftmultiplayer.typescript" Version="0.1.17" />
+    <PackageReference Include="MySql.Data" Version="6.10.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="web\" />
+  </ItemGroup>
+
+</Project>

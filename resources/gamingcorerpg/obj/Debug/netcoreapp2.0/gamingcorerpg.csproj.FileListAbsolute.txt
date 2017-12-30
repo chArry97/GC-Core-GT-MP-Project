@@ -1,0 +1,9 @@
+D:\gta\GT-MP-Server\resources\gamingcorerpg\bin\Debug\netcoreapp2.0\gamingcorerpg.deps.json
+D:\gta\GT-MP-Server\resources\gamingcorerpg\bin\Debug\netcoreapp2.0\gamingcorerpg.dll
+D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.csprojResolveAssemblyReference.cache
+D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.csproj.CoreCompileInputs.cache
+D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.AssemblyInfoInputs.cache
+D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.AssemblyInfo.cs
+D:\gta\GT-MP-Server\resources\gamingcorerpg\bin\Debug\netcoreapp2.0\gamingcorerpg.pdb
+D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.dll
+D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.pdb
