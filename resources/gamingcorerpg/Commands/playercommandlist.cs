@@ -7,11 +7,11 @@ using GrandTheftMultiplayer.Server.Managers;
 using GrandTheftMultiplayer.Shared;
 using GrandTheftMultiplayer.Shared.Math;
 
-public class Playercommandlist
+public class Playercommandlist : Script
 {
-    [Command ("hilfe")]
-	public void hilfe(Client player)
-	{
+    [Command("hilfe")]
+    public void hilfe(Client player)
+    {
         API.sendChatMessageToPlayer(player, "~r~System:~w~ Folgende Befehle sind auf diesem Server Aktiv:");
         API.sendChatMessageToPlayer(player, "~r~System:~w~ /veh /vehh /repair /tp /tptome");
     }

@@ -8,7 +8,7 @@ using GrandTheftMultiplayer.Shared;
 using GrandTheftMultiplayer.Shared.Math;
 
 //Das Anfangscript des Car Respair System.
-public class Carsrepair
+public class Carsrepair : Script
 {
     [Command("repair")]
     public void CMD_Repair(Client player)
