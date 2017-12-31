@@ -10,7 +10,7 @@ using GrandTheftMultiplayer.Shared.Math;
 
 public class PlayerCommands : Script
 {
-    [Command("tp", Alias = "teleport", "Usage: /tp *Player*", GreedyArg = true)
+    [Command("tp", "Usage: /tp *Player*", Alias = "teleport", GreedyArg = true)]
     public void cmd_teleport(Client sender, Client target)
     {
         API.sendNotificationToPlayer(sender, "~w~Du wurdest zum Spieler teleportiert.:~r~" + target.name);
@@ -18,7 +18,7 @@ public class PlayerCommands : Script
         sender.position = target.position;
     }
 	
-    [Command("tphere", Alias = "teleportHere", "Usage: /tptome *Player*", GreedyArg = true)]
+    [Command("tphere", "Usage: /tptome *Player*", Alias = "teleportHere", GreedyArg = true)]
     public void cmd_teleportHere(Client sender, Client target)
     {
         API.sendNotificationToPlayer(target, "~w~Du teleportierst den Spieler zu dir:~r~" + sender.name);
