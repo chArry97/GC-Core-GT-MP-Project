@@ -19,9 +19,11 @@ public class CarCommands : Script
             Vector3 vehRot = player.rotation;
             if(primaryColor > 159) { primaryColor = 0; }
             if(secondaryColor > 159) { secondaryColor = 0; }
-            API.createVehicle(vehicleHash, vehPos, new Vector3(0,0,vehRot.Z), primaryColor, secondaryColor);
+            NetHandle vehHandle = API.createVehicle(vehicleHash, vehPos, new Vector3(0,0,vehRot.Z), primaryColor, secondaryColor);
             
             API.sendChatMessageToPlayer(player, "Dein Auto wurde gespawnt.");
+			
+			API.setPlayerIntoVehicle(player, vehHandle, -1);
         }
         else
         {
@@ -36,9 +38,11 @@ public class CarCommands : Script
             Vector3 vehRot = player.rotation;
             if (primaryColor > 159) { primaryColor = 0; }
             if (secondaryColor > 159) { secondaryColor = 0; }
-            API.createVehicle((VehicleHash) vehicle, vehPos, new Vector3(0, 0, vehRot.Z), primaryColor, secondaryColor);
+			NetHandle vehHandle = API.createVehicle((VehicleHash) vehicle, vehPos, new Vector3(0, 0, vehRot.Z), primaryColor, secondaryColor);
 
             API.sendChatMessageToPlayer(player, "Dein Auto wurde gespawnt.");
+			
+			API.setPlayerIntoVehicle(player, vehHandle, -1);
     }
 	
 	[Command("repair")]
