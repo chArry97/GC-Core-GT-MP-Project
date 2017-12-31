@@ -25,7 +25,7 @@ public class PlayerCommands : Script
         target.position = sender.position;
     }
 	
-    [Command("tppos", "Usage: /tppos *Player*", Alias = "teleportToPosition", GreedyArg = true)]
+    [Command("tppos", "Usage: /tppos *Player*", Alias = "teleportToPosition")]
     public void cmd_teleportHere(Client sender, float x, float y, float z)
     {
         API.sendNotificationToPlayer(sender, "~w~Du wurdest teleportiert!");
