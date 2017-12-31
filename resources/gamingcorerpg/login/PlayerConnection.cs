@@ -71,7 +71,9 @@ public class PlayerConnection : Script {
 				
 				if (accounts == 0) {
 					cmd = conn.CreateCommand();
-					cmd.CommandText = "INSERT INTO user (Email, Password) Values (@email, @password)";
+					cmd.CommandText = "INSERT INTO user (Username, SocialClubName, Email, Password) Values (@username, @socialclubname, @email, @password)";
+					cmd.Parameters.AddWithValue("@username", player.name);
+					cmd.Parameters.AddWithValue("@username", player.socialClubName);
 					cmd.Parameters.AddWithValue("@email", arguments[0]);
 					cmd.Parameters.AddWithValue("@password", PlayerConnection.Base64Encode((string) arguments[1]));
 
