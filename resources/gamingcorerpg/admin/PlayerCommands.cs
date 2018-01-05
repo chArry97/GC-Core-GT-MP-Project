@@ -6,29 +6,72 @@ using GrandTheftMultiplayer.Server.Constant;
 using GrandTheftMultiplayer.Server.Managers;
 using GrandTheftMultiplayer.Shared;
 using GrandTheftMultiplayer.Shared.Math;
+using MySql.Data.MySqlClient;
 
 public class PlayerCommands : Script
 {
     [Command("tp", "Usage: /tp *Player*", Alias = "teleport", GreedyArg = true)]
     public void cmd_teleport(Client sender, Client target)
     {
-        API.sendNotificationToPlayer(sender, "~w~Du wurdest zum Spieler teleportiert.:~r~" + target.name);
-        API.sendNotificationToPlayer(target, "~r~" + sender.name + " ~w~hat sich zu dir teleportiert!");
-        sender.position = target.position;
+		if (API.getEntityData(sender.handle, "Adminlevel") >= 5) {
+			API.sendNotificationToPlayer(sender, "~w~Du wurdest zum Spieler teleportiert: ~r~" + target.name);
+			API.sendNotificationToPlayer(target, "~r~" + sender.name + " ~w~hat sich zu dir teleportiert!");
+			sender.position = target.position;
+		} else {
+			API.sendNotificationToPlayer(sender, "~w~Du hast nicht genügend Rechte, um diesen Befehl zu benutzen");
+		}
     }
 	
-    [Command("tphere", "Usage: /tptome *Player*", Alias = "teleportHere", GreedyArg = true)]
+    [Command("tphere", "Usage: /tphere *Player*", Alias = "teleportHere", GreedyArg = true)]
     public void cmd_teleportHere(Client sender, Client target)
     {
-        API.sendNotificationToPlayer(target, "~w~Du teleportierst den Spieler zu dir:~r~" + sender.name);
-        API.sendNotificationToPlayer(sender, "~r~" + target.name + " ~w~Du wurdest teleportiert!");
-        target.position = sender.position;
+		if (API.getEntityData(sender.handle, "Adminlevel") >= 5) {
+			API.sendNotificationToPlayer(sender, "~w~Du teleportierst den Spieler zu dir:~r~" + sender.name);
+			API.sendNotificationToPlayer(target, "~r~" + target.name + " ~w~Du wurdest teleportiert!");
+			target.position = sender.position;
+		} else {
+			API.sendNotificationToPlayer(sender, "~w~Du hast nicht genügend Rechte, um diesen Befehl zu benutzen");
+		}
     }
 	
-    [Command("tppos", "Usage: /tppos *Player*", Alias = "teleportToPosition")]
-    public void cmd_teleportHere(Client sender, float x, float y, float z)
+    [Command("tppos", "Usage: /tppos *X* *Y* *Z*", Alias = "teleportToPosition")]
+    public void cmd_teleportPosition(Client sender, float x, float y, float z)
     {
-        API.sendNotificationToPlayer(sender, "~w~Du wurdest teleportiert!");
-        sender.position = new Vector3(x, y, z);
+		if (API.getEntityData(sender.handle, "Adminlevel") >= 5) {
+			API.sendNotificationToPlayer(sender, "~w~Du wurdest teleportiert!");
+			sender.position = new Vector3((float) x, (float) y, (float) z);
+		} else {
+			API.sendNotificationToPlayer(sender, "~w~Du hast nicht genügend Rechte, um diesen Befehl zu benutzen");
+		}
+    }
+	
+    [Command("adminlvl", "Usage: /adminlvl *Player(SocialClubName)* *Adminlevel*", Alias = "setadminlevel")]
+    public void cmd_setAdminlevel(Client sender, Client target, int level)
+    {
+		if (API.getEntityData(sender.handle, "Adminlevel") >= 6) {
+			
+			MySqlConnection conn = Database.getDatabase();
+			try {
+				conn.Open();
+				
+				MySqlCommand cmd = conn.CreateCommand();
+				cmd = conn.CreateCommand();
+				cmd.CommandText = "UPDATE user SET Adminlevel = @adminlevel WHERE SocialClubName = @socialclubname";
+				cmd.Parameters.AddWithValue("@adminlevel", level.ToString());
+				cmd.Parameters.AddWithValue("@socialclubname", target.socialClubName);
+
+				cmd.ExecuteNonQuery();
+				conn.Close();
+				
+				API.setEntityData(target.handle, "Adminlevel", level);
+				API.sendNotificationToPlayer(sender, "~w~Du hast ~r~" + target.name + " ~w~zu Adminlevel ~r~" + level.ToString() + " ~w~hinzugefügt");
+				API.sendNotificationToPlayer(sender, "~w~Du wurdest von ~r~" + sender.name + " ~w~zu Adminlevel ~r~" + level.ToString() + " ~w~hinzugefügt");
+			} catch (MySqlException) {
+				API.consoleOutput ("ERROR connecting to database failed");
+				sender.sendNotification ("Register Error", "Es ist ein Fehler aufgetreten!");
+			}
+		} else {
+			API.sendNotificationToPlayer(sender, "~w~Du hast nicht genügend Rechte, um diesen Befehl zu benutzen");
+		}
     }
 }

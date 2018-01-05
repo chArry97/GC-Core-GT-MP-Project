@@ -23,7 +23,6 @@ public class PlayerConnection : Script {
 	
 	public void OnClientEvent(Client player, string eventName, params object[] arguments) {
 		if (eventName.Equals("eventClientLogin")) {
-			API.consoleOutput("eventClientLogin");
 			MySqlConnection conn = Database.getDatabase();
 			try {
 				conn.Open();
@@ -46,7 +45,7 @@ public class PlayerConnection : Script {
 					
 					if (arguments[1].Equals(PlayerConnection.Base64Decode(dbpw))) {
 						player.sendNotification ("Login", "Einloggen erfolgreich");
-						loginPlayerSuccess(player, arguments[0]);
+						loginPlayerSuccess(player, (string) arguments[0]);
 					} else {
 						player.sendNotification ("Login Error", "Email oder Passwort falsch");
 					}
@@ -59,7 +58,6 @@ public class PlayerConnection : Script {
 				player.sendNotification ("Login Error", "Es ist ein Fehler aufgetreten!");
 			}	
 		} else if (eventName.Equals("eventClientRegister")) {
-			API.consoleOutput("eventClientRegister");
 			MySqlConnection conn = Database.getDatabase();
 			try {
 				conn.Open();
@@ -71,14 +69,14 @@ public class PlayerConnection : Script {
 				
 				if (accounts == 0) {
 					cmd = conn.CreateCommand();
-					cmd.CommandText = "INSERT INTO user (Username, SocialClubName, Email, Password) Values (@username, @socialclubname, @email, @password)";
+					cmd.CommandText = "INSERT INTO user (Username, SocialClubName, EMail, Password) Values (@username, @socialclubname, @email, @password)";
 					cmd.Parameters.AddWithValue("@username", player.name);
-					cmd.Parameters.AddWithValue("@username", player.socialClubName);
+					cmd.Parameters.AddWithValue("@socialclubname", player.socialClubName);
 					cmd.Parameters.AddWithValue("@email", arguments[0]);
 					cmd.Parameters.AddWithValue("@password", PlayerConnection.Base64Encode((string) arguments[1]));
 
 					cmd.ExecuteNonQuery();
-					loginPlayerSuccess(player, arguments[0]);
+					loginPlayerSuccess(player, (string) arguments[0]);
 				} else {
 					player.sendNotification ("Register Error", "Ein Account mit dieser Email ist schon vorhanden!");
 				}
@@ -107,14 +105,14 @@ public class PlayerConnection : Script {
 		try {
 			conn.Open();
 			MySqlCommand cmd = conn.CreateCommand();
-			cmd.CommandText = "SELECT Adminlevel FROM user WHERE Email = @email";
+			cmd.CommandText = "SELECT Adminlevel FROM user WHERE EMail = @email";
 			cmd.Parameters.AddWithValue("@email", email);
 			
 			DataTable result = new DataTable();
 			result.Load(cmd.ExecuteReader());		
-			Int32 adminlevel = Int32.Parse((string) result.Rows[0]["Adminlevel"]);
+			//string adminlevel = result.Rows[0]["Adminlevel"].ToString();
 			
-			API.SetEntityData(player.handle, "Adminlevel", adminlevel);
+			API.setEntityData(player.handle, "Adminlevel", result.Rows[0]["Adminlevel"]);
 			
 			conn.Close();
 		} catch (MySqlException) {
@@ -124,7 +122,8 @@ public class PlayerConnection : Script {
 		
 		player.nametagVisible = true;
 		player.invincible = false;
-		player.position = new Vector3(-1370.6250, 56.1227, 0);
+		//player.position = new Vector3(-1370.6250, 56.1227, 0);
+		player.position = new Vector3(1975.552, 3820.538, 33.44833);
 		player.transparency = 255;
 		player.freeze (false);
 		player.collisionless = false;

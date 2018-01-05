@@ -7,3 +7,12 @@ D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerp
 D:\gta\GT-MP-Server\resources\gamingcorerpg\bin\Debug\netcoreapp2.0\gamingcorerpg.pdb
 D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.dll
 D:\gta\GT-MP-Server\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.pdb
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\bin\Debug\netcoreapp2.0\gamingcorerpg.deps.json
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\bin\Debug\netcoreapp2.0\gamingcorerpg.dll
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\bin\Debug\netcoreapp2.0\gamingcorerpg.pdb
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.csprojResolveAssemblyReference.cache
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.csproj.CoreCompileInputs.cache
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.AssemblyInfoInputs.cache
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.AssemblyInfo.cs
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.dll
+C:\Users\Norman_124\Documents\server\GC-Core-GT-MP-Project\resources\gamingcorerpg\obj\Debug\netcoreapp2.0\gamingcorerpg.pdb

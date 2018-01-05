@@ -2334,11 +2334,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\gta\\GT-MP-Server\\resources\\gamingcorerpg\\gamingcorerpg.csproj",
+      "projectUniqueName": "C:\\Users\\Norman_124\\Documents\\server\\GC-Core-GT-MP-Project\\resources\\gamingcorerpg\\gamingcorerpg.csproj",
       "projectName": "gamingcorerpg",
-      "projectPath": "D:\\gta\\GT-MP-Server\\resources\\gamingcorerpg\\gamingcorerpg.csproj",
+      "projectPath": "C:\\Users\\Norman_124\\Documents\\server\\GC-Core-GT-MP-Project\\resources\\gamingcorerpg\\gamingcorerpg.csproj",
       "packagesPath": "C:\\Users\\Norman_124\\.nuget\\packages\\",
-      "outputPath": "D:\\gta\\GT-MP-Server\\resources\\gamingcorerpg\\obj\\",
+      "outputPath": "C:\\Users\\Norman_124\\Documents\\server\\GC-Core-GT-MP-Project\\resources\\gamingcorerpg\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",

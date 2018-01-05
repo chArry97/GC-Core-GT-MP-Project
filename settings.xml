@@ -30,7 +30,6 @@
   <no_socialclub_duplicate>true</no_socialclub_duplicate>
   <connections_slow_mode>false</connections_slow_mode>
   
-  <resource src="admin" />
   <resource src="speedometer" />
   <resource src="spawner" />
   <resource src="gamingcorerpg" />
