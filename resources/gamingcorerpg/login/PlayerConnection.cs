@@ -109,12 +109,13 @@ public class PlayerConnection : Script {
 			cmd.Parameters.AddWithValue("@email", email);
 			
 			DataTable result = new DataTable();
-			result.Load(cmd.ExecuteReader());		
-			//string adminlevel = result.Rows[0]["Adminlevel"].ToString();
+			result.Load(cmd.ExecuteReader());
 			
 			API.setEntityData(player.handle, "Adminlevel", result.Rows[0]["Adminlevel"]);
 			
 			conn.Close();
+		
+			MoneyHandler.loadMoney(player);
 		} catch (MySqlException) {
 			API.consoleOutput ("ERROR connecting to database failed");
 			player.sendNotification ("Login Error", "Informationen über Gruppenstatus konnte nicht abgerufen werden!");
