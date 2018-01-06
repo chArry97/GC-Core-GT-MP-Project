@@ -12,6 +12,9 @@
 	<script src="/admin/CarCommands.cs" type="server" lang="csharp" />
 	<script src="/admin/PlayerCommands.cs" type="server" lang="csharp" />
 	
+	<!--Player-->
+	<script src="/player/MoneyHandler.cs" type="server" lang="csharp" />
+	
     <!-- Blinker -->
 	<script src="/vehicle/VehIndicatorMain.cs" type="server" lang="csharp" />
 	<script src="/vehicle/VehIndicator.js" type="client" lang="javascript" />
