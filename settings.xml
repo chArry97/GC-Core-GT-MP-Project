@@ -33,6 +33,7 @@
   <resource src="speedometer" />
   <resource src="spawner" />
   <resource src="gamingcorerpg" />
+  <resource src="savedPositions" />
   
   
 </config>
