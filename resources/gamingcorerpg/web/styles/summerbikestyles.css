@@ -1,0 +1,87 @@
+@font-face {
+	font-family: 'sunday';
+	src:url('sunday.ttf') format('truetype');
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.header {
+	border-radius: 5%;
+}
+
+.summerbikes-logo {
+	margin: 0 auto;
+	display: block;
+	width: 75%;
+}
+
+.content {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.object {
+	width: 31%;
+	background-color: white;
+	border-radius: 30px;
+	height: 90%;
+	margin: 5px;
+	float: left;
+	border: solid 2px #63c6d5
+}
+
+.obj-header {
+	text-align: center;
+	line-height: 40%;
+	font-family: La Belle Aurore;
+	font-size: 42px;
+	color: #63c6d5;
+	margin-top: 40px;
+}	
+
+.obj-subtitle {
+	text-align: center;
+	font-family: calibri;
+	font-size: 25px;
+	color: #d260ae;
+}	
+
+.bike-img {
+	margin: 0 auto;
+	display: block;
+	width: 75%;
+	border-radius: 15px;
+}
+
+.obj-desc {
+	margin: 10px;
+	margin-top: 20px;
+	text-align: center;
+	font-family: calibri;
+	font-size: 17px;
+	color: black;
+}
+
+.obj-btn {
+	margin: 0 auto;
+	margin-bottom: 12px;
+	width: 80%;
+	height: 28px;
+	display: block;
+	border: none;
+	background-color: #63c6d5;
+	border-radius: 15px;
+	font-family: calibri;
+	font-size: 14px;
+}
+
+.obj-btn:hover {
+	background-color: #73d6e5;
+}
+
+.obj-btn:active {
+	background-color: #83e6f5;
+}

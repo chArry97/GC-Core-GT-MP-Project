@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Charakter Editor</title>
+    <link rel="stylesheet" href="styles/charakterstyles.css">
+</head>
+<body>
+	<div class="header">
+		<div class="Editor-logo">
+			<img src="images/charcreat-frau-l-head.png" class="img-side-logo" alt="Charater Editor" onclick="">
+			<img src="images/charchreat-m-head.png" class="img-main-logo" alt="Charater Editor">
+			<img src="images/charcreate-mann-r-head.png" class="img-side-logo" alt="Charater Editor" onclick="">
+		</div>	
+	</div>
+	<div class="content">
+		<button class="tablinks" type="button" onclick="openTab(event,'eltern')">Eltern</button>
+		
+			<div id="eltern" class="tabcontent">
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Mutter</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="mother">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Vater</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="father">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Ähnlichkeit</p>
+					<input type="range" min="1" max="100" value="50" class="slider-lit" id="resemblance">
+					<p class="fond-sub">Mutter</p>
+					<p class="fond-sub-right">Vater</p>
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Hautton</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="skin-tone">
+				</div>
+				
+				<button class="obj-btn-tab" type="button" onclick="">Zufällig</button>
+			</div>
+		<button id="defaultOpen" class="tablinks" type="button" onclick="openTab(event,'eigenschaften')">Eigenschaften</button>
+			
+			<div id="eigenschaften" class="tabcontent">
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Nasen-Breite</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="nose width">
+				</div>
+			
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Nasenflügel-Höhe</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="nose bottom height">
+				</div>
+			
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Nasenspite-Länge</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="nose tip length">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Nasenrücken-Tiefe </p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="nose bridge depth">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Nasen-Brüche</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="nose broken">
+				</div>
+			
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Augenbrauen-Höhe</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="brow height">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Augenbrauen-Tiefe</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="brow height">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Wangenknochen-Höhe</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone height">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Wangenknochen-Breite</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone width">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Wangen-Breite</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="cheek width">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Augen-Größe</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="Eye Size">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Lippen Fülle</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="Lip Thickness">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Kiefer-Breite</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="Jaw Width">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Kiefer-Form</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="Jaw Shape">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Kinn-Höhe</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="Chin Height">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Kinn-Tiefe</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="Chin Depth">
+				</div>
+				
+				<button class="obj-btn-tab" type="button" onclick="">Zufällig</button>
+				
+			</div>
+		<button class="tablinks" type="button" onclick="">Aussehen</button>
+		<button class="tablinks" type="button" onclick="">Haare und Haarfarbe</button>
+		<div class="slidecontainer">
+			<p class="fond-but">Rotation</p>
+			<input type="range" min="1" max="100" value="50" class="slider" id="angle">
+		</div>
+		<button class="obj-btn-bottom" type="button" onclick="">Speichern und Weiter</button>
+	</div>
+	
+	<script>
+        //document.getElementById("defaultOpen").click();		
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+		
+        function openSubTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("subtabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("subtablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+	</script>
+
+</body>
+</html>
