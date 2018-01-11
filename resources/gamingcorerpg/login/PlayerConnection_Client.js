@@ -13,15 +13,12 @@ API.onResourceStart.connect(function() {
     API.waitUntilCefBrowserLoaded(login_browser);
 });
 
-API.onServerEventTrigger.connect(function(eventname, args) {
-	if (eventname === "spawnPlayer") {
-		API.showCursor(false);
-		API.destroyCefBrowser(login_browser);
-		API.setCanOpenChat(true);      
-		API.setHudVisible(true);
-	}
-});
-
+function spawnPlayer(args) {
+	API.showCursor(false);
+	API.destroyCefBrowser(login_browser);
+	API.setCanOpenChat(true);      
+	API.setHudVisible(true);
+}
 function loginPlayer(email, password) {
 	API.triggerServerEvent("eventClientLogin", email, password);
 }

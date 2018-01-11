@@ -12,10 +12,9 @@ API.onKeyDown.connect(function (sender, e) {
 	}
 });
 
-API.onServerEventTrigger.connect(function (eventName, args) {
-	if (eventName == "IndicatorSubtitle") API.displaySubtitle(((args[0] == 1) ? "Left" : "Right") + " Indicator: " + ((args[1]) ? "~g~On" : "~r~Off"), 1000);
-});
-
+function IndicatorSubtitle(args) {
+        API.displaySubtitle(((args[0] == 1) ? "Left" : "Right") + " Indicator: " + ((args[1]) ? "~g~On" : "~r~Off"), 1000);
+}
 API.onEntityStreamIn.connect(function (ent, entType) {
 	if (entType == 1)
 	{

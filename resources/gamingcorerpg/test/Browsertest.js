@@ -1,6 +1,6 @@
 var test_browser = null;
 
-function testhtml() {
+function testhtml(args) {
 		var res = API.getScreenResolution();
 		
 		test_browser = API.createCefBrowser(res.Width/4, res.Height-20, true);
