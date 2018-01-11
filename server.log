@@ -10054,3 +10054,14 @@ Sie können dieses Feature deaktivieren, indem Sie den Registrierungswert [HKLM\S
 2018-01-11 20:09:39.7914 | Debug | GameServer | Announcing self to master server... 
 2018-01-11 20:11:39.9022 | Debug | GameServer | Announcing self to master server... 
 2018-01-11 20:13:40.0415 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:15:28.1707 |  Info | Program | Terminating... 
+2018-01-11 20:15:28.2810 |  Info | GameServer | Stopping charcreator 
+2018-01-11 20:15:28.5326 |  Info | GameServer | Stopped charcreator. 
+2018-01-11 20:15:28.7312 |  Info | GameServer | Stopping savedPositions 
+2018-01-11 20:15:28.9568 |  Info | GameServer | Stopped savedPositions. 
+2018-01-11 20:15:29.0751 |  Info | GameServer | Stopping gamingcorerpg 
+2018-01-11 20:15:29.8074 |  Info | GameServer | Stopped gamingcorerpg. 
+2018-01-11 20:15:29.9117 |  Info | GameServer | Stopping spawner 
+2018-01-11 20:15:30.1152 |  Info | GameServer | Stopped spawner. 
+2018-01-11 20:15:30.2125 |  Info | GameServer | Stopping speedometer 
+2018-01-11 20:15:30.3178 |  Info | GameServer | Stopped speedometer. 

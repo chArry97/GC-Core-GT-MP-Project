@@ -19,36 +19,63 @@ var similarityItem = null;
 var skinSimilarityItem = null;
 var angleItem = null;
 
-var featureNames = ["Nose Width", "Nose Bottom Height", "Nose Tip Length", "Nose Bridge Depth", "Nose Tip Height", "Nose Broken", "Brow Height", "Brow Depth", "Cheekbone Height", "Cheekbone Width", "Cheek Depth", "Eye Size", "Lip Thickness", "Jaw Width", "Jaw Shape", "Chin Height", "Chin Depth", "Chin Width", "Chin Indent", "Neck Width"];
+var featureNames = ["Nose Width", "Nose Bottom Height", "Nose Tip Length", "Nose Bridge Depth", 
+"Nose Tip Height", "Nose Broken", "Brow Height", "Brow Depth", "Cheekbone Height", "Cheekbone Width",
+ "Cheek Depth", "Eye Size", "Lip Thickness", "Jaw Width", "Jaw Shape", "Chin Height", "Chin Depth", 
+ "Chin Width", "Chin Indent", "Neck Width"];
 var creatorFeaturesItems = [];
 
-var appearanceNames = ["Blemishes", "Facial Hair", "Eyebrows", "Ageing", "Makeup", "Blush", "Complexion", "Sun Damage", "Lipstick", "Moles & Freckles", "Chest Hair"];
+var appearanceNames = ["Blemishes", "Facial Hair", "Eyebrows", "Ageing", "Makeup",
+ "Blush", "Complexion", "Sun Damage", "Lipstick", "Moles & Freckles", "Chest Hair"];
 var creatorAppearanceItems = [];
 var creatorAppearanceOpacityItems = [];
 
 var appearanceItemNames = [
 	// blemishes
-	["None", "Measles", "Pimples", "Spots", "Break Out", "Blackheads", "Build Up", "Pustules", "Zits", "Full Acne", "Acne", "Cheek Rash", "Face Rash", "Picker", "Puberty", "Eyesore", "Chin Rash", "Two Face", "T Zone", "Greasy", "Marked", "Acne Scarring", "Full Acne Scarring", "Cold Sores", "Impetigo"],
+	["None", "Measles", "Pimples", "Spots", "Break Out", "Blackheads", "Build Up",
+	"Pustules", "Zits", "Full Acne", "Acne", "Cheek Rash", "Face Rash", "Picker", 
+	"Puberty", "Eyesore", "Chin Rash", "Two Face", "T Zone", "Greasy", "Marked", 
+	"Acne Scarring", "Full Acne Scarring", "Cold Sores", "Impetigo"],
 	// facial hair
-	["None", "Light Stubble", "Balbo", "Circle Beard", "Goatee", "Chin", "Chin Fuzz", "Pencil Chin Strap", "Scruffy", "Musketeer", "Mustache", "Trimmed Beard", "Stubble", "Thin Circle Beard", "Horseshoe", "Pencil and 'Chops", "Chin Strap Beard", "Balbo and Sideburns", "Mutton Chops", "Scruffy Beard", "Curly", "Curly & Deep Stranger", "Handlebar", "Faustic", "Otto & Patch", "Otto & Full Stranger", "Light Franz", "The Hampstead", "The Ambrose", "Lincoln Curtain"],
+	["None", "Light Stubble", "Balbo", "Circle Beard", "Goatee", "Chin", "Chin Fuzz",
+	"Pencil Chin Strap", "Scruffy", "Musketeer", "Mustache", "Trimmed Beard", "Stubble",
+	"Thin Circle Beard", "Horseshoe", "Pencil and 'Chops", "Chin Strap Beard",
+	"Balbo and Sideburns", "Mutton Chops", "Scruffy Beard", "Curly",
+	"Curly & Deep Stranger", "Handlebar", "Faustic", "Otto & Patch",
+	"Otto & Full Stranger", "Light Franz", "The Hampstead", "The Ambrose", "Lincoln Curtain"],
 	// eyebrows
-	["None", "Balanced", "Fashion", "Cleopatra", "Quizzical", "Femme", "Seductive", "Pinched", "Chola", "Triomphe", "Carefree", "Curvaceous", "Rodent", "Double Tram", "Thin", "Penciled", "Mother Plucker", "Straight and Narrow", "Natural", "Fuzzy", "Unkempt", "Caterpillar", "Regular", "Mediterranean", "Groomed", "Bushels", "Feathered", "Prickly", "Monobrow", "Winged", "Triple Tram", "Arched Tram", "Cutouts", "Fade Away", "Solo Tram"],
+	["None", "Balanced", "Fashion", "Cleopatra", "Quizzical", "Femme", "Seductive", 
+	"Pinched", "Chola", "Triomphe", "Carefree", "Curvaceous", "Rodent", "Double Tram",
+	"Thin", "Penciled", "Mother Plucker", "Straight and Narrow", "Natural", "Fuzzy",
+	"Unkempt", "Caterpillar", "Regular", "Mediterranean", "Groomed", "Bushels", "Feathered",
+	"Prickly", "Monobrow", "Winged", "Triple Tram", "Arched Tram", "Cutouts", "Fade Away", "Solo Tram"],
 	// ageing
-	["None", "Crow's Feet", "First Signs", "Middle Aged", "Worry Lines", "Depression", "Distinguished", "Aged", "Weathered", "Wrinkled", "Sagging", "Tough Life", "Vintage", "Retired", "Junkie", "Geriatric"],
+	["None", "Crow's Feet", "First Signs", "Middle Aged", "Worry Lines", "Depression",
+	"Distinguished", "Aged", "Weathered", "Wrinkled", "Sagging", "Tough Life", "Vintage",
+	"Retired", "Junkie", "Geriatric"],
 	// makeup
-	["None", "Smoky Black", "Bronze", "Soft Gray", "Retro Glam", "Natural Look", "Cat Eyes", "Chola", "Vamp", "Vinewood Glamour", "Bubblegum", "Aqua Dream", "Pin Up", "Purple Passion", "Smoky Cat Eye", "Smoldering Ruby", "Pop Princess"],
+	["None", "Smoky Black", "Bronze", "Soft Gray", "Retro Glam", "Natural Look",
+	"Cat Eyes", "Chola", "Vamp", "Vinewood Glamour", "Bubblegum", "Aqua Dream", "Pin Up", 
+	"Purple Passion", "Smoky Cat Eye", "Smoldering Ruby", "Pop Princess"],
 	// blush
 	["None", "Full", "Angled", "Round", "Horizontal", "High", "Sweetheart", "Eighties"],
 	// complexion
-	["None", "Rosy Cheeks", "Stubble Rash", "Hot Flush", "Sunburn", "Bruised", "Alchoholic", "Patchy", "Totem", "Blood Vessels", "Damaged", "Pale", "Ghostly"],
+	["None", "Rosy Cheeks", "Stubble Rash", "Hot Flush", "Sunburn", "Bruised", "Alchoholic",
+	"Patchy", "Totem", "Blood Vessels", "Damaged", "Pale", "Ghostly"],
 	// sun damage
-	["None", "Uneven", "Sandpaper", "Patchy", "Rough", "Leathery", "Textured", "Coarse", "Rugged", "Creased", "Cracked", "Gritty"],
+	["None", "Uneven", "Sandpaper", "Patchy", "Rough", "Leathery", "Textured", "Coarse",
+	"Rugged", "Creased", "Cracked", "Gritty"],
 	// lipstick
-	["None", "Color Matte", "Color Gloss", "Lined Matte", "Lined Gloss", "Heavy Lined Matte", "Heavy Lined Gloss", "Lined Nude Matte", "Liner Nude Gloss", "Smudged", "Geisha"],
+	["None", "Color Matte", "Color Gloss", "Lined Matte", "Lined Gloss", "Heavy Lined Matte",
+	"Heavy Lined Gloss", "Lined Nude Matte", "Liner Nude Gloss", "Smudged", "Geisha"],
 	// freckles
-	["None", "Cherub", "All Over", "Irregular", "Dot Dash", "Over the Bridge", "Baby Doll", "Pixie", "Sun Kissed", "Beauty Marks", "Line Up", "Modelesque", "Occasional", "Speckled", "Rain Drops", "Double Dip", "One Sided", "Pairs", "Growth"],
+	["None", "Cherub", "All Over", "Irregular", "Dot Dash", "Over the Bridge", "Baby Doll",
+	"Pixie", "Sun Kissed", "Beauty Marks", "Line Up", "Modelesque", "Occasional", "Speckled",
+	"Rain Drops", "Double Dip", "One Sided", "Pairs", "Growth"],
 	// chest hair
-	["None", "Natural", "The Strip", "The Tree", "Hairy", "Grisly", "Ape", "Groomed Ape", "Bikini", "Lightning Bolt", "Reverse Lightning", "Love Heart", "Chestache", "Happy Face", "Skull", "Snail Trail", "Slug and Nips", "Hairy Arms"]
+	["None", "Natural", "The Strip", "The Tree", "Hairy", "Grisly", "Ape", "Groomed Ape",
+	"Bikini", "Lightning Bolt", "Reverse Lightning", "Love Heart", "Chestache", "Happy Face",
+	"Skull", "Snail Trail", "Slug and Nips", "Hairy Arms"]
 ];
 
 var hairIDList = [
