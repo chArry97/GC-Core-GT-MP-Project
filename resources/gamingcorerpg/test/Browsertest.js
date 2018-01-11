@@ -1,7 +1,6 @@
 var test_browser = null;
 
-API.onServerEventTrigger.connect(function(eventname, args) {
-	if (eventname === "testhtml") {
+function testhtml() {
 		var res = API.getScreenResolution();
 		
 		test_browser = API.createCefBrowser(res.Width/4, res.Height-20, true);
@@ -12,5 +11,4 @@ API.onServerEventTrigger.connect(function(eventname, args) {
 		API.setCanOpenChat(false);
 		API.showCursor(true);
 		API.waitUntilCefBrowserLoaded(test_browser);
-	}
-});
+}
