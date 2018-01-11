@@ -23,10 +23,17 @@
 	<script src="/general/ConfigurationLoader.cs" type="server" lang="csharp" />
 	<script src="/login/PlayerConnection.cs" type="server" lang="csharp" />
 	<script src="/login/PlayerConnection_Client.js" type="client" lang="javascript" />
+	<script src="/test/Browsertest.cs" type="server" lang="csharp" />
+	<script src="/test/Browsertest.js" type="client" lang="javascript" />
 	
 	<!--Web-->
 	<file src="/web/start.html" />
 	<file src="/web/styles/styles.css" />
 	<file src="/web/images/logo.png" />
+	<file src="/web/charcreator.html" />
+	<file src="/web/styles/charakterstyles.css" />
+	<file src="/web/images/charchreat-m-head.png" />
+	<file src="/web/images/charcreate-mann-r-head.png" />
+	<file src="/web/images/charcreat-frau-l-head.png" />
 	
 </meta>

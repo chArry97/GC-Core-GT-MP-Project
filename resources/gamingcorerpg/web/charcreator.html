@@ -8,9 +8,9 @@
 <body>
 	<div class="header">
 		<div class="Editor-logo">
-			<img src="images/charcreat-frau-l-head.png" class="img-side-logo" alt="Charater Editor" onclick="">
+			<img src="images/charcreat-frau-l-head.png" class="img-side-logo" alt="Charater Editor" onclick="setGender(event, 'female')">
 			<img src="images/charchreat-m-head.png" class="img-main-logo" alt="Charater Editor">
-			<img src="images/charcreate-mann-r-head.png" class="img-side-logo" alt="Charater Editor" onclick="">
+			<img id="defaultGender" src="images/charcreate-mann-r-head.png" class="img-side-logo" alt="Charater Editor" onclick="setGender(event, 'male')">
 		</div>	
 	</div>
 	<div class="content">
@@ -41,93 +41,180 @@
 				
 				<button class="obj-btn-tab" type="button" onclick="">Zufällig</button>
 			</div>
-		<button id="defaultOpen" class="tablinks" type="button" onclick="openTab(event,'eigenschaften')">Eigenschaften</button>
+		<button class="tablinks" type="button" onclick="openTab(event,'eigenschaften')">Eigenschaften</button>
 			
 			<div id="eigenschaften" class="tabcontent">
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Nasen-Breite</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="nose width">
-				</div>
 			
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Nasenflügel-Höhe</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="nose bottom height">
-				</div>
+				<button class="subtablinks" type="button" onclick="openSubTab(event,'nase')">Nase</button>
 			
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Nasenspite-Länge</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="nose tip length">
-				</div>
-				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Nasenrücken-Tiefe </p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="nose bridge depth">
-				</div>
-				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Nasen-Brüche</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="nose broken">
-				</div>
+					<div id="nase" class="subtabcontent">
+					
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Nasen-Breite</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="nose width">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Nasenflügel-Höhe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="nose bottom height">
+						</div>
+					
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Nasenspite-Länge</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="nose tip length">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Nasenrücken-Tiefe </p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="nose bridge depth">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Nasen-Brüche</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="nose broken">
+						</div>
+						
+					</div>
 			
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Augenbrauen-Höhe</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="brow height">
-				</div>
+				<button class="subtablinks" type="button" onclick="openSubTab(event,'augen')">Augen</button>
+			
+					<div id="augen" class="subtabcontent">
+					
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Augenbrauen-Höhe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="brow height">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Augenbrauen-Tiefe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="brow depth">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Augen-Größe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="Eye Size">
+						</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Augenbrauen-Tiefe</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="brow height">
-				</div>
+					</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Wangenknochen-Höhe</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone height">
-				</div>
+				<button class="subtablinks" type="button" onclick="openSubTab(event,'wangen')">Wangen und Mund</button>
+			
+					<div id="wangen" class="subtabcontent">
+					
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Wangenknochen-Höhe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone height">
+						</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Wangenknochen-Breite</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone width">
-				</div>
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Wangenknochen-Breite</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone width">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Wangenknochen-Tiefe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone depth">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Wangen-Breite</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="cheek width">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Lippen Fülle</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="Lip Thickness">
+						</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Wangen-Breite</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="cheek width">
-				</div>
+					</div>
+					
+				<button class="subtablinks" type="button" onclick="openSubTab(event,'kiefer')">Kiefer</button>
+			
+					<div id="kiefer" class="subtabcontent">
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Augen-Größe</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="Eye Size">
-				</div>
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Kiefer-Breite</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="Jaw Width">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Kiefer-Form</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="Jaw Shape">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Kinn-Höhe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="Chin Height">
+						</div>
+						
+						<div class="sub-slidecontainer-tab">
+							<p class="fond-but">Kinn-Tiefe</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="Chin Depth">
+						</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Lippen Fülle</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="Lip Thickness">
-				</div>
-				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Kiefer-Breite</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="Jaw Width">
-				</div>
-				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Kiefer-Form</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="Jaw Shape">
-				</div>
-				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Kinn-Höhe</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="Chin Height">
-				</div>
-				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Kinn-Tiefe</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="Chin Depth">
-				</div>
-				
+					</div>
 				<button class="obj-btn-tab" type="button" onclick="">Zufällig</button>
 				
 			</div>
-		<button class="tablinks" type="button" onclick="">Aussehen</button>
+		<button class="tablinks" type="button" onclick="openTab(event,'aussehen')">Aussehen</button>
+		
+			<div id="aussehen" class="tabcontent">
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Hautunreinheiten</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="blemishes">
+				</div>
+				
+				<div class="male">
+					<p class="fond-but">Gesichtsbehaarung</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="facial hair">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Augenbrauen</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="eyebrows">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Alterung</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="ageing">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Make-Up</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="makeup">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Rötungen</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="blush">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Teint</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="complexion">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Sonnen-Schäden</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="sun damage">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Lippenstift</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="lipstick">
+				</div>
+				
+				<div class="slidecontainer-tab">
+					<p class="fond-but">Grübchen & Sommersprossen</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="moles & freckles">
+				</div>
+				
+				<div class="male">
+					<p class="fond-but">Brust Haar</p>
+					<input type="range" min="1" max="100" value="50" class="slider" id="chest hair">
+				</div>
+			</div>
 		<button class="tablinks" type="button" onclick="">Haare und Haarfarbe</button>
 		<div class="slidecontainer">
 			<p class="fond-but">Rotation</p>
@@ -137,8 +224,11 @@
 	</div>
 	
 	<script>
-        //document.getElementById("defaultOpen").click();		
+        document.getElementById("defaultGender").click();		
 
+		var lastTab = null, lastSubtab = null;
+		
+		
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
 
@@ -152,8 +242,13 @@
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
 
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+			if (tabName == lastTab) {
+				lastTab = null;
+			} else {
+				document.getElementById(tabName).style.display = "block";
+				evt.currentTarget.className += " active";
+				lastTab = tabName;
+			}
         }
 		
         function openSubTab(evt, tabName) {
@@ -169,9 +264,37 @@
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
 
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+			if (tabName == lastSubtab) {
+				lastSubtab = null;
+			} else {
+				document.getElementById(tabName).style.display = "block";
+				evt.currentTarget.className += " active";
+				lastSubtab = tabName;
+			}
         }
+		
+		function setGender(evt, gender) {
+			var i, itemList, otherGender;
+			
+			if (gender == "male") {
+				otherGender = "female";
+			} else if (gender == "female") {
+				otherGender = "male";
+			} else {
+				gender = "male";
+				otherGender = "female";
+			}
+			
+			itemList = document.getElementsByClassName(otherGender);
+            for (i = 0; i < itemList.length; i++) {
+                itemList[i].style.display = "none";
+            }
+			
+			itemList = document.getElementsByClassName(gender);
+            for (i = 0; i < itemList.length; i++) {
+                itemList[i].style.display = "block";
+            }
+		}
 	</script>
 
 </body>
