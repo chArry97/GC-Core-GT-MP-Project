@@ -1,16 +1,16 @@
-var login_browser = null;
+var test_browser = null;
 
-API.onServerEventTrigger.connect(function() {
+API.onServerEventTrigger.connect(function(eventname, args) {
 	if (eventname === "testhtml") {
 		var res = API.getScreenResolution();
 		
-		login_browser = API.createCefBrowser(res.Width/4, res.Height/2, true);
-		API.waitUntilCefBrowserInit(login_browser);
-		API.setCefBrowserPosition(login_browser, res.Width - res.Width/4, res.Height/4);
-		API.loadPageCefBrowser(login_browser, "/web/charcreator.html");
+		test_browser = API.createCefBrowser(res.Width/4, res.Height-20, true);
+		API.waitUntilCefBrowserInit(test_browser);
+		API.setCefBrowserPosition(test_browser, res.Width - res.Width/4, 10);
+		API.loadPageCefBrowser(test_browser, "/web/charcreator.html");
 		API.setHudVisible(true);
 		API.setCanOpenChat(false);
 		API.showCursor(true);
-		API.waitUntilCefBrowserLoaded(login_browser);
+		API.waitUntilCefBrowserLoaded(test_browser);
 	}
 });

@@ -10065,3 +10065,409 @@ Sie können dieses Feature deaktivieren, indem Sie den Registrierungswert [HKLM\S
 2018-01-11 20:15:30.1152 |  Info | GameServer | Stopped spawner. 
 2018-01-11 20:15:30.2125 |  Info | GameServer | Stopping speedometer 
 2018-01-11 20:15:30.3178 |  Info | GameServer | Stopped speedometer. 
+2018-01-11 20:32:12.8172 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2018-01-11 20:32:13.0848 |  Info | Program |   Interface:         0.0.0.0 
+2018-01-11 20:32:13.1941 |  Info | Program |   Port:                 4490 
+2018-01-11 20:32:13.3074 |  Info | Program |   Name:      GC-Core Test Server 
+2018-01-11 20:32:13.4007 |  Info | Program |   FQDN:                      
+2018-01-11 20:32:13.8469 |  Info | Program |   Players:                50 
+2018-01-11 20:32:13.9291 |  Info | Program |   Announce:             True 
+2018-01-11 20:32:14.0384 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2018-01-11 20:32:14.1467 |  Info | Program | Starting... 
+2018-01-11 20:32:15.8141 |  Info | ConstantData | Loaded Language de 
+2018-01-11 20:32:16.0377 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:32:16.1801 |  Info | GameServer | Loading resources... 
+2018-01-11 20:32:16.4137 |  Info | GameServer | Starting speedometer 
+2018-01-11 20:32:16.6824 |  Info | GameServer | Resource speedometer started. 
+2018-01-11 20:32:16.7887 |  Info | GameServer | Starting spawner 
+2018-01-11 20:32:17.7071 |  Info | GameServer | Resource spawner started. 
+2018-01-11 20:32:17.8365 |  Info | GameServer | Starting gamingcorerpg 
+2018-01-11 20:32:18.4481 |  Info | GameServer | Resource gamingcorerpg started. 
+2018-01-11 20:32:18.4782 |  Info | GamingcoreRpg | Server starting... 
+2018-01-11 20:32:18.5614 |  Info | GameServer | Starting savedPositions 
+2018-01-11 20:32:19.2623 |  Info | GameServer | Resource savedPositions started. 
+2018-01-11 20:32:19.3766 |  Info | GameServer | Starting charcreator 
+2018-01-11 20:32:19.2773 |  Info | GamingcoreRpg | Connected to Database 
+2018-01-11 20:32:19.2623 |  Info | savedPositions | Starting "savedPositions" Script! 
+2018-01-11 20:32:19.5701 |  Info | GamingcoreRpg | Connection to Database closed 
+2018-01-11 20:32:19.8288 |  Info | GameServer | Resource charcreator started. 
+2018-01-11 20:32:19.9461 |  Info | Program | Started! Waiting for connections. 
+2018-01-11 20:32:26.2108 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:32:37.5940 |  Info | GameServer | Initiating connection: [62.158.231.99:63710] 
+2018-01-11 20:32:41.1415 |  Info | GameServer | Player connection refused: Invalid client. (62.158.231.99 | 569B4B31DCA9E7025D19F8D6EDABB507) 
+2018-01-11 20:32:41.2748 |  Info | GameServer | Player disconnected:  () [62.158.231.99], reason: Disconnected. 
+2018-01-11 20:32:54.3144 |  Info | GameServer | Initiating connection: [62.158.231.99:63710] 
+2018-01-11 20:32:57.8397 |  Info | GameServer | Player connection refused: Invalid client. (62.158.231.99 | 569B4B31DCA9E7025D19F8D6EDABB507) 
+2018-01-11 20:32:57.9591 |  Info | GameServer | Player disconnected:  () [62.158.231.99], reason: Disconnected. 
+2018-01-11 20:34:16.0407 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:34:56.2550 |  Info | Program | Terminating... 
+2018-01-11 20:34:56.3743 |  Info | GameServer | Stopping charcreator 
+2018-01-11 20:34:56.6119 |  Info | GameServer | Stopped charcreator. 
+2018-01-11 20:34:56.7974 |  Info | GameServer | Stopping savedPositions 
+2018-01-11 20:34:57.0330 |  Info | GameServer | Stopped savedPositions. 
+2018-01-11 20:34:57.1484 |  Info | GameServer | Stopping gamingcorerpg 
+2018-01-11 20:34:57.8592 |  Info | GameServer | Stopped gamingcorerpg. 
+2018-01-11 20:34:58.0397 |  Info | GameServer | Stopping spawner 
+2018-01-11 20:34:58.2222 |  Info | GameServer | Stopped spawner. 
+2018-01-11 20:34:58.3215 |  Info | GameServer | Stopping speedometer 
+2018-01-11 20:34:58.4117 |  Info | GameServer | Stopped speedometer. 
+2018-01-11 20:35:01.0277 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2018-01-11 20:35:01.2723 |  Info | Program |   Interface:         0.0.0.0 
+2018-01-11 20:35:01.3606 |  Info | Program |   Port:                 4490 
+2018-01-11 20:35:01.4678 |  Info | Program |   Name:      GC-Core Test Server 
+2018-01-11 20:35:01.5952 |  Info | Program |   FQDN:                      
+2018-01-11 20:35:01.6794 |  Info | Program |   Players:                50 
+2018-01-11 20:35:01.8128 |  Info | Program |   Announce:             True 
+2018-01-11 20:35:01.9070 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2018-01-11 20:35:02.0133 |  Info | Program | Starting... 
+2018-01-11 20:35:03.4712 |  Info | ConstantData | Loaded Language de 
+2018-01-11 20:35:03.8813 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:35:03.9936 |  Info | GameServer | Loading resources... 
+2018-01-11 20:35:04.2152 |  Info | GameServer | Starting speedometer 
+2018-01-11 20:35:04.4899 |  Info | GameServer | Resource speedometer started. 
+2018-01-11 20:35:04.5942 |  Info | GameServer | Starting spawner 
+2018-01-11 20:35:05.3802 |  Info | GameServer | Resource spawner started. 
+2018-01-11 20:35:05.4685 |  Info | GameServer | Starting gamingcorerpg 
+2018-01-11 20:35:06.1523 |  Info | GameServer | Resource gamingcorerpg started. 
+2018-01-11 20:35:06.1764 |  Info | GamingcoreRpg | Server starting... 
+2018-01-11 20:35:06.2576 |  Info | GameServer | Starting savedPositions 
+2018-01-11 20:35:06.8471 |  Info | GameServer | Resource savedPositions started. 
+2018-01-11 20:35:06.9695 |  Info | GamingcoreRpg | Connected to Database 
+2018-01-11 20:35:06.8471 |  Info | savedPositions | Starting "savedPositions" Script! 
+2018-01-11 20:35:07.0888 |  Info | GamingcoreRpg | Connection to Database closed 
+2018-01-11 20:35:06.9785 |  Info | GameServer | Starting charcreator 
+2018-01-11 20:35:07.9240 |  Info | GameServer | Resource charcreator started. 
+2018-01-11 20:35:08.0293 |  Info | Program | Started! Waiting for connections. 
+2018-01-11 20:37:03.8841 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:37:13.9188 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:39:03.9940 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:39:14.0146 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:39:53.6285 |  Info | Program | Terminating... 
+2018-01-11 20:39:53.7799 |  Info | GameServer | Stopping charcreator 
+2018-01-11 20:39:54.0055 |  Info | GameServer | Stopped charcreator. 
+2018-01-11 20:39:54.1088 |  Info | GameServer | Stopping savedPositions 
+2018-01-11 20:39:54.3203 |  Info | GameServer | Stopped savedPositions. 
+2018-01-11 20:39:54.4306 |  Info | GameServer | Stopping gamingcorerpg 
+2018-01-11 20:39:55.1515 |  Info | GameServer | Stopped gamingcorerpg. 
+2018-01-11 20:39:55.2628 |  Info | GameServer | Stopping spawner 
+2018-01-11 20:39:55.5576 |  Info | GameServer | Stopped spawner. 
+2018-01-11 20:39:55.6499 |  Info | GameServer | Stopping speedometer 
+2018-01-11 20:39:55.7502 |  Info | GameServer | Stopped speedometer. 
+2018-01-11 20:39:57.6502 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2018-01-11 20:39:57.9089 |  Info | Program |   Interface:         0.0.0.0 
+2018-01-11 20:39:58.1064 |  Info | Program |   Port:                 4490 
+2018-01-11 20:39:58.1866 |  Info | Program |   Name:      GC-Core Test Server 
+2018-01-11 20:39:58.3250 |  Info | Program |   FQDN:                      
+2018-01-11 20:39:58.4343 |  Info | Program |   Players:                50 
+2018-01-11 20:39:58.4804 |  Info | Program |   Announce:             True 
+2018-01-11 20:39:58.5195 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2018-01-11 20:39:58.5556 |  Info | Program | Starting... 
+2018-01-11 20:39:59.6846 |  Info | ConstantData | Loaded Language de 
+2018-01-11 20:39:59.9433 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:40:00.0887 |  Info | GameServer | Loading resources... 
+2018-01-11 20:40:00.3754 |  Info | GameServer | Starting speedometer 
+2018-01-11 20:40:00.5950 |  Info | GameServer | Resource speedometer started. 
+2018-01-11 20:40:00.6762 |  Info | GameServer | Starting spawner 
+2018-01-11 20:40:01.2137 |  Info | GameServer | Resource spawner started. 
+2018-01-11 20:40:01.3390 |  Info | GameServer | Starting gamingcorerpg 
+2018-01-11 20:40:01.8985 |  Info | GameServer | Resource gamingcorerpg started. 
+2018-01-11 20:40:01.9276 |  Info | GamingcoreRpg | Server starting... 
+2018-01-11 20:40:02.0268 |  Info | GameServer | Starting savedPositions 
+2018-01-11 20:40:02.6445 |  Info | GameServer | Resource savedPositions started. 
+2018-01-11 20:40:02.7517 |  Info | GameServer | Starting charcreator 
+2018-01-11 20:40:02.6445 |  Info | savedPositions | Starting "savedPositions" Script! 
+2018-01-11 20:40:02.7087 |  Info | GamingcoreRpg | Connected to Database 
+2018-01-11 20:40:02.9964 |  Info | GamingcoreRpg | Connection to Database closed 
+2018-01-11 20:40:03.1147 |  Info | GameServer | Resource charcreator started. 
+2018-01-11 20:40:03.2220 |  Info | Program | Started! Waiting for connections. 
+2018-01-11 20:40:10.1073 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:40:38.2980 |  Info | Program | Terminating... 
+2018-01-11 20:40:38.4394 |  Info | GameServer | Stopping charcreator 
+2018-01-11 20:40:38.6961 |  Info | GameServer | Stopped charcreator. 
+2018-01-11 20:40:38.8033 |  Info | GameServer | Stopping savedPositions 
+2018-01-11 20:40:39.4280 |  Info | GameServer | Stopped savedPositions. 
+2018-01-11 20:40:39.5233 |  Info | GameServer | Stopping gamingcorerpg 
+2018-01-11 20:40:40.2311 |  Info | GameServer | Stopped gamingcorerpg. 
+2018-01-11 20:40:40.3414 |  Info | GameServer | Stopping spawner 
+2018-01-11 20:40:40.5490 |  Info | GameServer | Stopped spawner. 
+2018-01-11 20:40:40.6483 |  Info | GameServer | Stopping speedometer 
+2018-01-11 20:40:40.7696 |  Info | GameServer | Stopped speedometer. 
+2018-01-11 20:40:42.2285 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2018-01-11 20:40:42.4871 |  Info | Program |   Interface:         0.0.0.0 
+2018-01-11 20:40:42.5904 |  Info | Program |   Port:                 4490 
+2018-01-11 20:40:42.6997 |  Info | Program |   Name:      GC-Core Test Server 
+2018-01-11 20:40:42.8150 |  Info | Program |   FQDN:                      
+2018-01-11 20:40:42.9413 |  Info | Program |   Players:                50 
+2018-01-11 20:40:43.0477 |  Info | Program |   Announce:             True 
+2018-01-11 20:40:43.1599 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2018-01-11 20:40:43.2672 |  Info | Program | Starting... 
+2018-01-11 20:40:44.5717 |  Info | ConstantData | Loaded Language de 
+2018-01-11 20:40:44.7381 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:40:44.8665 |  Info | GameServer | Loading resources... 
+2018-01-11 20:40:45.1402 |  Info | GameServer | Starting speedometer 
+2018-01-11 20:40:45.4209 |  Info | GameServer | Resource speedometer started. 
+2018-01-11 20:40:45.5252 |  Info | GameServer | Starting spawner 
+2018-01-11 20:40:46.3975 |  Info | GameServer | Resource spawner started. 
+2018-01-11 20:40:46.5008 |  Info | GameServer | Starting gamingcorerpg 
+2018-01-11 20:40:47.3812 |  Info | GameServer | Resource gamingcorerpg started. 
+2018-01-11 20:40:47.4032 |  Info | GamingcoreRpg | Server starting... 
+2018-01-11 20:40:47.4944 |  Info | GameServer | Starting savedPositions 
+2018-01-11 20:40:48.0610 |  Info | GameServer | Resource savedPositions started. 
+2018-01-11 20:40:48.1763 |  Info | GameServer | Starting charcreator 
+2018-01-11 20:40:48.0680 |  Info | savedPositions | Starting "savedPositions" Script! 
+2018-01-11 20:40:48.1953 |  Info | GamingcoreRpg | Connected to Database 
+2018-01-11 20:40:48.5533 |  Info | GamingcoreRpg | Connection to Database closed 
+2018-01-11 20:40:48.7628 |  Info | GameServer | Resource charcreator started. 
+2018-01-11 20:40:48.8872 |  Info | Program | Started! Waiting for connections. 
+2018-01-11 20:40:54.8921 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:42:44.7437 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:42:54.7544 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:44:44.8488 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:44:54.8684 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:46:00.1132 |  Info | GameServer | Initiating connection: [213.209.74.94:49893] 
+2018-01-11 20:46:00.8492 |  Info | GameServer | Processing connection: norman124 (norman124) [213.209.74.94] 
+2018-01-11 20:46:01.6744 |  Info | GameServer | Connection established: norman124 (norman124) [213.209.74.94] 
+2018-01-11 20:46:43.4542 |  Info | GameServer | Player disconnected: norman124 (norman124) [213.209.74.94], reason: Timeout 
+2018-01-11 20:46:44.9522 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:47:57.4473 |  Info | GameServer | Initiating connection: [77.20.252.167:33342] 
+2018-01-11 20:48:00.9717 |  Info | GameServer | Player connection refused: Wrong password. (77.20.252.167) 
+2018-01-11 20:48:01.0970 |  Info | GameServer | Player disconnected:  () [77.20.252.167], reason: Disconnected. 
+2018-01-11 20:48:45.0780 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:48:55.0952 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:49:28.8277 |  Info | GameServer | Initiating connection: [213.209.74.94:61017] 
+2018-01-11 20:49:29.3020 |  Info | GameServer | Processing connection: norman124 (norman124) [213.209.74.94] 
+2018-01-11 20:49:29.4263 |  Info | GameServer | Connection established: norman124 (norman124) [213.209.74.94] 
+2018-01-11 20:49:52.9646 |  Info | GameServer | Initiating connection: [62.158.231.99:62440] 
+2018-01-11 20:49:53.4208 |  Info | GameServer | Processing connection: chArryPlays (chArryPlays) [62.158.231.99] 
+2018-01-11 20:49:53.5912 |  Info | GameServer | Connection established: chArryPlays (chArryPlays) [62.158.231.99] 
+2018-01-11 20:50:14.7351 | Error | ScriptingEngine | EXCEPTION IN RESOURCE gamingcorerpg INSIDE SCRIPTENGINE Browsertest System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei GrandTheftMultiplayer.Server.GameServer.ParseNativeArguments(Object[] args)
+   bei GrandTheftMultiplayer.Server.API.ServerAPI.triggerClientEvent(Client player, String eventName, Object[] args)
+   bei Browsertest.cmd_testhtml(Client sender)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei GrandTheftMultiplayer.Server.Models.ScriptingEngine.<>c__DisplayClass22_0.<InvokeVoidMethod>b__0()
+   bei GrandTheftMultiplayer.Server.Models.ScriptingEngine.MainThreadLoop()
+2018-01-11 20:50:22.0429 | Error | ScriptingEngine | EXCEPTION IN RESOURCE gamingcorerpg INSIDE SCRIPTENGINE Browsertest System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei GrandTheftMultiplayer.Server.GameServer.ParseNativeArguments(Object[] args)
+   bei GrandTheftMultiplayer.Server.API.ServerAPI.triggerClientEvent(Client player, String eventName, Object[] args)
+   bei Browsertest.cmd_testhtml(Client sender)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei GrandTheftMultiplayer.Server.Models.ScriptingEngine.<>c__DisplayClass22_0.<InvokeVoidMethod>b__0()
+   bei GrandTheftMultiplayer.Server.Models.ScriptingEngine.MainThreadLoop()
+2018-01-11 20:50:45.1933 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:50:55.2109 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:52:45.3039 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:54:45.4222 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:54:55.4345 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:56:45.5363 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:56:55.5600 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 20:58:45.6537 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 20:58:55.1375 | Error | ScriptingEngine | EXCEPTION IN RESOURCE gamingcorerpg INSIDE SCRIPTENGINE Browsertest System.Reflection.TargetInvocationException: Ein Aufrufziel hat einen Ausnahmefehler verursacht. ---> System.NullReferenceException: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+   bei GrandTheftMultiplayer.Server.GameServer.ParseNativeArguments(Object[] args)
+   bei GrandTheftMultiplayer.Server.API.ServerAPI.triggerClientEvent(Client player, String eventName, Object[] args)
+   bei Browsertest.cmd_testhtml(Client sender)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   bei System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   bei System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   bei GrandTheftMultiplayer.Server.Models.ScriptingEngine.<>c__DisplayClass22_0.<InvokeVoidMethod>b__0()
+   bei GrandTheftMultiplayer.Server.Models.ScriptingEngine.MainThreadLoop()
+2018-01-11 21:00:45.7630 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:00:55.7707 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:02:45.8693 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:02:55.8789 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:04:24.4237 |  Info | Program | Terminating... 
+2018-01-11 21:04:24.5500 |  Info | GameServer | Stopping charcreator 
+2018-01-11 21:04:24.7887 |  Info | GameServer | Stopped charcreator. 
+2018-01-11 21:04:24.9029 |  Info | GameServer | Stopping savedPositions 
+2018-01-11 21:04:25.1305 |  Info | GameServer | Stopped savedPositions. 
+2018-01-11 21:04:25.2468 |  Info | GameServer | Stopping gamingcorerpg 
+2018-01-11 21:04:25.9728 |  Info | GameServer | Stopped gamingcorerpg. 
+2018-01-11 21:04:26.0861 |  Info | GameServer | Stopping spawner 
+2018-01-11 21:04:26.3147 |  Info | GameServer | Stopped spawner. 
+2018-01-11 21:04:26.4129 |  Info | GameServer | Stopping speedometer 
+2018-01-11 21:04:26.5202 |  Info | GameServer | Stopped speedometer. 
+2018-01-11 21:04:36.2515 |  Info | Program | Grand Theft Multiplayer Server v0.1.640.64 
+2018-01-11 21:04:36.5042 |  Info | Program |   Interface:         0.0.0.0 
+2018-01-11 21:04:36.6205 |  Info | Program |   Port:                 4490 
+2018-01-11 21:04:36.7257 |  Info | Program |   Name:      GC-Core Test Server 
+2018-01-11 21:04:36.8431 |  Info | Program |   FQDN:                      
+2018-01-11 21:04:36.9674 |  Info | Program |   Players:                50 
+2018-01-11 21:04:37.0757 |  Info | Program |   Announce:             True 
+2018-01-11 21:04:37.1980 |  Warn | Program | Port is not the default one, players on your local network won't be able to automatically detect you! 
+2018-01-11 21:04:37.3324 |  Info | Program | Starting... 
+2018-01-11 21:04:38.6729 |  Info | ConstantData | Loaded Language de 
+2018-01-11 21:04:38.9346 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:04:39.0970 |  Info | GameServer | Loading resources... 
+2018-01-11 21:04:39.3948 |  Info | GameServer | Starting speedometer 
+2018-01-11 21:04:39.7017 |  Info | GameServer | Resource speedometer started. 
+2018-01-11 21:04:39.8190 |  Info | GameServer | Starting spawner 
+2018-01-11 21:04:40.3002 |  Info | GameServer | Resource spawner started. 
+2018-01-11 21:04:40.4216 |  Info | GameServer | Starting gamingcorerpg 
+2018-01-11 21:04:41.0603 |  Info | GameServer | Resource gamingcorerpg started. 
+2018-01-11 21:04:41.0934 |  Info | GamingcoreRpg | Server starting... 
+2018-01-11 21:04:41.1976 |  Info | GameServer | Starting savedPositions 
+2018-01-11 21:04:41.9817 |  Info | GamingcoreRpg | Connected to Database 
+2018-01-11 21:04:42.0830 |  Info | savedPositions | Starting "savedPositions" Script! 
+2018-01-11 21:04:42.1191 |  Info | GamingcoreRpg | Connection to Database closed 
+2018-01-11 21:04:42.0790 |  Info | GameServer | Resource savedPositions started. 
+2018-01-11 21:04:42.4670 |  Info | GameServer | Starting charcreator 
+2018-01-11 21:04:42.9774 |  Info | GameServer | Resource charcreator started. 
+2018-01-11 21:04:43.0536 |  Info | Program | Started! Waiting for connections. 
+2018-01-11 21:04:51.3254 |  Info | GameServer | Initiating connection: [213.209.74.94:61017] 
+2018-01-11 21:04:52.0693 |  Info | GameServer | Processing connection: norman124 (norman124) [213.209.74.94] 
+2018-01-11 21:04:52.7793 |  Info | GameServer | Connection established: norman124 (norman124) [213.209.74.94] 
+2018-01-11 21:04:58.3896 |  Info | GameServer | Initiating connection: [62.158.231.99:62440] 
+2018-01-11 21:04:58.7756 |  Info | GameServer | Processing connection: chArryPlays (chArryPlays) [62.158.231.99] 
+2018-01-11 21:04:58.8599 |  Info | GameServer | Connection established: chArryPlays (chArryPlays) [62.158.231.99] 
+2018-01-11 21:05:07.1593 |  Info | GameServer | Player disconnected: norman124 (norman124) [213.209.74.94], reason: Quit 
+2018-01-11 21:06:38.9326 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:06:48.9582 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:08:39.0426 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:08:49.0586 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:10:09.1177 |  Info | GameServer | Initiating connection: [213.209.74.94:59018] 
+2018-01-11 21:10:11.7276 |  Info | GameServer | Player connection refused: Wrong password. (213.209.74.94) 
+2018-01-11 21:10:33.8603 |  Info | GameServer | Initiating connection: [213.209.74.94:59018] 
+2018-01-11 21:10:34.3597 |  Info | GameServer | Processing connection: norman124 (norman124) [213.209.74.94] 
+2018-01-11 21:10:34.4960 |  Info | GameServer | Connection established: norman124 (norman124) [213.209.74.94] 
+2018-01-11 21:10:39.1544 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:12:03.8137 |  Info | GameServer | Initiating connection: [95.91.227.114:18019] 
+2018-01-11 21:12:04.2629 |  Info | GameServer | Processing connection: WerwolfMAN_7 (WerwolfMAN_7) [95.91.227.114] 
+2018-01-11 21:12:04.4725 |  Info | GameServer | Connection established: WerwolfMAN_7 (WerwolfMAN_7) [95.91.227.114] 
+2018-01-11 21:12:39.2712 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:13:43.9208 |  Info | GameServer | Player disconnected: norman124 (norman124) [213.209.74.94], reason: Quit 
+2018-01-11 21:14:39.4200 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:16:39.5684 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:16:49.5945 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:17:05.5764 |  Info | GameServer | Player disconnected: chArryPlays (chArryPlays) [62.158.231.99], reason: Switching servers 
+2018-01-11 21:17:14.9679 |  Info | GameServer | Initiating connection: [62.158.231.99:62440] 
+2018-01-11 21:17:15.4291 |  Info | GameServer | Processing connection: chArryPlays (chArryPlays) [62.158.231.99] 
+2018-01-11 21:17:15.5805 |  Info | GameServer | Connection established: chArryPlays (chArryPlays) [62.158.231.99] 
+2018-01-11 21:18:39.6896 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:20:39.7973 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:20:44.4507 | Error | GameServer | Failed to announce self: master server is not available at this time. 
+2018-01-11 21:20:44.4737 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (502) Ungültiges Gateway.
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:20:44.5600 | Debug | GameServer | System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (502) Ungültiges Gateway.
+   bei System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   bei System.Net.WebClient.UploadData(Uri address, String method, Byte[] data)
+   bei GrandTheftMultiplayer.Server.GameServer.<AnnounceSelfToMaster>b__66_0() System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (502) Ungültiges Gateway.
+   bei System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   bei System.Net.WebClient.UploadData(Uri address, String method, Byte[] data)
+   bei GrandTheftMultiplayer.Server.GameServer.<AnnounceSelfToMaster>b__66_0()
+2018-01-11 21:22:39.9606 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:24:40.0857 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:24:50.1003 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:26:40.2651 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:26:51.2942 | Error | GameServer | Failed to announce self: master server is not available at this time. 
+2018-01-11 21:26:51.4336 | Debug | GameServer | System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'master.mta-v.net'
+   bei System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   bei System.Net.WebClient.UploadData(Uri address, String method, Byte[] data)
+   bei GrandTheftMultiplayer.Server.GameServer.<AnnounceSelfToMaster>b__66_0() System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'master.mta-v.net'
+   bei System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   bei System.Net.WebClient.UploadData(Uri address, String method, Byte[] data)
+   bei GrandTheftMultiplayer.Server.GameServer.<AnnounceSelfToMaster>b__66_0()
+2018-01-11 21:26:51.2942 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:28:40.3929 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:28:50.4033 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:30:40.5173 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:32:40.6358 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:32:50.6584 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:34:40.7882 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:34:46.4353 | Error | GameServer | Failed to announce self: master server is not available at this time. 
+2018-01-11 21:34:46.5676 | Debug | GameServer | System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (502) Ungültiges Gateway.
+   bei System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   bei System.Net.WebClient.UploadData(Uri address, String method, Byte[] data)
+   bei GrandTheftMultiplayer.Server.GameServer.<AnnounceSelfToMaster>b__66_0() System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (502) Ungültiges Gateway.
+   bei System.Net.WebClient.UploadDataInternal(Uri address, String method, Byte[] data, WebRequest& request)
+   bei System.Net.WebClient.UploadData(Uri address, String method, Byte[] data)
+   bei GrandTheftMultiplayer.Server.GameServer.<AnnounceSelfToMaster>b__66_0()
+2018-01-11 21:34:46.4353 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Der Remoteserver hat einen Fehler zurückgegeben: (502) Ungültiges Gateway.
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:36:40.9154 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:38:41.0348 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:38:51.0534 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:40:41.1672 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:40:51.1899 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)
+2018-01-11 21:42:41.4236 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:44:41.5603 | Debug | GameServer | Announcing self to master server... 
+2018-01-11 21:44:51.5729 | Debug | GameServer | Downloading latest Assembly String failed System.Net.WebException: Timeout für Vorgang überschritten
+   bei System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   bei System.Net.WebClient.DownloadString(Uri address)
+   bei GrandTheftMultiplayer.Server.GameServer.<UpdateLatestAssemblyString>b__63_0(Object <p0>)

@@ -10,10 +10,9 @@ using MySql.Data.MySqlClient;
 
 public class Browsertest : Script
 {
-    [Command("testhtml", "Usage: /testhtml")]
+    [Command("html", "Usage: /testhtml", Alias = "testhtml")]
     public void cmd_testhtml(Client sender)
     {
-		API.triggerClientEvent(sender, "testhtml", null);
-		API.sendNotificationToPlayer(sender, "HTML wurde gestartet");
+		API.triggerClientEvent(sender, "testhtml");
     }
 }
