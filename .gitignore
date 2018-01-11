@@ -1,2 +1,6 @@
 resources/gamingcorerpg/config/database.xml
 resources/.vs/*
+resources/gamingcorerpg/obj/*
+test.test
+server.log
+settings.xml
