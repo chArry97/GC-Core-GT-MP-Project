@@ -224,7 +224,7 @@ public class PlayerConnection : Script {
                 
             } else
             {
-                result = 2;
+                result = 1;
                 //player.sendNotification("Register Error", "Ein Account mit dieser Email ist schon vorhanden!");
             }
             conn.Close();
@@ -232,7 +232,7 @@ public class PlayerConnection : Script {
         catch (Exception err) {
             Console.WriteLine(err);
             //player.sendNotification("Register Error", "Es ist ein Fehler aufgetreten!");
-            result = 1;
+            result = 2;
         }
         return result;
     }
