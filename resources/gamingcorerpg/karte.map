@@ -1,0 +1,11 @@
+<map>
+	//<world weather="7" />
+	//<prop model="" posX="" posY="" posZ="" rotX="" rotY="" rotZ="" />
+	//<vehicle model="" posX="" posY="" posZ="" rotX="" rotY="" rotZ="" color1="" color2="" />
+	//<pickup model="" posX="" posY="" posZ="" rotX="" rotY="" rotZ="" amoint="" respawn="" />
+	//<marker model="" posX="" posY="" posZ="" dirX="" dirY="" dirZ="" rotX="" rotY="" rotZ="" slaceX="" scaleY="" scaleZ="" alpha="" red="" green="" blue="" />
+	//<blip posX="" posY="" posZ="" sprite="" color="" scale="" shortRange="" />
+	//<ped posX="" posY="" posZ="" range="" size="" />
+	<ipl name="trevorstrailertidy" />
+	<removeipl name="trevorsmp" />
+</map>

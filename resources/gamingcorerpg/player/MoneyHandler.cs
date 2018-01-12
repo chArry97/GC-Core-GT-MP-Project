@@ -42,7 +42,7 @@ public class MoneyHandler {
 			MySqlCommand cmd = conn.CreateCommand();
 			cmd = conn.CreateCommand();
 			cmd.CommandText = "UPDATE user SET Wallet = @wallet WHERE SocialClubName = @socialclubname";
-			cmd.Parameters.AddWithValue("@wallet", (API.shared.getEntityData(player.handle, "Wallet") + amount).ToString());
+			cmd.Parameters.AddWithValue("@wallet", (API.shared.getEntitySyncedData(player.handle, "Wallet") + amount).ToString());
 			cmd.Parameters.AddWithValue("@socialclubname", player.socialClubName);
 
 			cmd.ExecuteNonQuery();
@@ -65,7 +65,7 @@ public class MoneyHandler {
 			MySqlCommand cmd = conn.CreateCommand();
 			cmd = conn.CreateCommand();
 			cmd.CommandText = "UPDATE user SET Wallet = @wallet WHERE SocialClubName = @socialclubname";
-			cmd.Parameters.AddWithValue("@wallet", (API.shared.getEntityData(player.handle, "Wallet") - amount).ToString());
+			cmd.Parameters.AddWithValue("@wallet", (API.shared.getEntitySyncedData(player.handle, "Wallet") - amount).ToString());
 			cmd.Parameters.AddWithValue("@socialclubname", player.socialClubName);
 
 			cmd.ExecuteNonQuery();
@@ -88,7 +88,7 @@ public class MoneyHandler {
 			MySqlCommand cmd = conn.CreateCommand();
 			cmd = conn.CreateCommand();
 			cmd.CommandText = "UPDATE user SET Bank = @bank WHERE SocialClubName = @socialclubname";
-			cmd.Parameters.AddWithValue("@bank", (API.shared.getEntityData(player.handle, "Bank") + amount).ToString());
+			cmd.Parameters.AddWithValue("@bank", (API.shared.getEntitySyncedData(player.handle, "Bank") + amount).ToString());
 			cmd.Parameters.AddWithValue("@socialclubname", player.socialClubName);
 
 			cmd.ExecuteNonQuery();
@@ -111,7 +111,7 @@ public class MoneyHandler {
 			MySqlCommand cmd = conn.CreateCommand();
 			cmd = conn.CreateCommand();
 			cmd.CommandText = "UPDATE user SET Bank = @bank WHERE SocialClubName = @socialclubname";
-			cmd.Parameters.AddWithValue("@bank", (API.shared.getEntityData(player.handle, "Bank") - amount).ToString());
+			cmd.Parameters.AddWithValue("@bank", (API.shared.getEntitySyncedData(player.handle, "Bank") - amount).ToString());
 			cmd.Parameters.AddWithValue("@socialclubname", player.socialClubName);
 
 			cmd.ExecuteNonQuery();

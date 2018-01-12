@@ -1,0 +1,52 @@
+using System;
+using System.Data;
+using GrandTheftMultiplayer.Server;
+using GrandTheftMultiplayer.Server.API;
+using GrandTheftMultiplayer.Server.Elements;
+using GrandTheftMultiplayer.Server.Constant;
+using GrandTheftMultiplayer.Server.Managers;
+using GrandTheftMultiplayer.Shared;
+using GrandTheftMultiplayer.Shared.Math;
+using MySql.Data.MySqlClient;
+
+public class SummerBikeShop {
+	
+	private readonly int pedHash = 1206185632;
+	
+	private CylinderColShape col;
+	private NetHandle ped;
+	
+	public SummerBikeShop(Vector3 colPos, Vector3 sellerPos, float heading) {
+		initiateBikeRental(colPos, sellerPos, heading);
+		
+		//API.shared.onResourceStop += stopBikeRental;
+	}
+	
+	private void initiateBikeRental(Vector3 colPos, Vector3 sellerPos, float heading) {
+		col = API.shared.createCylinderColShape(colPos, 1.0f, 2.0f);
+		col.dimension = 0;
+		col.onEntityEnterColShape += onBikeRentalTriggerEnter;
+		Blip blip = API.shared.createBlip(colPos);
+		blip.color = 3;
+		blip.name = "Summer Bike Fahrradverleih";
+		blip.scale = 0.8f;
+		blip.sprite = 226;
+		API.shared.createMarker(1, new Vector3(colPos.X, colPos.Y, colPos.Z-1f), new Vector3(), new Vector3(), new Vector3(2, 2, 0.5f), 255, 99, 198, 213);
+		
+		//ped = API.shared.createPed((PedHash) pedHash, sellerPos, heading);
+	}
+	
+	private void onBikeRentalTriggerEnter(ColShape shape, NetHandle entity) {
+		if (shape == col) {
+			Client player = API.shared.getPlayerFromHandle(entity);
+			if (player == null) {
+				return;
+			}
+			API.shared.triggerClientEvent(player, "bikeShopOpen");
+		}
+	}
+	
+	private void stopBikeRental() {
+		API.shared.deleteEntity(ped);
+	}
+}

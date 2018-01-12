@@ -29,6 +29,7 @@
   <no_hwid_duplicate>false</no_hwid_duplicate>
   <no_socialclub_duplicate>true</no_socialclub_duplicate>
   <connections_slow_mode>false</connections_slow_mode>
+  <trust_client_entity_properties>true</trust_client_entity_properties>
   
   <resource src="speedometer" />
   <resource src="spawner" />

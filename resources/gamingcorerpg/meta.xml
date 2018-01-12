@@ -1,6 +1,6 @@
 <meta>
     <info name="Gamingcore RPG" author="chArry" type="gamemode" />
-    
+	
     <assembly ref="System.Data.dll" />
     <assembly ref="System.Xml.dll" />
     <assembly ref="MySql.Data.dll" />
@@ -10,6 +10,7 @@
 	
 	<!--Admin-->
 	<script src="/admin/CarCommands.cs" type="server" lang="csharp" />
+	<script src="/admin/AdminCommands.cs" type="server" lang="csharp" />
 	<script src="/admin/PlayerCommands.cs" type="server" lang="csharp" />
 	
 	<!--Player-->
@@ -20,21 +21,35 @@
 	<script src="/vehicle/VehIndicator.js" type="client" lang="javascript" />
 	
 	<script src="GamingcoreRpg.cs" type="server" lang="csharp" />
-  <script src="/general/ConfigurationLoader.cs" type="server" lang="csharp" />
-  <script src="/general/onServerEventTrigger.js" type="client" lang="javascript" />
+	<script src="/general/ConfigurationLoader.cs" type="server" lang="csharp" />
+	<script src="/general/onServerEventTrigger.js" type="client" lang="javascript" />
 	<script src="/login/PlayerConnection.cs" type="server" lang="csharp" />
 	<script src="/login/PlayerConnection_Client.js" type="client" lang="javascript" />
 	<script src="/test/Browsertest.cs" type="server" lang="csharp" />
 	<script src="/test/Browsertest.js" type="client" lang="javascript" />
+	<script src="/shops/bikerental/BikeRental.cs" type="server" lang="csharp" />
+	<script src="/shops/bikerental/SummerBikeShop.cs" type="server" lang="csharp" />
+	<script src="/shops/bikerental/BikeRental.js" type="client" lang="javascript" />
 	
 	<!--Web-->
 	<file src="/web/start.html" />
 	<file src="/web/styles/styles.css" />
 	<file src="/web/images/logo.png" />
+	
 	<file src="/web/charcreator.html" />
 	<file src="/web/styles/charakterstyles.css" />
 	<file src="/web/images/charchreat-m-head.png" />
 	<file src="/web/images/charcreate-mann-r-head.png" />
 	<file src="/web/images/charcreat-frau-l-head.png" />
+	
+	<file src="/web/summerbike.html" />
+	<file src="/web/styles/summerbikestyles.css" />
+	<file src="/web/images/summerbikelogo.png" />
+	<file src="/web/images/bmx.png" />
+	<file src="/web/images/cruiser.png" />
+	<file src="/web/images/fixter.png" />
+	
+	<!--Karte-->
+	<!--<map src="karte.map" dimension='0'/>-->
 	
 </meta>
