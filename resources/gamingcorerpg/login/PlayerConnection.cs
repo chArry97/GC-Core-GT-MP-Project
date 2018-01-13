@@ -4,6 +4,7 @@ using GrandTheftMultiplayer.Server.API;
 using GrandTheftMultiplayer.Server.Elements;
 using GrandTheftMultiplayer.Shared.Math;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 //using gamingcorerpg.login;
 
 public class PlayerConnection : Script {
@@ -38,20 +39,27 @@ public class PlayerConnection : Script {
             }
 		} else if (eventName.Equals("eventClientRegister")) {
             int registerResult = createAccount(player.name, arguments[1].ToString(), arguments[0].ToString(), player.socialClubName);
-            switch (registerResult)
-                {
-                    case 0:
-                        loginPlayerSuccess(player, (string)arguments[0]);
-                        break;
-                    case 1:
-                        player.sendNotification("Register Error", "Es ist ein Fehler aufgetreten!");
-                        break;
-                    case 2:
-                        player.sendNotification("Register Error", "Ein Account mit dieser Email ist schon vorhanden!");
-                        break;
+            switch (registerResult) {
+                case 0:
+                    loginPlayerSuccess(player, (string)arguments[0]);
+                    break;
+                case 1:
+                    player.sendNotification("Register Error", "Es ist ein Fehler aufgetreten!");
+                    break;
+                case 2:
+                    player.sendNotification("Register Error", "Ein Account mit dieser E-Mail Adresse ist schon vorhanden!");
+                    break;
+                case 3:
+                    player.sendNotification("Register Error", "Die eingegebene E-Mail Adresse ist ungültig!");
+                    break;
+                case 4:
+                    player.sendNotification("Register Error", "Das eingegebene Kennwort entspricht nicht den Mindestanforderungen!");
+                    break;
 
-                }
-        }
+            }
+        } else if (eventName.Equals("eventClientRegisterPWnotMatch"))
+            player.sendNotification("Register Error", "Die eigegebenen Passwörter stimmen nicht überein.");
+
     }
 	
 	private void loginPlayerSuccess(Client player, string email) {
@@ -78,8 +86,8 @@ public class PlayerConnection : Script {
 		
 		player.nametagVisible = true;
 		player.invincible = false;
-		//player.position = new Vector3(-1370.6250, 56.1227, 0);
-		player.position = new Vector3(1975.552, 3820.538, 33.44833);
+        player.position = new Vector3(-1404.072, 53.73562, 53.04605);
+        //player.position = new Vector3(1975.552, 3820.538, 33.44833);
 		player.transparency = 255;
 		player.freeze (false);
 		player.collisionless = false;
@@ -87,7 +95,7 @@ public class PlayerConnection : Script {
 	}
 
     /// <summary>
-    /// Creates Account in DB with salted and encrypted PW
+    /// Creates Account in DB with salted and encrypted PW. Checks if e-mail and password is valid
     /// </summary>
     /// <param name="username">username</param>
     /// <param name="password">password</param>
@@ -97,12 +105,26 @@ public class PlayerConnection : Script {
     public int createAccount(string username, string password, string email, string socialClubName)
     {
         String saltedPassword = PasswordDerivation.Derive(password);
+        
+        //E-Mail validation
+        Regex reg = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
+                                + "@"
+                                + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
+        if (!reg.IsMatch(email))
+            return 3;
+
+        //Password validation
+        reg = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$");
+        if (!reg.IsMatch(password))
+            return 4;
+
+
+
         int result;
         try
         {   
             MySqlConnection conn = Database.getDatabase();
             MySqlCommand command = conn.CreateCommand();
-            //MySqlDataReader Reader;
             conn.Open();
 
             command.CommandText = "SELECT count(EMail) FROM user WHERE EMail = @email";

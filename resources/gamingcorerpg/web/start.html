@@ -76,6 +76,9 @@
             if (pw == pwrep) {
                 resourceCall("registerPlayer", email, pw);
             }
+            else {
+                resourceCall("registerPlayerPWnotMatch");
+            }
         }
     </script>
 </body>

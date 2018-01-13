@@ -24,5 +24,8 @@ function loginPlayer(email, password) {
 }
 
 function registerPlayer(email, password) {
-	API.triggerServerEvent("eventClientRegister", email, password);
+    API.triggerServerEvent("eventClientRegister", email, password);
+}
+function registerPlayerPWnotMatch() {
+    API.triggerServerEvent("eventClientRegisterPWnotMatch");
 }
