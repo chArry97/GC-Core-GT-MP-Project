@@ -94,7 +94,7 @@ public class PlayerConnection : Script {
     /// <param name="email">email</param>
     /// <param name="socialClubName">socialClubName</param>
     /// <returns>int -> resultcode</returns>
-    public int CreateAccount(string username, string password, string email, string socialClubName)
+    public int createAccount(string username, string password, string email, string socialClubName)
     {
         String saltedPassword = PasswordDerivation.Derive(password);
         int result;
