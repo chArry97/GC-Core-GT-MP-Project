@@ -24,10 +24,6 @@ public class PlayerConnection : Script {
 	
 	public void OnClientEvent(Client player, string eventName, params object[] arguments) {
 		if (eventName.Equals("eventClientLogin")) {
-			//MySqlConnection conn = Database.getDatabase();
-			//try {
-                //conn.Open();
-                //MySqlCommand cmd = conn.CreateCommand();
             int resultLogin = loginAccount(arguments[0].ToString(), arguments[1].ToString());
             switch (resultLogin) {
                 case 0:
@@ -40,45 +36,7 @@ public class PlayerConnection : Script {
                     player.sendNotification("Login Error", "Es ist ein Fehler aufgetreten!");
                     break;
             }
-                //loginPlayerSuccess(player, (string)arguments[0]);
-    //            cmd.CommandText = "SELECT count(EMail) FROM user WHERE EMail = @email";
-				//cmd.Parameters.AddWithValue("@email", arguments[0]);
-				
-				//Int32 accounts = Int32.Parse(cmd.ExecuteScalar().ToString());
-				
-				//if (accounts > 0) {
-				//	cmd = conn.CreateCommand();
-				//	cmd.CommandText = "SELECT Password FROM user WHERE Email = @email";
-				//	cmd.Parameters.AddWithValue("@email", arguments[0]);
-					
-				//	DataTable result = new DataTable();
-
-				//	result.Load(cmd.ExecuteReader());
-					
-				//	string dbpw = (string) result.Rows[0]["Password"];
-					
-				//	if (arguments[1].Equals(PlayerConnection.Base64Decode(dbpw))) {
-				//		player.sendNotification ("Login", "Einloggen erfolgreich");
-				//		loginPlayerSuccess(player, (string) arguments[0]);
-				//	} else {
-				//		player.sendNotification ("Login Error", "Email oder Passwort falsch");
-				//	}
-				//} else {
-				//	player.sendNotification ("Login Error", "Diese Email ist uns nicht bekannt");
-				//}
-				//conn.Close();
-			//} catch (MySqlException) {
-				//API.consoleOutput ("ERROR connecting to database failed");
-				//player.sendNotification ("Login Error", "Es ist ein Fehler aufgetreten!");
-			//}	
 		} else if (eventName.Equals("eventClientRegister")) {
-
-            //MySqlConnection conn = Database.getDatabase();
-            //try
-            //{
-            //conn.Open();
-            //MySqlCommand cmd = conn.CreateCommand();
-            //int registerResult = createAccount(player.name, (string)arguments[1], (string)arguments[0], player.socialClubName);
             int registerResult = createAccount(player.name, arguments[1].ToString(), arguments[0].ToString(), player.socialClubName);
             switch (registerResult)
                 {
@@ -93,43 +51,8 @@ public class PlayerConnection : Script {
                         break;
 
                 }
-
-                //cmd.CommandText = "SELECT count(EMail) FROM user WHERE EMail = @email";
-                //cmd.Parameters.AddWithValue("@email", arguments[0]);
-
-                //Int32 accounts = Int32.Parse(cmd.ExecuteScalar().ToString());
-
-                //if (accounts == 0) {
-                //cmd = conn.CreateCommand();
-                //cmd.CommandText = "INSERT INTO user (Username, SocialClubName, EMail, Password) Values (@username, @socialclubname, @email, @password)";
-                //md.Parameters.AddWithValue("@username", player.name);
-                //cmd.Parameters.AddWithValue("@socialclubname", player.socialClubName);
-                //cmd.Parameters.AddWithValue("@email", arguments[0]);
-                //cmd.Parameters.AddWithValue("@password", PlayerConnection.Base64Encode((string) arguments[1]));
-
-                //cmd.ExecuteNonQuery();
-					//loginPlayerSuccess(player, (string) arguments[0]);
-				//} else {
-				//	player.sendNotification ("Register Error", "Ein Account mit dieser Email ist schon vorhanden!");
-				//}
-				//conn.Close();
-			//} catch (MySqlException) {
-				//API.consoleOutput ("ERROR connecting to database failed");
-				//player.sendNotification ("Register Error", "Es ist ein Fehler aufgetreten!");
-			//}
         }
     }
-	
-	//private static string Base64Encode(string plainText) {
-	//	var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
-	//	return System.Convert.ToBase64String(plainTextBytes);
-	//}
-
-
-	//private static string Base64Decode(string base64EncodedData) {
-	//	var base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
-	//	return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
-	//}
 	
 	private void loginPlayerSuccess(Client player, string email) {
 		
@@ -163,28 +86,17 @@ public class PlayerConnection : Script {
 		player.triggerEvent ("spawnPlayer");
 	}
 
-
-
-    /////////////////////////////////////////////
-    public int createAccount(string username, string password, string email, string socialClubName)
+    /// <summary>
+    /// Creates Account in DB with salted and encrypted PW
+    /// </summary>
+    /// <param name="username">username</param>
+    /// <param name="password">password</param>
+    /// <param name="email">email</param>
+    /// <param name="socialClubName">socialClubName</param>
+    /// <returns>int -> resultcode</returns>
+    public int CreateAccount(string username, string password, string email, string socialClubName)
     {
-        /*  Now we'll generate our salted password and we will just send it to the database
-
-            Example: PasswordDerivation.Derive("bestPasswordEver");
-            Output: prHRZBO/xCXJrRpgas1cUA==:10000:16:LqTubT/4KhJWR+qwogrZqw==
-            This is our salted password, this is how we will see the users password into the database
-        */
         String saltedPassword = PasswordDerivation.Derive(password);
-
-        /* 
-            Remember that these instances has to be from your Database Connection class
-            Setup your MySQL database: https://wiki.gt-mp.net/index.php?title=MySql
-
-            This will open a connection with your MySQL Database.
-            After that we create a MySQLCommand to send our queries for your database.
-
-            This simplifies a lot you code and avoid boilerplate.
-        */
         int result;
         try
         {   
@@ -199,53 +111,35 @@ public class PlayerConnection : Script {
             command.Parameters.AddWithValue("@password", saltedPassword);
             command.Parameters.AddWithValue("@socialclubname", socialClubName);
 
-
-
             Int32 accounts = Int32.Parse(command.ExecuteScalar().ToString());
-            
             if (accounts == 0)
             {
-                // We use command parameters to avoid SQL Injections
-                // Learn more about: https://dev.mysql.com/doc/connector-net/en/connector-net-programming-prepared-preparing.html
-                //command.CommandText = "INSERT INTO AccountsTable (username, password) VALUES (@username, @password)";
 
                 command.CommandText = "INSERT INTO user (Username, SocialClubName, EMail, Password) Values (@username, @socialclubname, @email, @password)";
                 command.Prepare();
 
-
-                /* 
-                 * This will execute our query and will return a int value, that means the number of rows that has been affected
-                */
-                
                 if (command.ExecuteNonQuery() > 0)
                     result = 0;
                 else
                     result = 1;
                 
             } else
-            {
                 result = 1;
-                //player.sendNotification("Register Error", "Ein Account mit dieser Email ist schon vorhanden!");
-            }
             conn.Close();
         }
         catch (Exception err) {
             Console.WriteLine(err);
-            //player.sendNotification("Register Error", "Es ist ein Fehler aufgetreten!");
             result = 2;
         }
         return result;
     }
 
-    /**
-     * This method will connect into the database and return if user password matches, if yes, we can login
-     * 
-     * @param player is the client that we'll create an account
-     * @param username input from our login form
-     * @param password plain input password from our login form and isn't salted 
-     *
-     * @return Boolean return if password match or do not.
-     */
+    /// <summary>
+    /// Checks the submitted login data with the stored salted/encrypted password.
+    /// </summary>
+    /// <param name="email">email</param>
+    /// <param name="password">password</param>
+    /// <returns>int -> resultcode</returns>
     public static int loginAccount(string email, string password)
     {
         int result;
