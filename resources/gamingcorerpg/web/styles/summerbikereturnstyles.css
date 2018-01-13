@@ -1,0 +1,62 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.header {
+	border-radius: 5%;
+}
+
+.summerbikes-logo {
+	margin: 0 auto;
+	display: block;
+	width: 75%;
+}
+
+.content {
+    margin: 0px auto;
+    width: 98%;
+    background-color: white;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.obj-header {
+    text-align: center;
+    line-height: 40%;
+    font-family: La Belle Aurore;
+    font-size: 42px;
+    color: #63c6d5;
+    margin-top: 40px;
+}
+
+.desc {
+	margin: 10px;
+	margin-top: 20px;
+	text-align: center;
+	font-family: calibri;
+	font-size: 17px;
+	color: black;
+}
+
+.singlebutton {
+    margin: 0 auto;
+    margin-bottom: 12px;
+    width: 95%;
+    height: 28px;
+    display: block;
+    border: none;
+    background-color: #63c6d5;
+    border-radius: 15px;
+    font-family: calibri;
+    font-size: 14px;
+}
+
+.singlebutton:hover {
+    background-color: #73d6e5;
+}
+
+.singlebutton:active {
+    background-color: #83e6f5;
+}

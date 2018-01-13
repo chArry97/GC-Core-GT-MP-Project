@@ -7,6 +7,8 @@
 
   <!--Database-->
   <script src="/general/Database.cs" type="server" lang="csharp" />
+  
+  <script src="/general/WorldObjectSpawner.cs" type="server" lang="csharp" />
 
   <!--Admin-->
   <script src="/admin/CarCommands.cs" type="server" lang="csharp" />
@@ -49,6 +51,9 @@
   <file src="/web/images/bmx.png" />
   <file src="/web/images/cruiser.png" />
   <file src="/web/images/fixter.png" />
+  
+  <file src="/web/summerbikereturn.html" />
+  <file src="/web/styles/summerbikereturnstyles.css" />
 
   <!--Karte-->
   <!--<map src="karte.map" dimension='0'/>-->

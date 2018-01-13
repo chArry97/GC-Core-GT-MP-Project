@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Summerbike Fahradverleih</title>
+    <link rel="stylesheet" href="styles/summerbikereturnstyles.css">
+</head>
+<body>
+	<div class="header"> 
+		<img src="images/summerbikelogo.png" class="summerbikes-logo" alt="Summerbikes Fahrradverleih">
+	</div>
+	
+	<div class="content">
+		<p class="desc">Du sitzt auf einem geliehenem Fahrrad. Möchtest du das Fahrrad abgeben
+		und dafür Pfand zurück zu erhalten?</p>
+        <div class="buttons">
+            <button class="singlebutton" type="button" onclick="returnBike('Norman')">Ja</button>
+            <button class="singlebutton" type="button" onclick="returnBike(null)">Nein</button>
+        </div>
+	</div>
+	
+	<script>
+        function returnBike(name) {
+			resourceCall("sendReturnBike", name);
+        }
+	</script>
+</body>
+</html>

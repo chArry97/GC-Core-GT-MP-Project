@@ -234,6 +234,24 @@
     cursor: pointer;
 }
 
+.slider::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: gray;
+	border-radius: 1px;
+	border: 0.2px solid #010101;
+}
+
+.slider::-moz-range-track {
+	width: 100%;
+	height: 8.4px;
+	cursor: pointer;
+	background: gray;
+	border-radius: 1px;
+	border: 0.2px solid #010101;
+}
+
 .slider-lit:hover {
     opacity: 1;
 }

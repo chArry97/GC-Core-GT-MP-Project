@@ -2324,7 +2324,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Norman_124\\.nuget\\packages\\": {},
+    "C:\\Users\\Charry\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -2337,7 +2337,7 @@
       "projectUniqueName": "C:\\Users\\Norman_124\\Documents\\server\\GC-Core-GT-MP-Project\\resources\\gamingcorerpg\\gamingcorerpg.csproj",
       "projectName": "gamingcorerpg",
       "projectPath": "C:\\Users\\Norman_124\\Documents\\server\\GC-Core-GT-MP-Project\\resources\\gamingcorerpg\\gamingcorerpg.csproj",
-      "packagesPath": "C:\\Users\\Norman_124\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Charry\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Norman_124\\Documents\\server\\GC-Core-GT-MP-Project\\resources\\gamingcorerpg\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
@@ -2345,7 +2345,7 @@
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Norman_124\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Charry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
