@@ -43,11 +43,16 @@
 			</p>
 			<button class="obj-btn" type="button" onclick="rentBike('Bmx')">Für 120$ Leihen!</button>
 		</div>
+		<button class="obj-btn-bottom" type="button" onclick="close()">Ich möchte kein Fahrrad leihen!</button>
 	</div>
 	
 	<script>
 		function rentBike(name) {
 			resourceCall("sendRentBike", name);
+		}
+		
+		function close() {
+			resourceCall("closeBikeShop");
 		}
 	</script>
 </body>

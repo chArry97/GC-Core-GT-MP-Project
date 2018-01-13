@@ -71,7 +71,6 @@ public class BikeRental : Script {
 				conn.Open();
 				
 				MySqlCommand cmd = conn.CreateCommand();
-				cmd = conn.CreateCommand();
 				cmd.CommandText = "INSERT INTO world_objects (type, posX, posY, posZ, rotZ) VALUES (@type, @posX, @posY, @posZ, @rotZ)";
 				cmd.Parameters.AddWithValue("@type", "bikeshop");
 				cmd.Parameters.AddWithValue("@posX", sender.position.X);

@@ -1,12 +1,15 @@
 var bikeshop_browser = null;
 
 function sendRentBike(name) {
-	API.triggerServerEvent("eventBikeRental", name);
-	
-	API.showCursor(false);
-	API.destroyCefBrowser(bikeshop_browser);
-	API.setCanOpenChat(true);      
-	API.setHudVisible(true);
+    API.triggerServerEvent("eventBikeRental", name);
+    closeBikeShop();
+}
+
+function closeBikeShop() {
+    API.showCursor(false);
+    API.destroyCefBrowser(bikeshop_browser);
+    API.setCanOpenChat(true);
+    API.setHudVisible(true);
 }
 
 API.onServerEventTrigger.connect(function(eventname, args) {
