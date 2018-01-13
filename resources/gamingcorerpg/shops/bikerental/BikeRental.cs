@@ -84,7 +84,7 @@ public class BikeRental : Script {
 				API.shared.consoleOutput ("ERROR connecting to database failed");
 			}
 			
-			new SummerBikeShop(sender.position, sender.position, sender.rotation.Z);
+			new SummerBikeShop(sender.position, sender.rotation.Z);
 			
 			API.sendNotificationToPlayer(sender, "~w~Ein neuer Bike Shop wurde erstellt");
 		} else {

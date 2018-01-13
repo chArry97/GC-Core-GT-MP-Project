@@ -15,13 +15,11 @@ public class SummerBikeShop {
 	private CylinderColShape col;
 	private NetHandle ped;
 	
-	public SummerBikeShop(Vector3 colPos, Vector3 sellerPos, float heading) {
-		initiateBikeRental(colPos, sellerPos, heading);
-		
-		//API.shared.onResourceStop += stopBikeRental;
+	public SummerBikeShop(Vector3 colPos,  float heading) {
+		initiateBikeRental(colPos, heading);
 	}
 	
-	private void initiateBikeRental(Vector3 colPos, Vector3 sellerPos, float heading) {
+	private void initiateBikeRental(Vector3 colPos,  float heading) {
 		col = API.shared.createCylinderColShape(colPos, 1.0f, 2.0f);
 		col.dimension = 0;
 		col.onEntityEnterColShape += onBikeRentalTriggerEnter;
@@ -31,8 +29,6 @@ public class SummerBikeShop {
 		blip.scale = 0.8f;
 		blip.sprite = 226;
 		API.shared.createMarker(1, new Vector3(colPos.X, colPos.Y, colPos.Z-1f), new Vector3(), new Vector3(), new Vector3(2, 2, 0.5f), 255, 99, 198, 213);
-		
-		//ped = API.shared.createPed((PedHash) pedHash, sellerPos, heading);
 	}
 	
 	private void onBikeRentalTriggerEnter(ColShape shape, NetHandle entity) {

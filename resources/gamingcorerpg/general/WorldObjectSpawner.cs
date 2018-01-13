@@ -49,7 +49,7 @@ public class WorldObjectSpawner : Script {
                 Z = (float) Convert.ToDouble(result.Rows[i]["posZ"])
             };
             float rotZ = (float) Convert.ToDouble(result.Rows[i]["rotZ"]);
-            new SummerBikeShop(pos, pos, rotZ);
+            new SummerBikeShop(pos, rotZ);
         }
     }
 }
