@@ -37,7 +37,7 @@ public class PlayerConnection : Script {
                     player.sendNotification("Login Error", "Email oder Passwort falsch");
                     break;
                 case 2:
-                    player.sendNotification("Login Error", "Es ist ein Fehler bei der Verbindung zur Datenbank aufgetreten!");
+                    player.sendNotification("Login Error", "Es ist ein Fehler aufgetreten!");
                     break;
             }
                 //loginPlayerSuccess(player, (string)arguments[0]);
@@ -248,41 +248,24 @@ public class PlayerConnection : Script {
      */
     public static int loginAccount(string email, string password)
     {
-        /*
-            Setup your MySQL database: https://wiki.gt-mp.net/index.php?title=MySql
-
-            This will open a connection with your MySQL Database.
-            After that we create a MySQLCommand to send our queries for your database.
-
-            This simplifies a lot you code and avoid boilerplate.
-        */
         int result;
         try
         {
             MySqlConnection conn = Database.getDatabase();
             MySqlCommand command = conn.CreateCommand();
             conn.Open();
-            // This query is for SELECT the username and password from the database to check the password later
-            // We use command parameters to avoid SQL Injections
-            // Learn more about: https://dev.mysql.com/doc/connector-net/en/connector-net-programming-prepared-preparing.html
+
             command.CommandText = "SELECT password FROM user WHERE EMail=@email";
             command.Prepare();
-            Console.WriteLine(email);
             command.Parameters.AddWithValue("@email", email);
 
-            // Open the connection
-            
-
-            // Execute our query and receive the result as a string
-            // This will give us the salted password from the database
-            // Output example: prHRZBO/xCXJrRpgas1cUA==:10000:16:LqTubT/4KhJWR+qwogrZqw==		
+            //get salted PW from DB and check with submitted pw	
             string saltedPassword = (string)command.ExecuteScalar();
-
-            if (PasswordDerivation.Verify(saltedPassword, password))
+            if(saltedPassword != null && PasswordDerivation.Verify(saltedPassword, password)) 
                 result = 0;
             else
                 result = 1;
-            // return if password (input from user) equals to saltedPassword (stored in database)
+
             conn.Close();
         }
         catch (Exception err) { Console.WriteLine(err); result = 2;}
