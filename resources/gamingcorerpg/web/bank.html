@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8"/>
@@ -6,72 +6,69 @@
 	<link rel="stylesheet" href="styles/bankstyles.css">
 </head>
 <body>
-	<div class="header">                                                
-		<img src="images/bank_logo_v3.png" class="register-image-logo">
-		<h3 class="welcome">Willkommen auf dem Gamingcore GT-MP Server!</h3>
-		<p class="welcome_desc">
-			Logge dich mit deinem Account ein, damit du spielen kannst.<br>
-			Solltest du noch keinen Account haben, so hast du die Möglichkeit,<br>
-			dir einen neuen Account zu erstellen.
-		</p>
-	</div>
-	<div class="tab">
-		<button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
-		<button class="tablinks" onclick="openTab(event, 'Einzahlen')">Einzahlen</button>
-		<button class="tablinks" onclick="openTab(event, 'Auszahlen')">Auszahlen</button>
-	</div>
-	
-	<div id="Home" class="tabcontent">
-		<h4 class="headline">Home</h4>
-		<input class="inputfield" type="text" id="email" placeholder="E-Mail" required checked><br>
-		<input class="inputfield" type="password" id="pw" placeholder="Passwort" required checked><br>
-	</div>
-	<div id="Einzahlen" class="tabcontent">
-		<form onsubmit="login();">
-			<h4 class="headline">Einzahlen</h4>
-			<input class="inputfield" type="text" id="email" placeholder="E-Mail" required checked><br>
-			<input class="inputfield" type="password" id="pw" placeholder="Passwort" required checked><br>
-			<button class="inputbutton" type="submit">Einloggen<br>
-		</form>
-	</div>
-	<div id="Auszahlen" class="tabcontent">
-		<form onsubmit="register();">
-			<h4 class="headline">Auszahlen</h4>
-			<input class="inputfield" type="text" id="regemail" placeholder="E-Mail" required checked><br>
-			<input class="inputfield" type="password" id="regpw" placeholder="Passwort" required checked><br>
-			<input class="inputfield" type="password" id="regpwrepeated" placeholder="Passwort wiederholen" required checked><br>
-			<button class="inputbutton" type="submit">Registrieren<br>
-		</form>
-	</div>
-	<div class="footer">
-		<p class="footertext">powered by <a href="http://www.gc-core.net">gc-core.net</a></p>
-	</div>
+    <div class="header">
+        <img src="images/starbank.png" class="register-image-logo">
+        <h3 class="welcome">Die Bank für Millionäre</h3>
+        <p class="welcome_desc">
+            Dein Partner für alle Geldangelegenheiten.<br>
+            Und noch vieles mehr...
+        </p>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+        <button class="tablinks" onclick="openTab(event, 'Einzahlen')">Einzahlen/Auszahlen</button>
+        <button class="tablinks" onclick="close()">Schließen</button>
+    </div>
+
+    <div id="Home" class="tabcontent">
+        <h4 class="headline">Home</h4>
+        <p class="description">Hier muss eine kleine Beschreibung oder Geschichte stehen, die Norman in naher Zukunft<br />
+            schreiben wird. Wenn ich hier einen Text schreibe, dann beschwert sich Norman wieder, dass der kacke ist.<br />
+            Deswegen soll er das selber machen
+        </p>
+    </div>
+    <div id="Einzahlen" class="tabcontent">
+        <h4 class="headline">Einzahlen/Auszahlen</h4>
+        <p class="moneylist_header">Dein Portmonee und dein Kontostand:</p>
+        <ul class="moneylist">
+            <li class="moneylist">Portmonee: <span id="wallet">0$</span></li>
+            <li class="moneylist">Konto: <span id="bank">0$</span></li>
+        </ul>
+        <input class="inputfield" type="text" id="amount" placeholder="Betrag" required checked>
+        <button class="inputbutton" onclick="deposit()">Einzahlen</button>
+        <button class="inputbutton" onclick="payOff()">Auszahlen</button>
+    </div>
+    <div class="footer">
+        <p class="footertext">Besuchen sie uns auch auf unserer Website: <a href="http://www.gc-core.net">star-bank.ls</a></p>
+    </div>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function deposit() {
+            var amount = $("#amount").val();
+        }
+
+        function payOff() {
+            var amount = $("#amount").val();
+        }
+    </script>
 </body>
-
-<script>
-	document.getElementById("defaultOpen").click();
-
-	function openTab(evt, tabName) {
-		var i, tabcontent, tablinks;
-
-		tabcontent = document.getElementsByClassName("tabcontent");
-		for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-		}
-
-		tablinks = document.getElementsByClassName("tablinks");
-		for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].className = tablinks[i].className.replace(" active", "");
-		}
-
-		document.getElementById(tabName).style.display = "block";
-		evt.currentTarget.className += " active";
-	}
-	
-	function login() {
-		var email = $("#email").val();
-		var pw = $("#pw").val();
-	}
-</script>
-
 </html>

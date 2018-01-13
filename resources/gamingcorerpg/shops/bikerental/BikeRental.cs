@@ -23,16 +23,20 @@ public class BikeRental : Script {
 	public void OnPlayerRentBike(Client player, string eventName, params object[] arguments) {
 		if (eventName == "eventBikeRental") {
 			float costs = float.MaxValue;
+            float returnValue = float.MaxValue;
 			switch ((string) arguments[0]) {
 				case "Cruiser":
 					costs = 60.0f;
+                    returnValue = 40.0f;
 					break;
 				case "Fixter":
 					costs = 90.0f;
-					break;
+                    returnValue = 60.0f;
+                    break;
 				case "Bmx":
 					costs = 120.0f;
-					break;
+                    returnValue = 80.0f;
+                    break;
 				default:
 					break;
 			}
@@ -50,8 +54,9 @@ public class BikeRental : Script {
 					NetHandle vehHandle = API.createVehicle(vehicleHash, vehPos, new Vector3(0,0,vehRot.Z), 157, 157);
 					API.setEntityData(vehHandle, "Owner", player.socialClubName);
 					API.setEntityData(vehHandle, "Loaned", true);
-					
-					API.sendNotificationToPlayer(player, "Du hast ein Fahrrad geliehen.");
+                    API.setEntityData(vehHandle, "ReturnValue", returnValue);
+
+                    API.sendNotificationToPlayer(player, "Du hast ein Fahrrad geliehen.");
 					
 					API.setPlayerIntoVehicle(player, vehHandle, -1);
 				}
@@ -59,6 +64,18 @@ public class BikeRental : Script {
 				API.sendNotificationToPlayer(player, "Du hast nicht genügend Geld im Portmonee.");
 			}
 		}
+        else if (eventName == "eventBikeReturn")
+        {
+            if (player.isInVehicle)
+                if (API.shared.hasEntityData(player.vehicle, "Loaned"))
+                    if (API.shared.getEntityData(player.vehicle, "Loaned"))
+                    {
+                        float returnValue = API.getEntityData(player.vehicle, "ReturnValue");
+                        MoneyHandler.addToWallet(player, returnValue);
+                        API.deleteEntity(player.vehicle);
+                        API.sendChatMessageToPlayer(player, "~w~Du hast ~r~" + returnValue + "$ ~w~für das Zurückgeben eines Fahrrads erhalten.");
+                    }
+        }
 	}
 	
 	[Command("createBikeShop")]

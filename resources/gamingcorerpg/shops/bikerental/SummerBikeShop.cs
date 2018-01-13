@@ -37,7 +37,14 @@ public class SummerBikeShop {
 			if (player == null) {
 				return;
 			}
-			API.shared.triggerClientEvent(player, "bikeShopOpen");
+
+            if (!player.isInVehicle)
+                API.shared.triggerClientEvent(player, "bikeShopOpen");
+            else if (API.shared.hasEntityData(player.vehicle, "Loaned"))
+                if (API.shared.getEntityData(player.vehicle, "Loaned"))
+                {
+                    API.shared.triggerClientEvent(player, "bikeReturnOpen");
+                }
 		}
 	}
 	

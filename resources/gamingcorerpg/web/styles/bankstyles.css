@@ -27,7 +27,7 @@ body {
 
 .register-image-logo {
 	text-align: right;
-	height: 90px;
+	height: 70px;
 	float: left;
 	margin-top: 5px;
 	margin-right: 10px;
@@ -35,8 +35,8 @@ body {
 }
 
 .tab {
-	overflow: hidden;
-	background-color: LightGreen;
+    overflow: hidden;
+    background-color: #f75b42;
 }
 
 .tab button {
@@ -57,11 +57,11 @@ body {
 }
 
 .tab button:hover {
-	background-color: PaleGreen;
+	background-color: #f79557;
 }
 
 .tab button.active {
-	background-color: MediumSeaGreen;
+	background-color: #c8232e;
 }
 
 .tabcontent {
@@ -85,50 +85,70 @@ body {
 	padding-bottom: 5px;
 }
 
+.description {
+    margin: 5px;
+    margin-left: 5px;
+    font-family: calibri;
+}
+
+.moneylist_header {
+    color: black;
+    padding: 1px;
+    font-family: calibri;
+    font-weight: bold;
+}
+
+.moneylist {
+    margin: 5px;
+    margin-left: 15px;
+    font-family: calibri;
+}
+
 .inputfield {
-	height: 32px;
-	margin-top: 8px;
-	font-size: 22px;
-	display: block;
-	margin: auto;
-	width: 100%;
-	text-align: center;
+    height: 32px;
+    font-size: 22px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
 }
 
 .inputbutton {
-	background-color: LightGreen;
-	float: center;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 14px 16px;
-	transition: 0.3s;
-	color: White;
-	font-family: calibri;
-	font-size: 18px;
-	font-weight: bold;
-	font-variant: small-caps;
-	text-shadow: 0 0 5px black;
-	width: 100%;
-	display: block;
+    background-color: #f75b42;
+    margin-top: 16px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: White;
+    font-family: calibri;
+    font-size: 18px;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-shadow: 0 0 5px black;
+    width: 50%;
+    display: block;
 }
 
 .inputbutton:hover {
-	background-color: PaleGreen;
+	background-color: #f79557;
 }
 
 .inputbutton:active {
-	background-color: MediumSeaGreen;
+	background-color: #c8232e;
 }
 
 .footer {
-	position: fixed;
-	left: 0px;
-	bottom: 0px;
-	width: 100%;
-	background-color: LightGreen;
-	text-align: center;
-	padding: 5px;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: #f75b42;
+    text-align: center;
+    padding: 5px;
 }
 
 .footertext {

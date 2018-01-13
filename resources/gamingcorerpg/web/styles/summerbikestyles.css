@@ -65,6 +65,14 @@
 	color: black;
 }
 
+.obj-depos {
+	margin: 10px;
+	text-align: center;
+	font-family: calibri;
+	font-size: 14px;
+	color: black;
+}
+
 .obj-btn {
 	margin: 0 auto;
 	margin-bottom: 12px;
@@ -88,7 +96,7 @@
 	background-color: #63c6d5;
 	border-radius: 15px;
 	font-family: calibri;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .obj-btn:hover {
