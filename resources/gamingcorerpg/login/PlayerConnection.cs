@@ -52,8 +52,11 @@ public class PlayerConnection : Script {
                 case 3:
                     player.sendNotification("Register Error", "Die eingegebene E-Mail Adresse ist ungültig!");
                     break;
+                case 4:
+                    player.sendNotification("Register Error", "Das eingegebene Kennwort entspricht nicht den Mindestanforderungen!");
+                    break;
 
-                }
+            }
         } else if (eventName.Equals("eventClientRegisterPWnotMatch"))
             player.sendNotification("Register Error", "Die eigegebenen Passwörter stimmen nicht überein.");
 
@@ -92,7 +95,7 @@ public class PlayerConnection : Script {
 	}
 
     /// <summary>
-    /// Creates Account in DB with salted and encrypted PW
+    /// Creates Account in DB with salted and encrypted PW. Checks if e-mail and password is valid
     /// </summary>
     /// <param name="username">username</param>
     /// <param name="password">password</param>
@@ -103,11 +106,17 @@ public class PlayerConnection : Script {
     {
         String saltedPassword = PasswordDerivation.Derive(password);
         
+        //E-Mail validation
         Regex reg = new Regex(@"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
                                 + "@"
                                 + @"((([\-\w]+\.)+[a-zA-Z]{2,4})|(([0-9]{1,3}\.){3}[0-9]{1,3}))$");
         if (!reg.IsMatch(email))
             return 3;
+
+        //Password validation
+        reg = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,15}$");
+        if (!reg.IsMatch(password))
+            return 4;
 
 
 
@@ -116,7 +125,6 @@ public class PlayerConnection : Script {
         {   
             MySqlConnection conn = Database.getDatabase();
             MySqlCommand command = conn.CreateCommand();
-            //MySqlDataReader Reader;
             conn.Open();
 
             command.CommandText = "SELECT count(EMail) FROM user WHERE EMail = @email";
