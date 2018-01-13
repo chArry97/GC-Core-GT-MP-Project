@@ -54,7 +54,9 @@ public class PlayerConnection : Script {
                     break;
 
                 }
-        }
+        } else if (eventName.Equals("eventClientRegisterPWnotMatch"))
+            player.sendNotification("Register Error", "Die eigegebenen Passwörter stimmen nicht überein.");
+
     }
 	
 	private void loginPlayerSuccess(Client player, string email) {
