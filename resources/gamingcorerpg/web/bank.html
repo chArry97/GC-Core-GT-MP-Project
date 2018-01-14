@@ -17,7 +17,7 @@
     <div class="tab">
         <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
         <button class="tablinks" onclick="openTab(event, 'Einzahlen')">Einzahlen/Auszahlen</button>
-        <button class="tablinks" onclick="close()">Schließen</button>
+        <button class="tablinks" onclick="closeBank()">Schließen</button>
     </div>
 
     <div id="Home" class="tabcontent">
@@ -43,11 +43,8 @@
 
     <script>
         document.getElementById("defaultOpen").click();
-
-        $(document).ready(function () {
-            document.getElementById("bank").innerHTML = API.getEntitySyncedData(API.getLocalPlayer(), "Bank");
-            resourceCall("sendPlayerMoney", "shit");
-        });
+        
+        resourceCall("sendPlayerMoney");
 
         function setBankMoney(amount) {
             document.getElementById("bank").innerHTML = amount;
@@ -76,6 +73,10 @@
 
         function payOff() {
             var amount = $("#amount").val();
+        }
+
+        function closeBank() {
+            resourceCall("closeBankUI");
         }
     </script>
 </body>

@@ -7,7 +7,7 @@ API.onServerEventTrigger.connect(function (eventName, args) {
             resource.VehIndicator.IndicatorSubtitle(args);
             break;
         case 'testhtml':
-            resource.Cashmachine.openBankBrowser(args);
+            resource.ATM.openBankBrowser(args);
             break;
         case 'createMapMenu':
             resource.MapCommandsClient.createMapMainMenu();

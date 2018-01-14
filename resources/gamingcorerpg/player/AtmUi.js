@@ -1,8 +1,14 @@
 ﻿var bank_browser;
 
-function sendPlayerMoney(shit) {
-    bank_browser.call("setBankMoney", 20);
-    //API.getEntitySyncedData(API.getLocalPlayer(), "Bank")
+function sendPlayerMoney() {
+    bank_browser.call("setBankMoney", API.getEntitySyncedData(API.getLocalPlayer(), "Bank"));
+}
+
+function closeBankUI() {
+    API.showCursor(false);
+    API.destroyCefBrowser(bank_browser);
+    API.setCanOpenChat(true);
+    API.setHudVisible(true);
 }
 
 API.onServerEventTrigger.connect(function (eventname, args) {

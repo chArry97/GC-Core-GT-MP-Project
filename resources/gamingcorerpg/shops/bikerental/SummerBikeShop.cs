@@ -10,8 +10,6 @@ using GrandTheftMultiplayer.Shared.Math;
 
 public class SummerBikeShop {
 	
-	private readonly int pedHash = 1206185632;
-	
 	private CylinderColShape col;
 	private NetHandle ped;
 	
