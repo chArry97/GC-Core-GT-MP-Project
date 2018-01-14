@@ -45,8 +45,4 @@ public class SummerBikeShop {
                 }
 		}
 	}
-	
-	private void stopBikeRental() {
-		API.shared.deleteEntity(ped);
-	}
 }
