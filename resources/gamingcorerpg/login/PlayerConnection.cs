@@ -68,15 +68,16 @@ public class PlayerConnection : Script {
 		try {
 			conn.Open();
 			MySqlCommand cmd = conn.CreateCommand();
-			cmd.CommandText = "SELECT Adminlevel FROM user WHERE EMail = @email";
+			cmd.CommandText = "SELECT Adminlevel, Mappinglevel FROM user WHERE EMail = @email";
 			cmd.Parameters.AddWithValue("@email", email);
 			
 			DataTable result = new DataTable();
 			result.Load(cmd.ExecuteReader());
-			
-			API.setEntityData(player.handle, "Adminlevel", result.Rows[0]["Adminlevel"]);
-			
-			conn.Close();
+
+            API.setEntityData(player.handle, "Adminlevel", result.Rows[0]["Adminlevel"]);
+            API.setEntityData(player.handle, "Mappinglevel", result.Rows[0]["Mappinglevel"]);
+
+            conn.Close();
 		
 			MoneyHandler.loadMoney(player);
 		} catch (MySqlException) {

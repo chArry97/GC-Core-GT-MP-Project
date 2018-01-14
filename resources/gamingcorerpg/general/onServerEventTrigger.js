@@ -9,5 +9,8 @@ API.onServerEventTrigger.connect(function (eventName, args) {
         case 'testhtml':
             resource.Cashmachine.openBankBrowser(args);
             break;
+        case 'createMapMenu':
+            resource.MapCommandsClient.createMapMainMenu();
+            break;
     }
 });
