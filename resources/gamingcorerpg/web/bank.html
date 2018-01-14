@@ -29,10 +29,9 @@
     </div>
     <div id="Einzahlen" class="tabcontent">
         <h4 class="headline">Einzahlen/Auszahlen</h4>
-        <p class="moneylist_header">Dein Portmonee und dein Kontostand:</p>
+        <p class="moneylist_header">Dein Kontostand:</p>
         <ul class="moneylist">
-            <li class="moneylist">Portmonee: <span id="wallet">0$</span></li>
-            <li class="moneylist">Konto: <span id="bank">0$</span></li>
+            <li class="moneylist">Konto: <span id="bank">0</span>$</li>
         </ul>
         <input class="inputfield" type="text" id="amount" placeholder="Betrag" required checked>
         <button class="inputbutton" onclick="deposit()">Einzahlen</button>
@@ -44,6 +43,15 @@
 
     <script>
         document.getElementById("defaultOpen").click();
+
+        $(document).ready(function () {
+            document.getElementById("bank").innerHTML = API.getEntitySyncedData(API.getLocalPlayer(), "Bank");
+            resourceCall("sendPlayerMoney", "shit");
+        });
+
+        function setBankMoney(amount) {
+            document.getElementById("bank").innerHTML = amount;
+        }
 
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;

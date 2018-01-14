@@ -33,6 +33,8 @@
   <script src="/shops/bikerental/BikeRental.cs" type="server" lang="csharp" />
   <script src="/shops/bikerental/SummerBikeShop.cs" type="server" lang="csharp" />
   <script src="/shops/bikerental/BikeRental.js" type="client" lang="javascript" />
+  
+  <script src="/player/Cashmachine.js" type="client" lang="javascript" />
 
   <!--Web-->
   <file src="/web/start.html" />
@@ -54,6 +56,10 @@
   
   <file src="/web/summerbikereturn.html" />
   <file src="/web/styles/summerbikereturnstyles.css" />
+  
+  <file src="/web/bank.html" />
+  <file src="/web/styles/bankstyles.css" />
+  <file src="/web/images/starbank.png" />
 
   <!--Karte-->
   <!--<map src="karte.map" dimension='0'/>-->

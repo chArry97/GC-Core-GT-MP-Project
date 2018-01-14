@@ -101,7 +101,7 @@
 			
 					<div id="wangen" class="subtabcontent">
 					
-						<div class="slidecontainer-tab">
+						<div class="sub-slidecontainer-tab">
 							<p class="fond-but">Wangenknochen-Höhe</p>
 							<input type="range" min="1" max="100" value="50" class="slider" id="cheekbone height">
 						</div>
@@ -160,61 +160,81 @@
 		
 			<div id="aussehen" class="tabcontent">
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Hautunreinheiten</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="blemishes">
-				</div>
+				<button class="subtablinks" type="button" onclick="openSubTab(event,'haut')">Haut</button>
 				
-				<div class="male">
-					<p class="fond-but">Gesichtsbehaarung</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="facial hair">
-				</div>
+					<div id="haut" class="subtabcontent">
+					
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Hautunreinheiten</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="blemishes">
+						</div>
+					
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Rötungen</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="blush">
+						</div>
+						
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Teint</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="complexion">
+						</div>
+					
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Sonnen-Schäden</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="sun damage">
+						</div>
+					
+					</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Augenbrauen</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="eyebrows">
-				</div>
+				<button class="subtablinks" type="button" onclick="openSubTab(event,'make-up')">Make-Up</button>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Alterung</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="ageing">
-				</div>
+					<div id="make-up" class="subtabcontent">
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Make-Up</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="makeup">
+						</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Make-Up</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="makeup">
-				</div>
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Lippenstift</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="lipstick">
+						</div>
+					</div>
+					
+				<button class="male" class="subtablinks" type="button" onclick="openSubTab(event,'haare')">Behaarung</button>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Rötungen</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="blush">
-				</div>
+					<div id="haare" class="subtabcontent">
+					
+						<div class= "male1" class="slidecontainer-tab">
+							<p class="fond-but">Gesichtsbehaarung</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="facial hair">
+						</div>
+						
+						<div class= "male1" class="slidecontainer-tab">
+							<p class="fond-but">Brust Haar</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="chest hair">
+						</div>
+					</div>
+					
+				<button class="subtablinks" type="button" onclick="openSubTab(event,'gesicht')">Gesicht</button>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Teint</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="complexion">
-				</div>
+					<div id="gesicht" class="subtabcontent">
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Augenbrauen</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="eyebrows">
+						</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Sonnen-Schäden</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="sun damage">
-				</div>
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Alterung</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="ageing">
+						</div>
 				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Lippenstift</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="lipstick">
+						<div class="slidecontainer-tab">
+							<p class="fond-but">Grübchen & Sommersprossen</p>
+							<input type="range" min="1" max="100" value="50" class="slider" id="moles & freckles">
+						</div>
+					</div>
 				</div>
-				
-				<div class="slidecontainer-tab">
-					<p class="fond-but">Grübchen & Sommersprossen</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="moles & freckles">
-				</div>
-				
-				<div class="male">
-					<p class="fond-but">Brust Haar</p>
-					<input type="range" min="1" max="100" value="50" class="slider" id="chest hair">
-				</div>
-			</div>
+
 		<button class="tablinks" type="button" onclick="">Haare und Haarfarbe</button>
 		<div class="slidecontainer">
 			<p class="fond-but">Rotation</p>
@@ -274,15 +294,21 @@
         }
 		
 		function setGender(evt, gender) {
-			var i, itemList, otherGender;
+			var i, itemList, otherGender, gender1, otherGender1;
 			
 			if (gender == "male") {
+				gender1 = "male1";
 				otherGender = "female";
+				otherGender1 = "female1";
 			} else if (gender == "female") {
+				gender1 = "female";
 				otherGender = "male";
+				otherGender1 = "male1";
 			} else {
 				gender = "male";
+				gender1 = "male1";
 				otherGender = "female";
+				otherGender1 = "female1";
 			}
 			
 			itemList = document.getElementsByClassName(otherGender);
@@ -291,6 +317,16 @@
             }
 			
 			itemList = document.getElementsByClassName(gender);
+            for (i = 0; i < itemList.length; i++) {
+                itemList[i].style.display = "block";
+            }
+			
+			itemList = document.getElementsByClassName(otherGender1);
+            for (i = 0; i < itemList.length; i++) {
+                itemList[i].style.display = "none";
+            }
+			
+			itemList = document.getElementsByClassName(gender1);
             for (i = 0; i < itemList.length; i++) {
                 itemList[i].style.display = "block";
             }
