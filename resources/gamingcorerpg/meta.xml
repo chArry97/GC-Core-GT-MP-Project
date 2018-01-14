@@ -14,25 +14,27 @@
   <script src="/admin/CarCommands.cs" type="server" lang="csharp" />
   <script src="/admin/AdminCommands.cs" type="server" lang="csharp" />
   <script src="/admin/PlayerCommands.cs" type="server" lang="csharp" />
+  <script src="/admin/MapCommands.cs" type="server" lang="csharp" />
+  <script src="admin\MapCommandsClient.js" type="client" lang="javascript" />
 
   <!--Player-->
   <script src="/player/MoneyHandler.cs" type="server" lang="csharp" />
 
   <!-- Blinker -->
   <script src="/vehicle/VehIndicatorMain.cs" type="server" lang="csharp" />
-  <script src="/vehicle/VehIndicator.js" type="client" lang="javascript" />
+  <script src="vehicle\VehIndicator.js" type="client" lang="javascript" />
 
   <script src="GamingcoreRpg.cs" type="server" lang="csharp" />
   <script src="/general/ConfigurationLoader.cs" type="server" lang="csharp" />
-  <script src="/general/onServerEventTrigger.js" type="client" lang="javascript" />
+  <script src="general\onServerEventTrigger.js" type="client" lang="javascript" />
   <script src="/login/PlayerConnection.cs" type="server" lang="csharp" />
-  <script src="/login/PlayerConnection_Client.js" type="client" lang="javascript" />
+  <script src="login\PlayerConnection_Client.js" type="client" lang="javascript" />
   <script src="/login/PasswordDerivation.cs" type="server" lang="csharp" />
   <script src="/test/Browsertest.cs" type="server" lang="csharp" />
-  <script src="/test/Browsertest.js" type="client" lang="javascript" />
+  <script src="test\Browsertest.js" type="client" lang="javascript" />
   <script src="/shops/bikerental/BikeRental.cs" type="server" lang="csharp" />
   <script src="/shops/bikerental/SummerBikeShop.cs" type="server" lang="csharp" />
-  <script src="/shops/bikerental/BikeRental.js" type="client" lang="javascript" />
+  <script src="shops\bikerental\BikeRental.js" type="client" lang="javascript" />
 
   <!--Web-->
   <file src="/web/start.html" />

@@ -11,12 +11,10 @@ using MySql.Data.MySqlClient;
 public class MapCommands : Script
 {
     [Command("adminmap", "Usage: /adminmap ", Alias = "am", GreedyArg = true)]
-    public void cmd_teleport(Client sender, Client target) {
-        if (API.getEntityData(sender.handle, "Adminlevel") >= 5)
+    public void cmd_mapMenu(Client sender) {
+        if (API.getEntityData(sender.handle, "Mappinglevel") >= 3)
         {
-            API.sendNotificationToPlayer(sender, "~w~Du wurdest zum Spieler teleportiert: ~r~" + target.name);
-            API.sendNotificationToPlayer(target, "~r~" + sender.name + " ~w~hat sich zu dir teleportiert!");
-            sender.position = target.position;
+            API.triggerClientEvent(sender, "createMapMenu");
         }
         else
         {

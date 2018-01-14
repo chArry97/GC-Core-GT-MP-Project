@@ -9,5 +9,8 @@ API.onServerEventTrigger.connect(function (eventName, args) {
         case 'testhtml':
             resource.Browsertest.testhtml(args);
             break;
+        case 'createMapMenu':
+            resource.MapCommandsClient.createMapMainMenu();
+            break;
     }
 });
