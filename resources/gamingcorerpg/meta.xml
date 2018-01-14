@@ -6,62 +6,63 @@
   <assembly ref="MySql.Data.dll" />
 
   <!--Database-->
-  <script src="/general/Database.cs" type="server" lang="csharp" />
+  <script src="general\Database.cs" type="server" lang="csharp" />
   
-  <script src="/general/WorldObjectSpawner.cs" type="server" lang="csharp" />
+  <script src="general\WorldObjectSpawner.cs" type="server" lang="csharp" />
 
   <!--Admin-->
-  <script src="/admin/CarCommands.cs" type="server" lang="csharp" />
-  <script src="/admin/AdminCommands.cs" type="server" lang="csharp" />
-  <script src="/admin/PlayerCommands.cs" type="server" lang="csharp" />
-  <script src="/admin/MapCommands.cs" type="server" lang="csharp" />
+  <script src="admin\CarCommands.cs" type="server" lang="csharp" />
+  <script src="admin\AdminCommands.cs" type="server" lang="csharp" />
+  <script src="admin\PlayerCommands.cs" type="server" lang="csharp" />
+  <script src="admin\MapCommands.cs" type="server" lang="csharp" />
   <script src="admin\MapCommandsClient.js" type="client" lang="javascript" />
 
   <!--Player-->
-  <script src="/player/MoneyHandler.cs" type="server" lang="csharp" />
+  <script src="player\MoneyHandler.cs" type="server" lang="csharp" />
 
   <!-- Blinker -->
-  <script src="/vehicle/VehIndicatorMain.cs" type="server" lang="csharp" />
+  <script src="vehicle\VehIndicatorMain.cs" type="server" lang="csharp" />
   <script src="vehicle\VehIndicator.js" type="client" lang="javascript" />
 
   <script src="GamingcoreRpg.cs" type="server" lang="csharp" />
-  <script src="/general/ConfigurationLoader.cs" type="server" lang="csharp" />
+  <script src="general\ConfigurationLoader.cs" type="server" lang="csharp" />
   <script src="general\onServerEventTrigger.js" type="client" lang="javascript" />
-  <script src="/login/PlayerConnection.cs" type="server" lang="csharp" />
+  <script src="login\PlayerConnection.cs" type="server" lang="csharp" />
   <script src="login\PlayerConnection_Client.js" type="client" lang="javascript" />
-  <script src="/login/PasswordDerivation.cs" type="server" lang="csharp" />
-  <script src="/test/Browsertest.cs" type="server" lang="csharp" />
+  <script src="login\PasswordDerivation.cs" type="server" lang="csharp" />
+  <script src="test\Browsertest.cs" type="server" lang="csharp" />
   <script src="test\Browsertest.js" type="client" lang="javascript" />
-  <script src="/shops/bikerental/BikeRental.cs" type="server" lang="csharp" />
-  <script src="/shops/bikerental/SummerBikeShop.cs" type="server" lang="csharp" />
-  <script src="/shops/bikerental/BikeRental.js" type="client" lang="javascript" />
-  
-  <script src="/player/Cashmachine.js" type="client" lang="javascript" />
+  <script src="shops\bikerental/BikeRental.cs" type="server" lang="csharp" />
+  <script src="shops\bikerental\SummerBikeShop.cs" type="server" lang="csharp" />
+  <script src="shops\bikerental\BikeRental.js" type="client" lang="javascript" />
+
+  <script src="shops\atm\Atm.cs" type="server" lang="csharp" />
+  <script src="shops\atm\AtmUi.js" type="client" lang="javascript" />
 
   <!--Web-->
-  <file src="/web/start.html" />
-  <file src="/web/styles/styles.css" />
-  <file src="/web/images/logo.png" />
+  <file src="web\start.html" />
+  <file src="web\styles\styles.css" />
+  <file src="web\images\logo.png" />
 
-  <file src="/web/charcreator.html" />
-  <file src="/web/styles/charakterstyles.css" />
-  <file src="/web/images/charchreat-m-head.png" />
-  <file src="/web/images/charcreate-mann-r-head.png" />
-  <file src="/web/images/charcreat-frau-l-head.png" />
+  <file src="web\charcreator.html" />
+  <file src="web\styles\charakterstyles.css" />
+  <file src="web\images\charchreat-m-head.png" />
+  <file src="web\images\charcreate-mann-r-head.png" />
+  <file src="web\images\charcreat-frau-l-head.png" />
 
-  <file src="/web/summerbike.html" />
-  <file src="/web/styles/summerbikestyles.css" />
-  <file src="/web/images/summerbikelogo.png" />
-  <file src="/web/images/bmx.png" />
-  <file src="/web/images/cruiser.png" />
-  <file src="/web/images/fixter.png" />
+  <file src="web\summerbike.html" />
+  <file src="web\styles\summerbikestyles.css" />
+  <file src="web\images\summerbikelogo.png" />
+  <file src="web\images\bmx.png" />
+  <file src="web\images\cruiser.png" />
+  <file src="web\images\fixter.png" />
   
-  <file src="/web/summerbikereturn.html" />
-  <file src="/web/styles/summerbikereturnstyles.css" />
+  <file src="web\summerbikereturn.html" />
+  <file src="web\styles\summerbikereturnstyles.css" />
   
-  <file src="/web/bank.html" />
-  <file src="/web/styles/bankstyles.css" />
-  <file src="/web/images/starbank.png" />
+  <file src="web\bank.html" />
+  <file src="web\styles\bankstyles.css" />
+  <file src="web\images\starbank.png" />
 
   <!--Karte-->
   <!--<map src="karte.map" dimension='0'/>-->

@@ -12,7 +12,7 @@ function closeBankUI() {
 }
 
 API.onServerEventTrigger.connect(function (eventname, args) {
-    if (eventname === "bankOpen") {
+    if (eventname === "atmOpen") {
         var res = API.getScreenResolution();
 
         bank_browser = API.createCefBrowser(res.Width / 2, res.Height / 1.5, true);
