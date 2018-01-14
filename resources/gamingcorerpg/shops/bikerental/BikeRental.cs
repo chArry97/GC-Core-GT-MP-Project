@@ -12,12 +12,7 @@ using MySql.Data.MySqlClient;
 public class BikeRental : Script {
 	
 	public BikeRental() {
-		API.onResourceStart += SpawnBikeRentalsOnServerStart;
 		API.onClientEventTrigger += OnPlayerRentBike;
-	}
-	
-	public void SpawnBikeRentalsOnServerStart() {
-		
 	}
 	
 	public void OnPlayerRentBike(Client player, string eventName, params object[] arguments) {
