@@ -1,7 +1,7 @@
-function createMapMainMenu() {
+ï»¿function createMapMainMenu() {
 
     var mapMainMenu = API.createMenu("Map Menu", "Aktion", 0, 0, 6);
-    mapMainMenu.AddItem(API.createMenuItem("Hinzufügen", "Neues Element hinzufügen"));
+    mapMainMenu.AddItem(API.createMenuItem("HinzufÃ¼gen", "Neues Element hinzufÃ¼gen"));
     mapMainMenu.AddItem(API.createMenuItem("Entfernen", "Element entfernen (TBD)"));
     mapMainMenu.Visible = true;
 
@@ -17,8 +17,8 @@ function createMapMainMenu() {
 }
 
 function createMapAddMenu() {
-    var mapAddMenu = API.createMenu("Typ", "Wähle das Element.", 0, 0, 6);
-    mapAddMenu.AddItem(API.createMenuItem("Bike Shop", "Bike Shop hinzufügen"));
+    var mapAddMenu = API.createMenu("Typ", "WÃ¤hle das Element.", 0, 0, 6);
+    mapAddMenu.AddItem(API.createMenuItem("Bike Shop", "Bike Shop hinzufÃ¼gen"));
     mapAddMenu.AddItem(API.createMenuItem("xxxxx", "xxxxx"));
     mapAddMenu.Visible = true;
 
