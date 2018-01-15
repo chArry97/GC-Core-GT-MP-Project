@@ -5,6 +5,11 @@ using MySql.Data.MySqlClient;
 
 class Database{
 	
+    /// <summary>
+    /// This method returns an already configured MySqlConnection object that can be used to communicate
+    /// with the database. The database connection still needs to be opened and closed.
+    /// </summary>
+    /// <returns>Configured MySqlConnection Object</returns>
 	public static MySqlConnection getDatabase() {
 		XmlDocument databaseConfig = ConfigurationLoader.getConfigurationLoader().GetConfig("database");
 		string host = databaseConfig.GetElementsByTagName("host")[0].InnerText;

@@ -16,6 +16,9 @@ public class WorldObjectSpawner : Script {
         API.onResourceStart += LoadAndSpawnWorldObjects;
     }
 
+    /// <summary>
+    /// OnResourceStart method to call all methods that should spawn objects on Server Start
+    /// </summary>
     public void LoadAndSpawnWorldObjects()
     {
         MySqlConnection conn = Database.getDatabase();
@@ -34,6 +37,10 @@ public class WorldObjectSpawner : Script {
         }
     }
 
+    /// <summary>
+    /// Loading all Bike Shops from the database and spawning them ingame
+    /// </summary>
+    /// <param name="cmd">Opened MySqlConnection</param>
     private void LoadAndSpawnBikeShops(MySqlCommand cmd)
     {
         cmd.CommandText = "SELECT posX, posY, posZ, rotZ FROM world_objects WHERE type = 'bikeshop'";
@@ -54,6 +61,10 @@ public class WorldObjectSpawner : Script {
         }
     }
 
+    /// <summary>
+    /// Loading all ATMs from the database and spawning them ingame
+    /// </summary>
+    /// <param name="cmd">Opened MySqlConnection</param>
     private void LoadAndSpawnAtms(MySqlCommand cmd)
     {
         cmd.CommandText = "SELECT posX, posY, posZ, rotZ FROM world_objects WHERE type = 'atm'";
