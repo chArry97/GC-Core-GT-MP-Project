@@ -47,3 +47,6 @@ API.createVehicle((VehicleHash)-482719877, new Vector3(213.784, 2470.247, 54.942
 API.createVehicle((VehicleHash)234062309, new Vector3(3804.099, 4464.374, 4.270753), new Vector3(3.119989, 4.218818, 10.79562), 0, 0, 0); // Schiffswerft
 API.createVehicle((VehicleHash)418536135, new Vector3(796.7563, 1276.783, 359.8016), new Vector3(-0.02369767, 0.0450151, 89.52877), 0, 0, 0); // Funkturm
 API.createVehicle((VehicleHash)-2048333973, new Vector3(-1105.292, -1690.598, 3.622885), new Vector3(1.204189, -0.1720334, 133.1414), 0, 0, 0); // bikeRentalMroSpoke
+(-1212.897, -329.9945, 37.78702, 0, 0, -151.1929) // Fleeca Bank
+API.createVehicle((VehicleHash)-1622444098, new Vector3(-881.7028, -144.2999, 37.3985), new Vector3(2.629116, -0.4115334, 117.2941), 0, 0, 0); // Garage3
+API.createVehicle((VehicleHash)-1622444098, new Vector3(-894.6382, -64.36595, 37.71592), new Vector3(3.455785, 0.7966641, -38.03257), 0, 0, 0); // Garage4
