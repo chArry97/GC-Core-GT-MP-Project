@@ -46,3 +46,4 @@ API.createVehicle((VehicleHash)-482719877, new Vector3(213.784, 2470.247, 54.942
 (637.056, 2775.591, 41.98535, 0, 0, -145.6732) // Hintereingangfuergeheimemachenschaften
 API.createVehicle((VehicleHash)234062309, new Vector3(3804.099, 4464.374, 4.270753), new Vector3(3.119989, 4.218818, 10.79562), 0, 0, 0); // Schiffswerft
 API.createVehicle((VehicleHash)418536135, new Vector3(796.7563, 1276.783, 359.8016), new Vector3(-0.02369767, 0.0450151, 89.52877), 0, 0, 0); // Funkturm
+API.createVehicle((VehicleHash)-2048333973, new Vector3(-1105.292, -1690.598, 3.622885), new Vector3(1.204189, -0.1720334, 133.1414), 0, 0, 0); // bikeRentalMroSpoke

@@ -37,6 +37,7 @@
   <script src="shops\bikerental\BikeRental.js" type="client" lang="javascript" />
 
   <script src="shops\atm\Atm.cs" type="server" lang="csharp" />
+  <script src="shops\atm\AtmActions.cs" type="server" lang="csharp" />
   <script src="shops\atm\AtmUi.js" type="client" lang="javascript" />
 
   <!--Web-->

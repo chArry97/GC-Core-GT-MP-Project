@@ -33,7 +33,7 @@
         <ul class="moneylist">
             <li class="moneylist">Konto: <span id="bank">0</span>$</li>
         </ul>
-        <input class="inputfield" type="text" id="amount" placeholder="Betrag" required checked>
+        <input class="inputfield" type="number" min="1" max="9999999" id="amount" placeholder="Betrag" required checked>
         <button class="inputbutton" onclick="deposit()">Einzahlen</button>
         <button class="inputbutton" onclick="payOff()">Auszahlen</button>
     </div>
@@ -68,11 +68,13 @@
         }
 
         function deposit() {
-            var amount = $("#amount").val();
+            var amount = document.getElementById("amount").value;
+            resourceCall("sendAtmDeposit", amount);
         }
 
         function payOff() {
-            var amount = $("#amount").val();
+            var amount = document.getElementById("amount").value;
+            resourceCall("sendAtmPayOff", amount);
         }
 
         function closeBank() {

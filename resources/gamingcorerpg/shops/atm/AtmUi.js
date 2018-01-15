@@ -9,6 +9,15 @@ function closeBankUI() {
     API.destroyCefBrowser(bank_browser);
     API.setCanOpenChat(true);
     API.setHudVisible(true);
+    bank_browser = null;
+}
+
+function sendAtmDeposit(amount) {
+    API.triggerServerEvent("atmDeposit", amount);
+}
+
+function sendAtmPayOff(amount) {
+    API.triggerServerEvent("atmPayOff", amount);
 }
 
 API.onServerEventTrigger.connect(function (eventname, args) {
@@ -23,6 +32,10 @@ API.onServerEventTrigger.connect(function (eventname, args) {
         API.setCanOpenChat(false);
         API.showCursor(true);
         API.waitUntilCefBrowserLoaded(bank_browser);
+    } else if (eventname === "atmUpdateMoney") {
+        if (bank_browser != null) {
+            bank_browser.call("setBankMoney", API.getEntitySyncedData(API.getLocalPlayer(), "Bank"));
+        }
     }
 });
 

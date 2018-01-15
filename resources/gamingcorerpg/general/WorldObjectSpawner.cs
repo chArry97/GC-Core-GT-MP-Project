@@ -25,6 +25,7 @@ public class WorldObjectSpawner : Script {
             conn.Open();
 
             LoadAndSpawnBikeShops(conn.CreateCommand());
+            LoadAndSpawnAtms(conn.CreateCommand());
             conn.Close();
         }
         catch (MySqlException)
@@ -50,6 +51,26 @@ public class WorldObjectSpawner : Script {
             };
             float rotZ = (float) Convert.ToDouble(result.Rows[i]["rotZ"]);
             new SummerBikeShop(pos, rotZ);
+        }
+    }
+
+    private void LoadAndSpawnAtms(MySqlCommand cmd)
+    {
+        cmd.CommandText = "SELECT posX, posY, posZ, rotZ FROM world_objects WHERE type = 'atm'";
+
+        DataTable result = new DataTable();
+        result.Load(cmd.ExecuteReader());
+
+        for (int i = 0; i < result.Rows.Count; i++)
+        {
+            Vector3 pos = new Vector3
+            {
+                X = (float)Convert.ToDouble(result.Rows[i]["posX"]),
+                Y = (float)Convert.ToDouble(result.Rows[i]["posY"]),
+                Z = (float)Convert.ToDouble(result.Rows[i]["posZ"])
+            };
+            float rotZ = (float)Convert.ToDouble(result.Rows[i]["rotZ"]);
+            new Atm(pos, rotZ);
         }
     }
 }
